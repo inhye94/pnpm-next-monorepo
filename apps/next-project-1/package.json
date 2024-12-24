@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@workspace/design-system": "workspace:^",
     "next": "15.1.2"
   },
   "devDependencies": {

@@ -1,18 +1,11 @@
-import type { Config } from "tailwindcss";
+import designSystemConfig from "../../packages/design-system/tailwind.config";
 
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+module.exports = {
+  content: ["./app/**/*.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      ...designSystemConfig.theme.extend, // 디자인 시스템의 테마 확장
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: designSystemConfig.plugins, // 디자인 시스템 플러그인 통합
+};
