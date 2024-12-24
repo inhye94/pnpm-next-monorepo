@@ -5,10 +5,15 @@
   "main": "index.js",
   "scripts": {
     "project-1": "pnpm --filter @example/next-project-1",
-    "project-2": "pnpm --filter @example/next-project-2"
+    "project-2": "pnpm --filter @example/next-project-2",
+    "design-system": "pnpm --filter @workspace/design-system"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@9.7.1"
+  "packageManager": "pnpm@9.7.1",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2"
+  }
 }

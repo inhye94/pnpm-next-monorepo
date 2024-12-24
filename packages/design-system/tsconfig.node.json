@@ -5,6 +5,8 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "composite": true, // 프로젝트 참조를 위해 필요
+    "declaration": true, // composite이 true일 때 declaration도 필요
 
     /* Bundler mode */
     "moduleResolution": "bundler",
