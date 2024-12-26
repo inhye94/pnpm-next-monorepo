@@ -1,4 +1,4 @@
-import designSystemConfig from "../../packages/design-system/tailwind.config";
+import designSystemConfig from "@workspace/design-system/tailwind.config";
 
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],

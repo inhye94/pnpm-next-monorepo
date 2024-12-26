@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       fontSize: {
@@ -210,9 +211,6 @@ export default {
           750: "rgba(255, 255, 255, 0.75)",
           900: "#FFFFFF",
         },
-      },
-      backgroundImage: {
-        "main-gradient": "url('/images/background.png')",
       },
       keyframes: {
         slideIn: {
