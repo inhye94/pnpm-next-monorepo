@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* font */
+@import url("./base/font.css");
+
+/* tailwind */
+@import url("./base/tailwind.css");
 
 .visually-hidden {
   position: absolute;
@@ -14,9 +16,4 @@
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
-}
-
-html,
-body {
-  font-size: 62.5%; /* 1rem = 10px */
 }
