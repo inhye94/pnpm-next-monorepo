@@ -1,4 +1,8 @@
-import { ButtonColorType, ButtonSizeType, ButtonVariantType } from "./button";
+import type {
+  ButtonColorType,
+  ButtonSizeType,
+  ButtonVariantType,
+} from "./button";
 
 export const BASE_BUTTON_STYLE = `
   relative

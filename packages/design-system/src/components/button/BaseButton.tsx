@@ -4,7 +4,7 @@ import {
   BUTTON_SIZE_STYLE,
   BUTTON_VARIANT_STYLE,
 } from "./button.styles";
-import { IBaseButtonProps } from "./button";
+import type { IBaseButtonProps } from "./button";
 
 const BaseButton = ({
   variant = "filled",
