@@ -2,11 +2,16 @@ import BaseButton from "./BaseButton";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof BaseButton> = {
-  title: "Example/Button",
+  title: "Components/Button",
   component: BaseButton,
   parameters: {
     // NOTE: 컴포넌트 위치 설정
     layout: "centered",
+    docs: {
+      description: {
+        component: "BaseButton 컴포넌트는 forwardRef를 사용합니다.",
+      },
+    },
   },
   // NOTE: 컴포넌트에 자동으로 생성된 Autodocs 항목
   tags: ["autodocs"],

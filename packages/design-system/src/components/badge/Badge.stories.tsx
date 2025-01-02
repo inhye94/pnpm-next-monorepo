@@ -12,7 +12,7 @@ const ColorList: BadgeColorType[] = [
 ];
 
 const meta: Meta<typeof BaseBadge> = {
-  title: "Example/Badge",
+  title: "Components/Badge",
   component: BaseBadge,
   parameters: {
     layout: "centered",

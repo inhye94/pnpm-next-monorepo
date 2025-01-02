@@ -99,6 +99,9 @@ importers:
       '@eslint/js':
         specifier: ^9.17.0
         version: 9.17.0
+      '@storybook/addon-docs':
+        specifier: ^8.4.7
+        version: 8.4.7(@types/react@18.3.18)(storybook@8.4.7)
       '@storybook/addon-essentials':
         specifier: ^8.4.7
         version: 8.4.7(@types/react@18.3.18)(storybook@8.4.7)
