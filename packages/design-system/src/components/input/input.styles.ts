@@ -38,3 +38,6 @@ export const INPUT_VALIDATION_STATE_STYLE: Record<
   valid: "border-positive",
   invalid: "border-negative",
 };
+
+// common
+export const TITLE_STYLE = `block mb-[0.4rem] text-[1.2rem] font-semibold text-label-neutral`;
