@@ -1,8 +1,7 @@
 import * as RadixRadioGroup from "@radix-ui/react-radio-group";
 import ErrorMessage from "../input/ErrorMessage";
-import RequiredAsterisk from "../input/RequiredAsterisk";
-import { TITLE_STYLE } from "../input/input.styles";
 import RadioItem from "./RadioItem";
+import InputGroupTitle from "./InputGroupTitle";
 
 export interface IRadioRootProps {
   title: string;
@@ -19,12 +18,7 @@ export interface IRadioRootProps {
 const RadioGroup = ({ title, error, children, ...props }: IRadioRootProps) => {
   return (
     <RadixRadioGroup.Root {...props}>
-      {title && (
-        <h3 className={TITLE_STYLE}>
-          {title}
-          {props.required && <RequiredAsterisk />}
-        </h3>
-      )}
+      {title && <InputGroupTitle title={title} required={props.required} />}
       {children}
       {error && <ErrorMessage>{error}</ErrorMessage>}
     </RadixRadioGroup.Root>

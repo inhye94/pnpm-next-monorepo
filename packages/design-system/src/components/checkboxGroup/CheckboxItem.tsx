@@ -31,7 +31,7 @@ const CheckboxItem = ({ value, label, ...props }: ICheckboxItemProps) => {
         )}
         {...props}
       >
-        {<CheckBoxIcon className="text-label-assistive" variant="outlined" />}
+        <CheckBoxIcon className="text-label-assistive" variant="outlined" />
 
         <RadixCheckbox.Indicator
           className={classNames(

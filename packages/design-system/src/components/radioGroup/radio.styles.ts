@@ -1,27 +1,17 @@
 // Raio Item Styles
 export const RADIO_ITEM_STYLE = "flex items-center";
 
-export const RADIO_UNCHECKED_STYLE = `
-  relative
+export const RADIO_INDICATOR_STYLE = `
   flex
   items-center
   justify-center
-  shrink-0
-  grow-0
-  w-[1.6rem] h-[1.6rem]
-  m-[0.8rem]
-  bg-common-100
-  border-solid
-  border
-  border-secondary
-  rounded-full
-  cursor-pointer
-  shadow-lg
-  shadow-gray-400
-  transition-colors
+  w-[3.2rem] h-[3.2rem]
+  text-[1.8rem]
+`;
 
-  enabled:hover:bg-blue-200
-  enabled:active:bg-blue-400
+export const RADIO_UNCHECKED_STYLE = `
+  relative
+
   disabled:cursor-not-allowed
   disabled:text-label-disable
 
@@ -30,22 +20,13 @@ export const RADIO_UNCHECKED_STYLE = `
 
 export const RADIO_CHECKED_STYLE = `
   absolute
-  flex
-  items-center
-  justify-center
-  w-full
-  h-full
-  bg-primary
-  rounded-full
-
-  after:absolute
-  after:w-[0.6rem]
-  after:h-[0.6rem]
-  after:bg-common-100
-  after:rounded-full
+  left-0
+  top-0
 `;
 
 export const LABEL_STYLE = `
   text-caption break-keep
   peer-disabled:text-label-disable
+  peer-disabled:line-through
+  peer-disabled:cursor-not-allowed
 `;

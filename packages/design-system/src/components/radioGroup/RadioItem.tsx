@@ -5,7 +5,9 @@ import {
   RADIO_ITEM_STYLE,
   RADIO_UNCHECKED_STYLE,
   LABEL_STYLE,
+  RADIO_INDICATOR_STYLE,
 } from "./radio.styles";
+import RadioIcon from "../icon/RadioIcon";
 
 export interface IRadioItemProps {
   value: string;
@@ -20,10 +22,16 @@ const RadioItem = ({ value, label, ...props }: IRadioItemProps) => {
       <RadixRadioGroup.Item
         value={value}
         id={value}
-        className={classNames(RADIO_UNCHECKED_STYLE)}
+        className={classNames(RADIO_INDICATOR_STYLE, RADIO_UNCHECKED_STYLE)}
         {...props}
       >
-        <RadixRadioGroup.Indicator className={RADIO_CHECKED_STYLE} />
+        <RadioIcon variant="outlined" className="text-label-assistive" />
+
+        <RadixRadioGroup.Indicator
+          className={classNames(RADIO_INDICATOR_STYLE, RADIO_CHECKED_STYLE)}
+        >
+          <RadioIcon variant="filled" className="text-primary" />
+        </RadixRadioGroup.Indicator>
       </RadixRadioGroup.Item>
 
       <label htmlFor={value} className={LABEL_STYLE}>

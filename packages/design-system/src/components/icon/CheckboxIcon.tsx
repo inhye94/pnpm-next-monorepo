@@ -1,18 +1,17 @@
 import { IoIosCheckbox } from "react-icons/io";
 import { IoIosCheckboxOutline } from "react-icons/io";
 import { IoIosCheckmark } from "react-icons/io";
+import { IIconProps } from "./icon";
 
-export interface IIconProps {
-  label?: string;
+export interface ICheckboxIconProps extends IIconProps {
   variant?: "filled" | "outlined" | "ghost";
-  className?: string;
 }
 
 const CheckBoxIcon = ({
   label = "",
   variant = "filled",
   className,
-}: IIconProps) => {
+}: ICheckboxIconProps) => {
   if (variant === "filled") {
     return <IoIosCheckbox aria-label={label} className={className} />;
   }
