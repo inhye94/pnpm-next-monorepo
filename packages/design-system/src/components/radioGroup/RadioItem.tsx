@@ -3,8 +3,8 @@ import classNames from "classnames";
 import {
   RADIO_CHECKED_STYLE,
   RADIO_ITEM_STYLE,
-  RADIO_LABEL_STYLE,
   RADIO_UNCHECKED_STYLE,
+  LABEL_STYLE,
 } from "./radio.styles";
 
 export interface IRadioItemProps {
@@ -26,7 +26,7 @@ const RadioItem = ({ value, label, ...props }: IRadioItemProps) => {
         <RadixRadioGroup.Indicator className={RADIO_CHECKED_STYLE} />
       </RadixRadioGroup.Item>
 
-      <label htmlFor={value} className={RADIO_LABEL_STYLE}>
+      <label htmlFor={value} className={LABEL_STYLE}>
         {label}
       </label>
     </div>

@@ -45,7 +45,7 @@ export const RADIO_CHECKED_STYLE = `
   after:rounded-full
 `;
 
-export const RADIO_LABEL_STYLE = `
+export const LABEL_STYLE = `
   text-caption break-keep
   peer-disabled:text-label-disable
 `;
