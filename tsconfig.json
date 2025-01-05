@@ -6,17 +6,21 @@
     "skipLibCheck": true,
     "module": "esnext",
     "incremental": true,
+    "sourceMap": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "resolveJsonModule": true, // Enable JSON imports
     "esModuleInterop": true, // Enable CJS/ESM interop
     "isolatedModules": true, // Ensure each file is independent
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "noEmit": true,
     "jsx": "preserve",
 
     /* Linting */
     "strict": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
