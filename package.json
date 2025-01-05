@@ -9,13 +9,17 @@
     "design-system": "pnpm --filter @workspace/design-system",
     "prepare": "husky"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@9.7.1",
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "globals": "^15.14.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "postcss-load-config": "^6.0.1",
@@ -32,7 +36,8 @@
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ]
   }
 }
