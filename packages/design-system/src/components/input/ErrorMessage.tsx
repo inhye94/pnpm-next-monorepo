@@ -11,7 +11,7 @@ const ErrorMessage = memo(({ className, children }: IErrorMessageType) => {
     <p
       className={classNames(
         "mt-[0.4rem] text-negative text-[1.2rem]",
-        className
+        className,
       )}
     >
       {children}

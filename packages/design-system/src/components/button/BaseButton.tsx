@@ -1,10 +1,10 @@
 import classNames from "classnames";
+import type { IBaseButtonProps } from "./button";
 import {
   BASE_BUTTON_STYLE,
   BUTTON_SIZE_STYLE,
   BUTTON_VARIANT_STYLE,
 } from "./button.styles";
-import type { IBaseButtonProps } from "./button";
 
 const BaseButton = ({
   variant = "filled",
@@ -24,7 +24,7 @@ const BaseButton = ({
         BUTTON_SIZE_STYLE[size],
         BUTTON_VARIANT_STYLE[variant][color],
         isLoading && "cursor-wait",
-        className
+        className,
       )}
       {...props}
     >

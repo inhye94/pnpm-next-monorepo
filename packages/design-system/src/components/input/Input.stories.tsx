@@ -1,5 +1,5 @@
-import BaseInput from "./BaseInput";
 import type { Meta, StoryObj } from "@storybook/react";
+import BaseInput from "./BaseInput";
 import {
   InputRadiusType,
   InputSizeType,

@@ -27,7 +27,7 @@ const CheckboxItem = ({ value, label, ...props }: ICheckboxItemProps) => {
         id={value}
         className={classNames(
           CHECKBOX_INDICATOR_STYLE,
-          CHECKBOX_UNCHECKED_STYLE
+          CHECKBOX_UNCHECKED_STYLE,
         )}
         {...props}
       >
@@ -36,7 +36,7 @@ const CheckboxItem = ({ value, label, ...props }: ICheckboxItemProps) => {
         <RadixCheckbox.Indicator
           className={classNames(
             CHECKBOX_INDICATOR_STYLE,
-            CHECKBOX_CHECKED_STYLE
+            CHECKBOX_CHECKED_STYLE,
           )}
         >
           <CheckBoxIcon className="text-common-100 absolute" variant="ghost" />

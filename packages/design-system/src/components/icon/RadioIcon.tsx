@@ -1,5 +1,4 @@
-import { IoIosRadioButtonOff } from "react-icons/io";
-import { IoIosRadioButtonOn } from "react-icons/io";
+import { IoIosRadioButtonOff, IoIosRadioButtonOn } from "react-icons/io";
 import { IIconProps } from "./icon";
 
 export interface IRadioIconProps extends IIconProps {

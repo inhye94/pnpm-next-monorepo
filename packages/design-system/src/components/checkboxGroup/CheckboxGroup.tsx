@@ -1,6 +1,6 @@
 import ErrorMessage from "../input/ErrorMessage";
-import type { IRadioRootProps } from "../radioGroup/RadioGroup";
 import InputGroupTitle from "../radioGroup/InputGroupTitle";
+import type { IRadioRootProps } from "../radioGroup/RadioGroup";
 import CheckboxItem from "./CheckboxItem";
 
 export type CommonRootType = Pick<

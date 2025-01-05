@@ -1,13 +1,13 @@
 import * as RadixRadioGroup from "@radix-ui/react-radio-group";
 import classNames from "classnames";
+import RadioIcon from "../icon/RadioIcon";
 import {
+  LABEL_STYLE,
   RADIO_CHECKED_STYLE,
+  RADIO_INDICATOR_STYLE,
   RADIO_ITEM_STYLE,
   RADIO_UNCHECKED_STYLE,
-  LABEL_STYLE,
-  RADIO_INDICATOR_STYLE,
 } from "./radio.styles";
-import RadioIcon from "../icon/RadioIcon";
 
 export interface IRadioItemProps {
   value: string;

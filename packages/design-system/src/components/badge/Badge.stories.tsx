@@ -1,6 +1,6 @@
-import BaseBadge from "./BaseBadge";
 import type { Meta, StoryObj } from "@storybook/react";
 import type { BadgeColorType } from "./badge";
+import BaseBadge from "./BaseBadge";
 
 const ColorList: BadgeColorType[] = [
   "primary",

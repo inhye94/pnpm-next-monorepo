@@ -1,8 +1,8 @@
 import BaseInput from "../input/BaseInput";
 import ErrorMessage from "../input/ErrorMessage";
 import RequiredAsterisk from "../input/RequiredAsterisk";
-import { TITLE_STYLE } from "../input/input.styles";
 import type { IInputProps } from "../input/input";
+import { TITLE_STYLE } from "../input/input.styles";
 
 /**
  * 사용 예시

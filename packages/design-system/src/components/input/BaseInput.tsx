@@ -1,11 +1,11 @@
 import classNames from "classnames";
+import type { IInputProps } from "./input";
 import {
   INPUT_BASE_STYLE,
   INPUT_RADIUS_STYLE,
   INPUT_SIZE_STYLE,
   INPUT_VALIDATION_STATE_STYLE,
 } from "./input.styles";
-import type { IInputProps } from "./input";
 
 const BaseInput = ({
   size = "md",
@@ -24,7 +24,7 @@ const BaseInput = ({
         INPUT_SIZE_STYLE[size],
         INPUT_RADIUS_STYLE[radius],
         INPUT_VALIDATION_STATE_STYLE[validationState],
-        className
+        className,
       )}
       {...props}
     />

@@ -1,7 +1,7 @@
 import * as RadixRadioGroup from "@radix-ui/react-radio-group";
 import ErrorMessage from "../input/ErrorMessage";
-import RadioItem from "./RadioItem";
 import InputGroupTitle from "./InputGroupTitle";
+import RadioItem from "./RadioItem";
 
 export interface IRadioRootProps {
   title: string;
