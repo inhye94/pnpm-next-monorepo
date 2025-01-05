@@ -29,6 +29,7 @@ export default function Home() {
       </BaseButton>
       <TextField label="foo" placeholder="안뇽하세요!" />
       <BaseInput placeholder="바보" />
+      <p>테스트</p>
     </main>
   );
 }
