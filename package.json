@@ -6,7 +6,8 @@
   "scripts": {
     "project-1": "pnpm --filter @example/next-project-1",
     "project-2": "pnpm --filter @example/next-project-2",
-    "design-system": "pnpm --filter @workspace/design-system"
+    "design-system": "pnpm --filter @workspace/design-system",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,8 @@
   "devDependencies": {
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
     "postcss-load-config": "^6.0.1",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2",
@@ -26,5 +29,10 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.17"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
