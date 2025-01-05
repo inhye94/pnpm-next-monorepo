@@ -18,4 +18,5 @@ export interface IBaseButtonProps extends ButtonAttr {
   className?: string;
   isLoading?: boolean;
   children: React.ReactNode;
+  ref?: React.Ref<HTMLButtonElement>;
 }

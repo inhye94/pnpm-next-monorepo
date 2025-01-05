@@ -9,4 +9,5 @@ export interface IInputProps extends InputAttrType {
   radius?: InputRadiusType;
   validationState?: InputValidationStateType;
   className?: string;
+  ref?: React.Ref<HTMLInputElement>;
 }

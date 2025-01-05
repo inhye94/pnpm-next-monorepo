@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import classNames from "classnames";
 import {
   BASE_BUTTON_STYLE,
@@ -7,37 +6,32 @@ import {
 } from "./button.styles";
 import type { IBaseButtonProps } from "./button";
 
-const BaseButton = forwardRef<HTMLButtonElement, IBaseButtonProps>(
-  (
-    {
-      variant = "filled",
-      color = "primary",
-      size = "medium",
-      isLoading,
-      className,
-      children,
-      ...props
-    },
-    ref
-  ) => {
-    return (
-      <button
-        ref={ref}
-        className={classNames(
-          BASE_BUTTON_STYLE,
-          BUTTON_SIZE_STYLE[size],
-          BUTTON_VARIANT_STYLE[variant][color],
-          isLoading && "cursor-wait",
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </button>
-    );
-  }
-);
-
+const BaseButton = ({
+  variant = "filled",
+  color = "primary",
+  size = "medium",
+  isLoading,
+  className,
+  children,
+  ref,
+  ...props
+}: IBaseButtonProps) => {
+  return (
+    <button
+      ref={ref}
+      className={classNames(
+        BASE_BUTTON_STYLE,
+        BUTTON_SIZE_STYLE[size],
+        BUTTON_VARIANT_STYLE[variant][color],
+        isLoading && "cursor-wait",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
 BaseButton.displayName = "BaseButton";
 
 export default BaseButton;

@@ -63,12 +63,6 @@ const meta: Meta<typeof RadioGroup> = {
       },
       description: "라디오 버튼 그룹의 자식 요소를 설정합니다.",
     },
-    onValueChange: {
-      control: {
-        type: "function",
-      },
-      description: "라디오 버튼 그룹의 값이 변경될 때의 이벤트를 설정합니다.",
-    },
   },
 };
 
