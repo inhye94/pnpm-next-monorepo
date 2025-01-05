@@ -3,12 +3,10 @@ import InputGroupTitle from "../radioGroup/InputGroupTitle";
 import type { IRadioRootProps } from "../radioGroup/RadioGroup";
 import CheckboxItem from "./CheckboxItem";
 
-export type CommonRootType = Pick<
+export type ICheckboxRootProps = Pick<
   IRadioRootProps,
   "title" | "error" | "children" | "required"
 >;
-
-export interface ICheckboxRootProps extends CommonRootType {}
 
 const CheckboxGroup = ({
   title,
