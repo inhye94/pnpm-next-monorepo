@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "**"
+  ],
+  "exports": {
+    "./tailwind.config.ts": "./tailwind.config.ts",
+    "./styles.css": "./src/styles/main.css",
+    "./components": "./src/components/index.tsx"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

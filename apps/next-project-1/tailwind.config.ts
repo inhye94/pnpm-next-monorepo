@@ -1,4 +1,4 @@
-import designSystemConfig from "@workspace/design-system/tailwind.config";
+import designSystemConfig from "@workspace/design-system/tailwind.config.ts";
 
 module.exports = {
   content: [

@@ -23,7 +23,13 @@
     "noUncheckedSideEffectImports": true,
 
     /* Type */
-    "types": ["react", "react-dom"]
+    "types": ["react", "react-dom"],
+
+    /* Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/design-system/*": ["packages/design-system/src"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

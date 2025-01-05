@@ -6,7 +6,7 @@ export const BADGE_BASIC_STYLE = `
   justify-center
   h-20
   px-8
-  text-10
+  text-[1rem]
   font-semibold
 `;
 
