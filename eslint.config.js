@@ -1,9 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -43,19 +41,13 @@ export default [
     plugins: {
       "@typescript-eslint": tseslint,
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
     },
     rules: {
       // JavaScript 및 TypeScript 권장 규칙
-      ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
 
       // React 및 React Hooks 규칙
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
 
       // 프로젝트 공통 규칙 추가
       "no-unused-vars": ["warn", { vars: "all", args: "after-used" }],
