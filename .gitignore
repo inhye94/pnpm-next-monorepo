@@ -58,3 +58,5 @@ next-env.d.ts
 *.sln
 *.sw?
 
+# storybook
+storybook-static
