@@ -2,7 +2,7 @@
 
 ![design-system](https://github.com/user-attachments/assets/1bc245a9-ec5b-4db9-8739-5efc976f1b21)
 
-한 줄 소개
+**모노 레포의 디자인 시스템**
 
 - 작업기간: 2024.12.23 ~ 진행중
 - stack: Vite, React, TypeScript, TailwindCSS, Storybook, PNPM
@@ -55,8 +55,7 @@
 
 ## 배운 점
 
-Figma Dev 모드를 사용하여 color token과 text token을 손쉽게 추출할 수 있었습니다
-TailwindCSS Config 파일과 함께 사용해, 디자인 가이드 구현 시간을 3일에서 2시간으로 대폭 단축할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 많은 시간이 소요되었지만, Figma와 TailwindCSS의 강력한 연동 덕분에 효율적으로 작업할 수 있었습니다.
+Figma Dev 모드를 사용하여 color token과 text token을 손쉽게 추출할 수 있었습니다. TailwindCSS Config 파일과 함께 사용해, 디자인 가이드 구현 시간을 3일에서 2시간으로 대폭 단축할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 많은 시간이 소요되었지만, Figma와 TailwindCSS의 강력한 연동 덕분에 효율적으로 작업할 수 있었습니다.
 
 이 경험을 통해, 세부 작업은 **AI와 도구를 적극 활용**함으로써 더 재미있고 창의적인 작업(예: 컴포넌트 구현)에 시간을 할애할 수 있다는 점을 깨달았습니다.
 앞으로는 AI와 자동화 도구를 활용해 **반복 작업을 최소화**하고, 창의적이고 전략적인 작업에 집중할 계획입니다.
