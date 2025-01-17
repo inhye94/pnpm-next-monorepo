@@ -10,7 +10,7 @@
     /* Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -18,7 +18,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "../../tailwind.config.ts",
+    "./node_modules/@workspace/design-system/**/*.{js,jsx,ts,tsx}",
     "global.d.ts"
   ],
   "exclude": ["node_modules"]

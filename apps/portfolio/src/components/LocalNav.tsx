@@ -1,9 +1,9 @@
-const Navbar = () => {
+export default function LocalNav() {
   return (
     <nav>
-      <h3>사이드 메뉴</h3>
+      <h3 className="visually-hidden">사이드 메뉴</h3>
 
-      <ul>
+      <ul className="">
         <li>
           <button>aboutMe</button>
         </li>
@@ -22,6 +22,4 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}

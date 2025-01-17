@@ -1,4 +1,4 @@
-const Contact = () => {
+export default function ContactSection() {
   return (
     <section>
       <h2>깃허브랑 블로그</h2>
@@ -12,6 +12,4 @@ const Contact = () => {
       </a>
     </section>
   );
-};
-
-export default Contact;
+}

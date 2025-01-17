@@ -1,4 +1,4 @@
-const AboutMe = () => {
+export default function AboutSection() {
   return (
     <section>
       <h2>내 소개</h2>
@@ -9,6 +9,4 @@ const AboutMe = () => {
       </p>
     </section>
   );
-};
-
-export default AboutMe;
+}

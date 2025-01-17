@@ -1,6 +1,6 @@
-import Finish from "@/shared/components/Finish";
-import Gnb from "@/shared/components/Gnb";
-import Navbar from "@/shared/components/Navbar";
+import Cta from "@/components/CTA";
+import Finish from "@/components/Finish";
+import Gnb from "@/components/Gnb";
 import "@workspace/design-system/styles.css";
 import type { Metadata } from "next";
 
@@ -15,14 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body>
         <Gnb />
-        <Navbar />
-        <aside>이메일 클립복사, 피드백 주기, 맨 위로 이동</aside>
-
-        <main className="max-w-[1200px]">{children}</main>
-
+        <Cta />
+        <main>{children}</main>
         <Finish />
       </body>
     </html>
