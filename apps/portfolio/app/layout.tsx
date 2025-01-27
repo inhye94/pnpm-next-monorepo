@@ -1,8 +1,8 @@
-import Cta from "@/components/CTA";
+import Cta from "@/components/Cta";
 import Finish from "@/components/Finish";
 import Gnb from "@/components/Gnb";
-import "@workspace/design-system/styles.css";
 import type { Metadata } from "next";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

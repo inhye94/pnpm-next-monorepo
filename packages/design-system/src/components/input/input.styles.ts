@@ -8,8 +8,7 @@ export const INPUT_BASE_STYLE = `
   w-full
   px-16
   bg-white
-  text-[1.6rem] leading-[2rem]
-  text-label-normal
+  text-16 leading-20 text-label-normal
   border border-gray-300
   placeholder-label-assistive
   outline-none
@@ -40,4 +39,4 @@ export const INPUT_VALIDATION_STATE_STYLE: Record<
 };
 
 // common
-export const TITLE_STYLE = `block mb-[0.4rem] text-[1.2rem] font-semibold text-label-neutral`;
+export const TITLE_STYLE = `block mb-4 text-12 font-semibold text-label-neutral`;

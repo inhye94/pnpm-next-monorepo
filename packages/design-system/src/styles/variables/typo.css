@@ -1,0 +1,104 @@
+@theme {
+  /* common */
+  --text-10: 1rem;
+  --text-12: 1.2rem;
+  --text-14: 1.4rem;
+  --text-16: 1.6rem;
+  --text-18: 1.8rem;
+  --text-20: 2rem;
+  --text-24: 2.4rem;
+  --text-30: 3rem;
+  --text-32: 3.2rem;
+  --text-48: 4.8rem;
+  --text-64: 6.4rem;
+
+  /* heading */
+  --heading-size-1: var(--text-64);
+  --heading-height-1: 8rem;
+  --heading-spacing-1: -0.02em;
+  --heading-weight-1: 600;
+
+  --heading-size-2: var(--text-48);
+  --heading-height-2: 5.6rem;
+  --heading-spacing-2: -0.02em;
+  --heading-weight-2: 600;
+
+  --heading-size-3: var(--text-32);
+  --heading-height-3: 4rem;
+  --heading-spacing-3: -0.02em;
+  --heading-weight-3: 600;
+
+  --heading-size-4: var(--text-24);
+  --heading-height-4: 3.2rem;
+  --heading-spacing-4: -0.015em;
+  --heading-weight-4: 700;
+
+  --heading-size-5: var(--text-20);
+  --heading-height-5: 2.4rem;
+  --heading-spacing-5: -0.015em;
+  --heading-weight-5: 700;
+
+  --heading-size-6: var(--text-16);
+  --heading-height-6: 2.4rem;
+  --heading-spacing-6: -0.015em;
+  --heading-weight-6: 700;
+
+  /* body */
+  --body-size-lg: var(--text-20);
+  --body-height-lg: 3.2rem;
+  --body-spacing-lg: 0;
+  --body-weight-lg: 400;
+
+  --body-size-md: var(--text-16);
+  --body-height-md: 2.4rem;
+  --body-spacing-md: 0;
+  --body-weight-md: 400;
+
+  --body-size-sm: var(--text-14);
+  --body-height-sm: 2.4rem;
+  --body-spacing-sm: 0;
+  --body-weight-sm: 400;
+
+  --body-size-xs: var(--text-12);
+  --body-height-xs: 2.4rem;
+  --body-spacing-xs: 0;
+  --body-weight-xs: 400;
+
+  /* button */
+  --button-size-lg: var(--text-16);
+  --button-height-lg: 1.5rem;
+  --button-spacing-lg: 0.057em;
+  --button-weight-lg: 500;
+
+  --button-size-md: var(--text-14);
+  --button-height-md: 1.26rem;
+  --button-spacing-md: 0.096em;
+  --button-weight-md: 500;
+
+  --button-size-sm: var(--text-12);
+  --button-height-sm: 1.38rem;
+  --button-spacing-sm: 0.194em;
+  --button-weight-sm: 500;
+
+  /* link */
+  --link-size-md: var(--text-16);
+  --link-height-md: 2.4rem;
+  --link-spacing-md: 0.02em;
+  --link-weight-md: 600;
+
+  --link-size-sm: var(--text-14);
+  --link-height-sm: 2.4rem;
+  --link-spacing-sm: 0.02em;
+  --link-weight-sm: 600;
+
+  --link-size-xs: var(--text-12);
+  --link-height-xs: 1.6rem;
+  --link-spacing-xs: 0.02em;
+  --link-weight-xs: 600;
+
+  /* caption */
+  --caption-size: var(--text-14);
+  --caption-height: 1.6rem;
+  --caption-spacing: 0;
+  --caption-weight: 400;
+}

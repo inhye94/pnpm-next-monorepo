@@ -11,7 +11,6 @@ export const BASE_BUTTON_STYLE = `
   justify-center
   shrink-0
   gap-x-6
-  text-button
   font-bold
   transition-colors
   overflow-hidden
@@ -21,9 +20,9 @@ export const BASE_BUTTON_STYLE = `
 `;
 
 export const BUTTON_SIZE_STYLE: Record<ButtonSizeType, string> = {
-  large: "h-48 px-24 rounded-base text-button-large",
-  medium: "h-40 px-20 rounded-8 text-button",
-  small: "h-32 px-14 rounded-6 text-button-small",
+  large: "h-48 px-24 rounded-base text-button-lg",
+  medium: "h-40 px-20 rounded-8 text-button-md",
+  small: "h-32 px-14 rounded-6 text-button-sm",
 };
 
 export const BUTTON_VARIANT_STYLE: Record<

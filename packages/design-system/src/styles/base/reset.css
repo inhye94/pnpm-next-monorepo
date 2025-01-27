@@ -1,0 +1,17 @@
+@layer base {
+  a,
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  i {
+    color: inherit;
+    font-style: normal;
+    pointer-events: none;
+  }
+}

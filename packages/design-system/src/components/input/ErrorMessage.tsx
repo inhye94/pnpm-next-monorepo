@@ -6,14 +6,12 @@ export interface IErrorMessageType {
   children?: React.ReactNode;
 }
 
-const ErrorMessage = memo(({ className, children }: IErrorMessageType) => {
+const ErrorMessage = memo(function ErrorMessage({
+  className,
+  children,
+}: IErrorMessageType) {
   return (
-    <p
-      className={classNames(
-        "mt-[0.4rem] text-negative text-[1.2rem]",
-        className,
-      )}
-    >
+    <p className={classNames("text-negative text-12 mt-4", className)}>
       {children}
     </p>
   );

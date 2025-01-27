@@ -1,19 +1,54 @@
-/* font */
-@import url("./base/font.css");
+@import "tailwindcss";
 
-/* tailwind */
-@import url("./base/tailwind.css");
+/* (지우지 마세요!) 다른 프로젝트에도 컴포 스타일 적용 */
+@source "../components/**/*.{ts, tsx}";
 
-.visually-hidden {
-  position: absolute;
-  z-index: -999;
-  display: block !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+@layer theme, base;
+
+/* variables */
+@import "./variables/color.css" layer(theme);
+@import "./variables/typo.css" layer(theme);
+@import "./variables/spacing.css" layer(theme);
+@import "./variables/z-index.css" layer(theme);
+@import "./variables/border-radius.css" layer(theme);
+
+/* base */
+@import "./base/reset.css" layer(base);
+@import "./base/global.css" layer(base);
+@import "./base/font.css" layer(base);
+
+/* utilities */
+@utility text-heading-* {
+  font-size: --value(--heading-size- *);
+  line-height: --value(--heading-height- *);
+  letter-spacing: --value(--heading-spacing- *);
+  font-weight: --value(--heading-weight- *);
+}
+
+@utility text-body-* {
+  font-size: --value(--body-size- *);
+  line-height: --value(--body-height- *);
+  letter-spacing: --value(--body-spacing- *);
+  font-weight: --value(--body-weight- *);
+}
+
+@utility text-button-* {
+  font-size: --value(--button-size- *);
+  line-height: --value(--button-height- *);
+  letter-spacing: --value(--button-spacing- *);
+  font-weight: --value(--button-weight- *);
+}
+
+@utility text-link-* {
+  font-size: --value(--link-size- *);
+  line-height: --value(--link-height- *);
+  letter-spacing: --value(--link-spacing- *);
+  font-weight: --value(--link-weight- *);
+}
+
+@utility text-caption {
+  font-size: var(--caption-size);
+  line-height: var(--caption-height);
+  letter-spacing: var(--caption-spacing);
+  font-weight: var(--caption-weight);
 }

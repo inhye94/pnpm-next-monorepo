@@ -5,8 +5,8 @@ export const RADIO_INDICATOR_STYLE = `
   flex
   items-center
   justify-center
-  w-[3.2rem] h-[3.2rem]
-  text-[1.8rem]
+  w-32 h-32
+  text-30
 `;
 
 export const RADIO_UNCHECKED_STYLE = `
