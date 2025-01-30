@@ -81,20 +81,21 @@
   --button-weight-sm: 500;
 
   /* link */
-  --link-size-md: var(--text-16);
-  --link-height-md: 2.4rem;
-  --link-spacing-md: 0.02em;
-  --link-weight-md: 600;
+  --link-size-16: var(--text-16);
+  --link-height-16: 2.4rem;
+  --link-spacing-16: 0.02em;
 
-  --link-size-sm: var(--text-14);
-  --link-height-sm: 2.4rem;
-  --link-spacing-sm: 0.02em;
-  --link-weight-sm: 600;
+  --link-size-14: var(--text-14);
+  --link-height-14: 2.4rem;
+  --link-spacing-14: 0.02em;
 
-  --link-size-xs: var(--text-12);
-  --link-height-xs: 1.6rem;
-  --link-spacing-xs: 0.02em;
-  --link-weight-xs: 600;
+  --link-size-12: var(--text-12);
+  --link-height-12: 1.6rem;
+  --link-spacing-12: 0.02em;
+
+  --link-size-10: var(--text-10);
+  --link-height-10: 1.6rem;
+  --link-spacing-10: 0.02em;
 
   /* caption */
   --caption-size: var(--text-14);

@@ -37,13 +37,14 @@
   line-height: --value(--button-height- *);
   letter-spacing: --value(--button-spacing- *);
   font-weight: --value(--button-weight- *);
+  white-space: nowrap;
 }
 
 @utility text-link-* {
   font-size: --value(--link-size- *);
   line-height: --value(--link-height- *);
   letter-spacing: --value(--link-spacing- *);
-  font-weight: --value(--link-weight- *);
+  white-space: nowrap;
 }
 
 @utility text-caption {
@@ -51,4 +52,5 @@
   line-height: var(--caption-height);
   letter-spacing: var(--caption-spacing);
   font-weight: var(--caption-weight);
+  white-space: nowrap;
 }
