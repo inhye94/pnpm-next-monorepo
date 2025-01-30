@@ -1,6 +1,6 @@
 import * as RadixRadioGroup from "@radix-ui/react-radio-group";
 import classNames from "classnames";
-import RadioIcon from "../icon/RadioIcon";
+import Icon from "../icon";
 import {
   LABEL_STYLE,
   RADIO_CHECKED_STYLE,
@@ -25,12 +25,12 @@ const RadioItem = ({ value, label, ...props }: IRadioItemProps) => {
         className={classNames(RADIO_INDICATOR_STYLE, RADIO_UNCHECKED_STYLE)}
         {...props}
       >
-        <RadioIcon variant="outlined" className="text-label-assistive" />
+        <Icon name="radioOutlined" className="text-label-assistive" />
 
         <RadixRadioGroup.Indicator
           className={classNames(RADIO_INDICATOR_STYLE, RADIO_CHECKED_STYLE)}
         >
-          <RadioIcon variant="filled" className="text-primary" />
+          <Icon name="radioFilled" className="text-primary" />
         </RadixRadioGroup.Indicator>
       </RadixRadioGroup.Item>
 

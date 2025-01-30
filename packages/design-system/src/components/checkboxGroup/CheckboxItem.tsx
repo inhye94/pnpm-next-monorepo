@@ -1,6 +1,6 @@
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
 import classNames from "classnames";
-import CheckBoxIcon from "../icon/CheckboxIcon";
+import Icon from "../icon";
 import { LABEL_STYLE } from "../radioGroup/radio.styles";
 import {
   CHECKBOX_CHECKED_STYLE,
@@ -31,7 +31,7 @@ const CheckboxItem = ({ value, label, ...props }: ICheckboxItemProps) => {
         )}
         {...props}
       >
-        <CheckBoxIcon className="text-label-assistive" variant="outlined" />
+        <Icon name="checkboxOutlined" className="text-label-assistive" />
 
         <RadixCheckbox.Indicator
           className={classNames(
@@ -39,8 +39,8 @@ const CheckboxItem = ({ value, label, ...props }: ICheckboxItemProps) => {
             CHECKBOX_CHECKED_STYLE,
           )}
         >
-          <CheckBoxIcon className="text-common-100 absolute" variant="ghost" />
-          <CheckBoxIcon className="text-primary" variant="filled" />
+          <Icon name="checkboxGhost" className="absolute text-white" />
+          <Icon name="checkboxFilled" className="text-primary" />
         </RadixCheckbox.Indicator>
       </RadixCheckbox.Root>
 
