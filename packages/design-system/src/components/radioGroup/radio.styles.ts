@@ -6,7 +6,7 @@ export const RADIO_INDICATOR_STYLE = `
   items-center
   justify-center
   w-32 h-32
-  text-30
+  text-20
 `;
 
 export const RADIO_UNCHECKED_STYLE = `

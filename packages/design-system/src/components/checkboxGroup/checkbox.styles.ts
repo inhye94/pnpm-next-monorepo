@@ -6,7 +6,7 @@ export const CHECKBOX_INDICATOR_STYLE = `
   items-center
   justify-center
   w-32 h-32
-  text-30
+  text-20
 `;
 
 export const CHECKBOX_UNCHECKED_STYLE = `
