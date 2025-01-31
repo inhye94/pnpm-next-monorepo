@@ -12,12 +12,7 @@
     "emitDeclarationOnly": true,
 
     /* Aliases */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@styles/*": ["./src/styles/*"]
-    }
+    "baseUrl": "."
   },
   "include": ["src"]
 }

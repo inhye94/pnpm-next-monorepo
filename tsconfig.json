@@ -32,7 +32,7 @@
     /* Alias */
     "baseUrl": ".",
     "paths": {
-      "@workspace/design-system/*": ["packages/design-system/src"]
+      "@workspace/design-system/*": ["packages/design-system/src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
