@@ -1,4 +1,8 @@
 @theme {
+  /* common */
+  --color-white: #fff;
+  --color-black: #000;
+
   /* neutral */
   --color-neutral-99: #f7f7f7;
   --color-neutral-95: #dcdcdc;

@@ -1,4 +1,5 @@
 @theme {
   --z-index-gnb: 100;
-  --z-index-modal: 200;
+  --z-index-overlay: 200;
+  --z-index-modal: 300;
 }
