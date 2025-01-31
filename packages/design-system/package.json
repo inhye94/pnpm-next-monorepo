@@ -9,7 +9,8 @@
   "exports": {
     "./tailwind.config.ts": "./tailwind.config.ts",
     "./styles.css": "./src/styles/main.css",
-    "./components": "./src/components/index.tsx"
+    "./components": "./src/components/index.tsx",
+    "./providers": "./src/providers/index.tsx"
   },
   "scripts": {
     "dev": "vite",

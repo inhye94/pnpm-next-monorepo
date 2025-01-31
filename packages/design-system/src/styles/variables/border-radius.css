@@ -1,10 +1,12 @@
 @theme {
-  --radius-2: 0.2rem;
-  --radius-4: 0.4rem;
-  --radius-6: 0.6rem;
-  --radius-8: 0.8rem;
-  --radius-base: 1rem;
-  --radius-12: 1.2rem;
-  --radius-16: 1.6rem;
-  --radius-20: 2rem;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-base: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+
+  --radius-modal: 16px;
 }

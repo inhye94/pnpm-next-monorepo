@@ -3,7 +3,7 @@
 /* (지우지 마세요!) 다른 프로젝트에도 컴포 스타일 적용 */
 @source "../components/**/*.{ts, tsx}";
 
-@layer theme, base;
+@layer theme, base, components;
 
 /* variables */
 @import "./variables/color.css" layer(theme);
@@ -16,6 +16,13 @@
 @import "./base/reset.css" layer(base);
 @import "./base/global.css" layer(base);
 @import "./base/font.css" layer(base);
+
+/* components
+- 강제 스타일 유지(tree-shaking에도 끄떡없는 스타일 구현)
+- 최종 빌드 CSS에 포함하도록 보장됨
+- 꼭 필요한 것만 넣기
+*/
+@import "./components/modal.css" layer(components);
 
 /* utilities */
 @utility text-heading-* {
