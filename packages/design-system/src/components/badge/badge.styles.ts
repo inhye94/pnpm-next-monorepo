@@ -1,13 +1,15 @@
-import type { BadgeColorType, BadgeShapeType, BadgeVariantType } from "./badge";
+import type {
+  BadgeColorType,
+  BadgeShapeType,
+  BadgeSizeType,
+  BadgeVariantType,
+} from "./badge";
 
 export const BADGE_BASIC_STYLE = `
   inline-flex
   items-center
   justify-center
-  h-20
-  px-8
-  text-10
-  font-semibold
+  font-normal
 `;
 
 export const BADGE_COLOR_STYLE: Record<
@@ -43,4 +45,10 @@ export const BADGE_COLOR_STYLE: Record<
 export const BADGE_SHAPE_STYLE: Record<BadgeShapeType, string> = {
   simple: "rounded-4",
   pill: "rounded-full",
+};
+
+export const BADGE_SIZE_STYLE: Record<BadgeSizeType, string> = {
+  sm: "h-20 px-8 text-10",
+  md: "h-28 px-12 py-4 text-12",
+  lg: "h-36 px-16 py-6 text-14",
 };
