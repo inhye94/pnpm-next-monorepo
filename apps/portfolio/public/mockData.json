@@ -3,73 +3,57 @@
     {
       "id": "project-id-1",
       "title": "Design-system (MONO-REPO)",
-      "summary": "모노 레포의 디자인 시스템",
       "period": "2024.12.23 ~ 진행중",
       "team": "개인 프로젝트",
-      "thumbnailUrl": "https://private-user-images.githubusercontent.com/69448900/403294030-ed129376-c615-4d1c-a5fe-38c44cb72003.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcwMzM0NzcsIm5iZiI6MTczNzAzMzE3NywicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTQwMzAtZWQxMjkzNzYtYzYxNS00ZDFjLWE1ZmUtMzhjNDRjYjcyMDAzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTE2VDEzMTI1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAwNGRiMzA3MDAzNmVlM2JmOTQwODg2MDgxMmYwNmVkMmI5YzdkZjRmN2FhYWIyZGYyZDc4Y2U2NmQ4NmZkNWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.yaM5Uc96Hu5mHJXtU6PcxorRxgU5h3tx_MzEBDKQuc0",
-      "screens": [
+      "thumbnailUrl": "https://private-user-images.githubusercontent.com/69448900/403294030-ed129376-c615-4d1c-a5fe-38c44cb72003.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzgyNDcyNTgsIm5iZiI6MTczODI0Njk1OCwicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTQwMzAtZWQxMjkzNzYtYzYxNS00ZDFjLWE1ZmUtMzhjNDRjYjcyMDAzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTMwVDE0MjIzOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZjODZlZDYxYWFlNzEyZGI3MDRlNjhlNjA0MGZhNDg0ODk2NjFiNzBlZWEyZDhkYjc1NDNhZjYxMGQ1Mjk4ZTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.kxXNaOcdJOWBNtqLCr9mdp_eYKz-k_3tmPDgygiCEBM",
+      "stacks": [
+        {"id": "stack-1", "title": "Vite"},
+        {"id": "stack-2", "title": "React"},
+        {"id": "stack-3", "title": "TypeScript"},
+        {"id": "stack-4", "title": "TailwindCSS"},
+        {"id": "stack-5", "title": "Storybook"},
+        {"id": "stack-6", "title": "PNPM"}
+      ],
+      "highlights": [
+        {"id":  "highlight-1", "title": "모노레포 기반 커스텀 패키지"},
+        {"id": "highlight-3", "title": "Atomic UI 관리에서의 불편함을 해소하고자 개발"},
+        {"id": "highlight-2", "title": "Storybook을 활용해 UI 테스트 및 문서화"},
+        {"id": "highlight-4", "title": "스타일링 방식을 SCSS에서 TailwindCSS로 전환하여 빌드 속도를 개선"}
+      ],
+      "troubleShooting": [
         {
-          "id": "screen-id-1",
-          "url": "https://private-user-images.githubusercontent.com/69448900/403294030-ed129376-c615-4d1c-a5fe-38c44cb72003.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcwMzM0NzcsIm5iZiI6MTczNzAzMzE3NywicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTQwMzAtZWQxMjkzNzYtYzYxNS00ZDFjLWE1ZmUtMzhjNDRjYjcyMDAzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTE2VDEzMTI1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAwNGRiMzA3MDAzNmVlM2JmOTQwODg2MDgxMmYwNmVkMmI5YzdkZjRmN2FhYWIyZGYyZDc4Y2U2NmQ4NmZkNWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.yaM5Uc96Hu5mHJXtU6PcxorRxgU5h3tx_MzEBDKQuc0",
-          "title": "Badge",
-          "content": ["태그형 데이터를 표현하는 UI"]
+          "id": "trouble-1",
+          "title": "무슨무슨 주제",
+          "contents": ["어떤어떤 방법", "다른 방법2", "다른 방법3"]
         },
         {
-          "id": "screen-id-2",
-          "url": "https://private-user-images.githubusercontent.com/69448900/403295666-31704a10-a869-4db4-b62e-8611f30dcb0e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcwMzM0NzcsIm5iZiI6MTczNzAzMzE3NywicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTU2NjYtMzE3MDRhMTAtYTg2OS00ZGI0LWI2MmUtODYxMWYzMGRjYjBlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTE2VDEzMTI1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVkM2RkNjJlODYxZTU5NmJlMjdiY2EwMGJhNGVkZGYxOGU5MmE2ZjFhZTViYzEyZmVhMjljOWRjZTM5YTVlMGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gyKNaXd-d-1I_ER2YGJqPTcXeY4jQpSxjbURr1JLuLE",
-          "title": "Button",
-          "content": ["사용자와 클릭으로 상호작용하는 UI"]
-        },
-        {
-          "id": "screen-id-3",
-          "url": "https://private-user-images.githubusercontent.com/69448900/403297454-f4c4cf3a-5cb3-4611-bce1-cce1618ee224.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcwMzM0NzcsIm5iZiI6MTczNzAzMzE3NywicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTc0NTQtZjRjNGNmM2EtNWNiMy00NjExLWJjZTEtY2NlMTYxOGVlMjI0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTE2VDEzMTI1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU4YWZiNmFhMzFiZDRkMmJjZmYwYzYyOGNkNmMxMzM4YmJlMGIxNWE1ZjhiY2Y1Y2NjNGY4MGVjM2Y2ZmU3MjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.afWVQkX7QPKQJd9BeTJlLXfb13l9_9KRlXO3Bw9YlY8",
-          "title": "Checkbox Group",
-          "content": [
-            "여러 개의 선택지를 사용자에게 제공하고, 중복 또는 하나의 값을 받는 UI"
-          ]
-        },
-        {
-          "id": "screen-id-4",
-          "url": "https://private-user-images.githubusercontent.com/69448900/403299614-8d0d598e-ccba-4237-b488-71bb80e2a6af.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcwMzM0NzcsIm5iZiI6MTczNzAzMzE3NywicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTk2MTQtOGQwZDU5OGUtY2NiYS00MjM3LWI0ODgtNzFiYjgwZTJhNmFmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTE2VDEzMTI1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWExZWRjZDgyMmM4ZjQ0NzdmZjY5MTY2Y2E0ZTk3MmEyMzM2ZTc0YTZkN2I3NjllN2FiNmJlMTdmZjJmZjM4NTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.P2wRHipMrRESOLsRsQplZwBfcyfwpkip3e0ehqnJrZI",
-          "title": "Text Feild",
-          "content": ["사용자가 입력한 값을 받는 UI"]
+          "id": "trouble-2",
+          "title": "무슨무슨 주제",
+          "contents": ["어떤어떤 방법", "다른 방법2", "다른 방법3"]
         }
       ],
-      "stacks": [
-        "Vite",
-        "React",
-        "TypeScript",
-        "TailwindCSS",
-        "Storybook",
-        "PNPM"
-      ],
-      "background": "실무에서 Vanilla JS로 작업하며, 개발자마다 Atomic UI를 각기 다른 방식으로 구현해 유지보수의 어려움을 경험했습니다. 동일한 디자인 가이드가 여러 프로젝트에 적용되었으나, 디자인 변경 시 모든 프로젝트를 일일이 수정해야 하는 비효율성이 발생했습니다. 이를 해결하고자, 모노레포를 활용해 디자인 시스템을 패키지화하여 공유했습니다.\n복잡했던 SCSS 기반 스타일링을 TailwindCSS로 전환해 개발 생산성 및 협업 효율성을 높이고, Config 파일 공유로 일관된 스타일 관리를 실현하고자 했습니다.",
-      "highlights": [
-        "모노레포 기반 커스텀 패키지로 디자인 시스템 구축",
-        "Storybook을 활용해 UI 테스트 및 Atomic UI와 디자인 가이드 구현",
-        "프로젝트 간 UI 일관성을 확보하고, 디자인 변경에 따른 수정 시간을 크게 단축",
-        "TailwindCSS Config 파일로 색상, 간격 등을 표준화하여 스타일링 속도와 가독성을 개선"
-      ],
       "learnings": [
-        "Figma Dev 모드를 사용하여 color token과 text token 등을 손쉽게 추출할 수 있었습니다. TailwindCSS Config 파일과 함께 사용해, 디자인 가이드 구현 시간을 3일에서 2시간으로 대폭 단축할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 많은 시간이 소요되었지만, Figma와 TailwindCSS의 강력한 연동 덕분에 효율적으로 작업할 수 있었습니다.",
-        "이 경험을 통해, 세부 작업은 AI와 도구를 적극 활용함으로써 더 재미있고 창의적인 작업(예: 컴포넌트 구현)에 시간을 할애할 수 있다는 점을 깨달았습니다. 앞으로는 AI와 자동화 도구를 활용해 반복 작업을 최소화하고, 창의적이고 전략적인 작업에 집중할 계획입니다."
+        { "id": "learning-1", "title": "주제", "contents": [ "Figma Dev 모드를 사용하여 color token과 text token 등을 손쉽게 추출할 수 있었습니다. TailwindCSS Config 파일과 함께 사용해, 디자인 가이드 구현 시간을 3일에서 2시간으로 대폭 단축할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 많은 시간이 소요되었지만, Figma와 TailwindCSS의 강력한 연동 덕분에 효율적으로 작업할 수 있었습니다.",
+        "이 경험을 통해, 세부 작업은 AI와 도구를 적극 활용함으로써 더 재미있고 창의적인 작업(예: 컴포넌트 구현)에 시간을 할애할 수 있다는 점을 깨달았습니다. 앞으로는 AI와 자동화 도구를 활용해 반복 작업을 최소화하고, 창의적이고 전략적인 작업에 집중할 계획입니다."] },
+        { "id": "learning-2", "title": "주제", "contents": [ "Figma Dev 모드를 사용하여 color token과 text token 등을 손쉽게 추출할 수 있었습니다. TailwindCSS Config 파일과 함께 사용해, 디자인 가이드 구현 시간을 3일에서 2시간으로 대폭 단축할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 많은 시간이 소요되었지만, Figma와 TailwindCSS의 강력한 연동 덕분에 효율적으로 작업할 수 있었습니다.",
+        "이 경험을 통해, 세부 작업은 AI와 도구를 적극 활용함으로써 더 재미있고 창의적인 작업(예: 컴포넌트 구현)에 시간을 할애할 수 있다는 점을 깨달았습니다. 앞으로는 AI와 자동화 도구를 활용해 반복 작업을 최소화하고, 창의적이고 전략적인 작업에 집중할 계획입니다."] }
       ],
       "links": {
         "blog": [
           {
             "id": "blog-link-1",
             "title": "모노레포 PNPM으로 구성하기 (Feat. NextJS, Vite, React, TypeScript)",
-            "link": "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-Feat.-NextJS-Vite-React-TypeScript"
+            "content": "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-Feat.-NextJS-Vite-React-TypeScript"
           },
           {
             "id": "blog-link-2",
             "title": "모노레포 PNPM으로 구성하기 - TailwindCSS",
-            "link": "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-TailwindCSS"
+            "content": "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-TailwindCSS"
           },
           {
             "id": "blog-link-3",
             "title": "모노레포 PNPM으로 구성하기 - TypeScript",
-            "link": "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-TypeScript"
+            "content": "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-TypeScript"
           }
         ],
         "github": "https://github.com/inhye94/pnpm-next-monorepo/tree/main/packages/design-system",
@@ -79,88 +63,88 @@
     {
       "id": "project-id-2",
       "title": "원티드 사전 과제 To Do Lisg",
-      "summary": "이 프로젝트는 프론트엔드와 백엔드 서비스를 포함한 모노레포 구조로 구성되어 있습니다.\n원티드 2024년 11월 프리온보딩 사전과제 진행를 위해 제작되었습니다.",
       "period": "2024.11.14 ~ 2024.12.21",
       "team": "개인 프로젝트",
       "thumbnailUrl": "https://private-user-images.githubusercontent.com/69448900/397971949-95fc1633-f71a-4a20-9454-a2bb24609a6a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzcwMzQyOTAsIm5iZiI6MTczNzAzMzk5MCwicGF0aCI6Ii82OTQ0ODkwMC8zOTc5NzE5NDktOTVmYzE2MzMtZjcxYS00YTIwLTk0NTQtYTJiYjI0NjA5YTZhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTE2VDEzMjYzMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIzNzllYjkxOTU1MjFkNjdjMTBlNTFjMGIxNWQzNmMzOTMyNTk3MzIyOTMxY2RmZWZmZDJlZTIzNjNlODExOWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.YqJmMUaTkCOcO1GnaIbWXUOakszOpCbkjQ0A2pYHjCA",
-      "screens": [
-        {
-          "id": "screen-id-1",
-          "url": "이미지 주소",
-          "title": "페이지명",
-          "content": ["기능1", "기능2", "기능3"]
-        },
-        {
-          "id": "screen-id-1",
-          "url": "이미지 주소",
-          "title": "페이지명",
-          "content": ["기능1", "기능2", "기능3"]
-        },
-        {
-          "id": "screen-id-1",
-          "url": "이미지 주소",
-          "title": "페이지명",
-          "content": ["기능1", "기능2", "기능3"]
-        }
+      "stacks": [
+        {"id": "stack-1", "title": "Vite"},
+        {"id": "stack-2", "title": "React"},
+        {"id": "stack-3", "title": "TypeScript"},
+        {"id": "stack-4", "title": "TailwindCSS"},
+        {"id": "stack-5", "title": "Storybook"},
+        {"id": "stack-6", "title": "PNPM"}
       ],
-      "stacks": ["스택1", "스택2", "스택3"],
-      "background": "개발 배경을 이러쿵 저러쿵",
-      "highlights": ["작업1", "작업2", "작업3"],
-      "feature": ["기능1", "기능2", "기능3"],
+      "highlights": [
+        {"id":  "highlight-1", "title": "모노레포 기반 커스텀 패키지"},
+        {"id": "highlight-3", "title": "Atomic UI를 패키지로 공유하여, 작업자마다 달랐던 UI 구현방식을 하나로 통합하고 스타일 일관성을 확보"},
+        {"id": "highlight-2", "title": "Storybook을 활용해 UI 테스트 및 문서화"},
+        {"id": "highlight-4", "title": "스타일링 방식을 SCSS에서 TailwindCSS로 전환하여 빌드 속도를 개선"}
+      ],
       "troubleShooting": [
         {
-          "title": "주제",
-          "problem": "문제점",
-          "solution": "해결법",
-          "outcome": "성과"
+          "id": "trouble-1",
+          "title": "무슨무슨 주제",
+          "contents": ["어떤어떤 방법", "다른 방법2", "다른 방법3"]
+        },
+        {
+          "id": "trouble-2",
+          "title": "무슨무슨 주제",
+          "contents": ["어떤어떤 방법", "다른 방법2", "다른 방법3"]
         }
       ],
       "learnings": [
-        { "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] }
+        { "id": "learning-1", "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] },
+        { "id": "learning-2", "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] },
+        { "id": "learning-3", "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] }
       ],
       "links": {
-        "blog": [{ "title": "블로그 주제", "link": "블로그 링크" }],
+        "blog": [{ "id": "link-blog-1", "title": "블로그 주제", "content": "블로그 링크" }],
         "github": "깃허브 링크",
         "deploy": "배포 링크"
-      },
-      "setup": "셋업 방법"
+      }
     },
     {
       "id": "project-id-3",
       "title": "프로젝트명",
-      "summary": "프로잭트 개요",
       "period": "언제부터 ~ 언제까지",
       "team": "개인 프로젝트 / 팀 프로젝트 (몇 명)",
       "thumbnailUrl": "이미지 주소",
-      "screens": [
-        {
-          "id": "screen-id-1",
-          "url": "이미지 주소",
-          "title": "페이지명",
-          "content": ["기능1", "기능2", "기능3"]
-        }
+      "stacks": [
+        {"id": "stack-1", "title": "Vite"},
+        {"id": "stack-2", "title": "React"},
+        {"id": "stack-3", "title": "TypeScript"},
+        {"id": "stack-4", "title": "TailwindCSS"},
+        {"id": "stack-5", "title": "Storybook"},
+        {"id": "stack-6", "title": "PNPM"}
       ],
-      "stacks": ["스택1", "스택2", "스택3"],
-      "background": "개발 배경을 이러쿵 저러쿵",
-      "highlights": ["작업1", "작업2", "작업3"],
-      "feature": ["기능1", "기능2", "기능3"],
+      "highlights": [
+        {"id":  "highlight-1", "title": "모노레포 기반 커스텀 패키지"},
+        {"id": "highlight-3", "title": "Atomic UI를 패키지로 공유하여, 작업자마다 달랐던 UI 구현방식을 하나로 통합하고 스타일 일관성을 확보"},
+        {"id": "highlight-2", "title": "Storybook을 활용해 UI 테스트 및 문서화"},
+        {"id": "highlight-4", "title": "스타일링 방식을 SCSS에서 TailwindCSS로 전환하여 빌드 속도를 개선"}
+      ],
       "troubleShooting": [
         {
-          "title": "주제",
-          "problem": "문제점",
-          "solution": "해결법",
-          "outcome": "성과"
+          "id": "trouble-1",
+          "title": "무슨무슨 주제",
+          "contents": ["어떤어떤 방법", "다른 방법2", "다른 방법3"]
+        },
+        {
+          "id": "trouble-2",
+          "title": "무슨무슨 주제",
+          "contents": ["어떤어떤 방법", "다른 방법2", "다른 방법3"]
         }
       ],
       "learnings": [
-        { "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] }
+        { "id": "learning-1", "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] },
+        { "id": "learning-2", "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] },
+        { "id": "learning-3", "title": "주제", "contents": ["배운점1", "배운점2", "배운점3"] }
       ],
       "links": {
-        "blog": [{ "title": "블로그 주제", "link": "블로그 링크" }],
+        "blog": [{ "id": "link-blog-1",  "title": "블로그 주제", "content": "블로그 링크" }],
         "github": "깃허브 링크",
         "deploy": "배포 링크"
-      },
-      "setup": "셋업 방법"
+      }
     }
   ],
   "careers": [

@@ -1,39 +1,27 @@
-interface IDetailImages {
-  id: string;
-  url: string;
-  title: string;
-  content?: string[];
-}
-
-interface ITroubleShooting {
-  title: string;
-  problem: string;
-  solution: string;
-  outcome: string;
-}
-
-interface ILink {
+interface BasicType {
   id: string;
   title: string;
-  link: string;
+  content: string;
+}
+
+type OnlyTitleType = Pick<BasicType, "id" | "title">;
+
+interface TitleAndMultipleContentsType extends Omit<BasicType, "content"> {
+  contents?: string[];
 }
 
 export interface IProjectItem {
   id: string;
   title: string;
-  summary: string;
   period: string;
   team: string;
   thumbnailUrl: string;
-  screens: IDetailImages[];
-  stacks: string[];
-  background: string;
-  highlights?: string[];
-  feature?: string[];
-  troubleShooting?: ITroubleShooting[];
-  learnings: string[];
+  stacks: OnlyTitleType[];
+  highlights: OnlyTitleType[];
+  troubleShooting?: TitleAndMultipleContentsType[];
+  learnings: TitleAndMultipleContentsType[];
   links: {
-    blog?: ILink[];
+    blog?: BasicType[];
     github: string;
     deploy?: string;
   };
