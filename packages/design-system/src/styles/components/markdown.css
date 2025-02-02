@@ -1,0 +1,16 @@
+/* markdown 스타일 */
+@layer components {
+  .markdown {
+    code {
+      display: inline-block;
+      padding: 2px 6px !important;
+      border: none;
+      border-radius: var(--radius-4);
+      background-color: var(--color-coolNeutral-97);
+    }
+
+    li {
+      list-style: inside;
+    }
+  }
+}

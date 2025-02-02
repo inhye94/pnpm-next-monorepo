@@ -6,6 +6,7 @@ export { default as IconButton } from "./iconButton/IconButton";
 export { default as IconLink } from "./iconButton/IconLink";
 export { default as BaseInput } from "./input/BaseInput";
 export { default as Container } from "./layout/Container";
+export { default as Markdown } from "./markdown/ReactMarkdown";
 export { default as Modal } from "./modal/BaseModal";
 export { default as RadioGroup } from "./radioGroup/RadioGroup";
 export { default as TextField } from "./textField/TextField";
