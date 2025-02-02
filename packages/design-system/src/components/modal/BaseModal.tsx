@@ -1,9 +1,5 @@
-import { ModalProvider } from "../../providers/ModalProvider";
-import ModalClose from "./ModalClose";
-import ModalContent from "./ModalContent";
-import ModalOverlay from "./ModalOverlay";
-import ModalPortal from "./ModalPortal";
-import ModalTrigger from "./ModalTrigger";
+import classNames from "classnames";
+import { Dialog } from "radix-ui";
 
 /**
  * Modal 컴포넌트
@@ -22,22 +18,42 @@ import ModalTrigger from "./ModalTrigger";
 <Modal.Root>
   <Modal.Trigger>트리거</Modal.Trigger>
   <Modal.Portal>
-    <Modal.Overlay />
-    <Modal.Content>
-      <Modal.Close>닫기</Modal.Close>
-      <p>모달 내용</p>
-    </Modal.Content>
+    <Modal.Overlay>
+      <Modal.Content>
+        <Modal.Close>닫기</Modal.Close>
+        <p>모달 내용</p>
+      </Modal.Content>
+    </Modal.Overlay>
   </Modal.Portal>
 </Modal.Root>
  */
 
 export default function Modal({ children }: { children: React.ReactNode }) {
-  return <ModalProvider>{children}</ModalProvider>;
+  return <Dialog.Root>{children}</Dialog.Root>;
 }
 
-Modal.Root = Modal;
-Modal.Portal = ModalPortal;
+function ModalOverlay({ children }: { children: React.ReactNode }) {
+  return <Dialog.Overlay className="overlay">{children}</Dialog.Overlay>;
+}
+
+function ModalContent({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Dialog.Content className={classNames("modal-content", className)}>
+      {children}
+    </Dialog.Content>
+  );
+}
+
+Modal.Root = Dialog.Root;
+Modal.Portal = Dialog.Portal;
 Modal.Content = ModalContent;
-Modal.Trigger = ModalTrigger;
-Modal.Close = ModalClose;
+Modal.Trigger = Dialog.Trigger;
+Modal.Close = Dialog.Close;
 Modal.Overlay = ModalOverlay;
+Modal.Title = Dialog.Title;

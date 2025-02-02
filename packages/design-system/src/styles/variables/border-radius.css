@@ -8,5 +8,5 @@
   --radius-16: 16px;
   --radius-20: 20px;
 
-  --radius-modal: 16px;
+  --radius-modal: var(--radius-16);
 }
