@@ -1,0 +1,38 @@
+@layer components {
+  .iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    color: var(--color-neutral-20);
+    font-size: var(--text-20);
+    transition: background-color 150ms ease-in-out;
+
+    &:hover {
+      background-color: var(--color-coolNeutral-97);
+    }
+  }
+
+  .is-outlined {
+    border: 1px solid var(--color-coolNeutral-95);
+    background-color: var(--color-white);
+  }
+
+  .is-ghost {
+    background-color: var(--color-white);
+  }
+
+  .is-float {
+    box-shadow: 0 3px 17px 0 var(--color-neutral-70);
+  }
+
+  /* desktop */
+  @media screen and (min-width: 1024px) {
+    .iconButton {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}

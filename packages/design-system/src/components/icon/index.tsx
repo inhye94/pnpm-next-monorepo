@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { iconMap } from "./iconMap";
 
 // type
-interface IIconProps {
+export interface IIconProps {
   name: keyof typeof iconMap;
   label?: string;
   className?: string;

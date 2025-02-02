@@ -23,6 +23,7 @@
 - 꼭 필요한 것만 넣기
 */
 @import "./components/modal.css" layer(components);
+@import "./components/iconButton.css" layer(components);
 
 /* utilities */
 @utility text-heading-* {
