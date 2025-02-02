@@ -34,4 +34,13 @@ export const iconMap = {
   checkboxGhost: lazy(() =>
     import("react-icons/io").then((m) => ({ default: m.IoIosCheckmark })),
   ),
+  github: lazy(() =>
+    import("react-icons/io").then((m) => ({ default: m.IoLogoGithub })),
+  ),
+  externalLink: lazy(() =>
+    import("react-icons/fi").then((m) => ({ default: m.FiExternalLink })),
+  ),
+  velog: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiVelog })),
+  ),
 };
