@@ -57,7 +57,7 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
         </div>
       </header>
 
-      <hr className="border-neutral-95 my-24 block h-1 border border-t-0 lg:my-40" />
+      <hr className="border-border my-24 block h-1 border border-t-0 lg:my-40" />
 
       <div className="flex flex-col gap-24 lg:gap-48">
         <DetailSection title="작업 내역">

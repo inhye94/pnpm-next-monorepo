@@ -41,13 +41,13 @@ export default function ProjectModal({
 }: IProjectModalProps) {
   return (
     <Modal.Root>
-      <Modal.Trigger className="w-full text-left transition hover:-translate-y-10 hover:border-solid hover:shadow-2xl focus:-translate-y-10 focus:border-solid focus:shadow-2xl">
+      <Modal.Trigger className="rounded-base w-full text-left transition hover:-translate-y-10 hover:border-solid hover:shadow-2xl focus:-translate-y-10 focus:border-solid focus:shadow-2xl">
         {trigger}
       </Modal.Trigger>
       <Modal.Portal>
         <Modal.Overlay>
           <Modal.Content className="relative">
-            <header className="md:rounded-t-modal border-neutral-95 sticky top-0 left-0 border-b-1 bg-white">
+            <header className="md:rounded-t-modal border-border sticky top-0 left-0 border-b-1 bg-white">
               <div className="flex min-h-48 items-center justify-between px-16 lg:h-54">
                 <Modal.Title className="text-14 text-neutral-20 font-semibold whitespace-nowrap">
                   {title}
@@ -64,7 +64,7 @@ export default function ProjectModal({
               </div>
 
               <ProjectLinkList
-                className="border-neutral-95 sticky top-48 right-0 border-t-1 bg-white p-8 lg:absolute lg:top-0 lg:-right-10 lg:translate-x-full lg:border-none lg:bg-transparent"
+                className="border-border sticky top-48 right-0 border-t-1 bg-white p-8 lg:absolute lg:top-0 lg:-right-10 lg:translate-x-full lg:border-none lg:bg-transparent"
                 links={links}
               />
             </header>

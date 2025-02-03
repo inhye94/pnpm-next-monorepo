@@ -20,7 +20,7 @@ export default function ProjectCard({ project, className }: IProjectCardProps) {
   return (
     <article
       className={classNames(
-        "bg-coolNeutral-99 rounded-base hover:bg-coolNeutral-97 relative min-h-300 overflow-hidden p-32",
+        "bg-background-gray rounded-base hover:bg-background-darkgray relative min-h-300 overflow-hidden p-32",
         className,
       )}
     >
