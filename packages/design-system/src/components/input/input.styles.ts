@@ -15,7 +15,7 @@ export const INPUT_BASE_STYLE = `
   transition-colors duration-200
 
   enabled:hover:border-primary enabled:focus:border-primary
-  disabled:bg-coolNeutral-97 disabled:placeholder-disable disabled:cursor-not-allowed
+  disabled:bg-background-darkgray disabled:placeholder-disable disabled:cursor-not-allowed
 `;
 
 export const INPUT_SIZE_STYLE: Record<InputSizeType, string> = {

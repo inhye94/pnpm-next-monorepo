@@ -212,4 +212,12 @@
 
   --color-label-disable: var(--color-coolNeutral-80);
   --color-label-disable-dark: var(--color-coolNeutral-60);
+
+  /* background color */
+  --color-background-dark: var(--color-neutral-10);
+  --color-background-gray: var(--color-coolNeutral-99);
+  --color-background-darkgray: var(--color-coolNeutral-97);
+
+  /* border color */
+  --color-border: var(--color-neutral-95);
 }

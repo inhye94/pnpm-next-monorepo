@@ -6,7 +6,7 @@
       padding: 2px 6px !important;
       border: none;
       border-radius: var(--radius-4);
-      background-color: var(--color-coolNeutral-97);
+      background-color: var(--color-background-darkgray);
     }
 
     li {
