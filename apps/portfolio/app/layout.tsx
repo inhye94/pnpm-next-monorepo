@@ -1,6 +1,6 @@
 import Cta from "@/components/Cta";
 import Finish from "@/components/Finish";
-import Gnb from "@/components/Gnb";
+import Gnb from "@/components/Gnb/Gnb";
 import type { Metadata } from "next";
 import "./global.css";
 
@@ -20,6 +20,7 @@ export default function RootLayout({
         <Gnb />
         <Cta />
         <main>{children}</main>
+        <div id="modal-root"></div>
         <Finish />
       </body>
     </html>

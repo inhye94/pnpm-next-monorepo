@@ -12,9 +12,7 @@ export default function Home() {
       <SkillSection />
       <hr />
       <ContactSection />
-      <hr />
       <ProjectSection />
-      <hr />
       <CareerSection />
     </>
   );

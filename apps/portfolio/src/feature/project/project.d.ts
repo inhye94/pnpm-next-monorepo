@@ -6,6 +6,8 @@ interface BasicType {
 
 type OnlyTitleType = Pick<BasicType, "id" | "title">;
 
+type OnlyContentType = Pick<BasicType, "id" | "content">;
+
 interface TitleAndMultipleContentsType extends Omit<BasicType, "content"> {
   contents?: string[];
 }
@@ -17,7 +19,7 @@ export interface IProjectItem {
   team: string;
   thumbnailUrl: string;
   stacks: OnlyTitleType[];
-  highlights: OnlyTitleType[];
+  highlights: OnlyContentType[];
   troubleShooting?: TitleAndMultipleContentsType[];
   learnings: TitleAndMultipleContentsType[];
   links: {
