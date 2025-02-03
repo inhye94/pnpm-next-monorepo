@@ -32,7 +32,7 @@ export default function LocalNavButton({
       <i
         className={classNames(
           "lg-hidden",
-          "text-30 flex items-center justify-center text-center",
+          "text-16 flex items-center justify-center text-center",
         )}
         aria-hidden
       >

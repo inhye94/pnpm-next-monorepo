@@ -1,6 +1,6 @@
 "use client";
 
-import Icon from "node_modules/@workspace/design-system/src/components/icon";
+import { Icon } from "@workspace/design-system/components";
 import { useState } from "react";
 import LocalNavButton from "./LocalNavButton";
 
@@ -52,7 +52,7 @@ export default function LocalNav() {
   };
 
   return (
-    <nav className="border-neutral-95 fixed bottom-0 left-0 w-full border-t bg-white lg:static lg:w-auto lg:border-none lg:bg-transparent">
+    <nav className="border-neutral-95 z-gnb fixed bottom-0 left-0 w-full border-t bg-white lg:static lg:w-auto lg:border-none lg:bg-transparent">
       <h3 className="visually-hidden">사이드 메뉴</h3>
 
       <ul className="flex items-center justify-evenly lg:inline-flex">
