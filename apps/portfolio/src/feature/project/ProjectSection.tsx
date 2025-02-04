@@ -10,11 +10,10 @@ import ProjectModal from "./ProjectModal";
  * 특징:
  * 1. 진행했던 프로젝트를 카드 형태로 보여주는 section
  */
-
 export default function ProjectSection() {
   return (
     <Section title="Project" id="project">
-      <div className="flex flex-col gap-12 md:grid md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
         {projects?.map((project) => (
           <ProjectModal
             key={project.id}
