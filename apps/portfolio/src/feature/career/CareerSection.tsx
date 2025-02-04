@@ -1,19 +1,13 @@
-import { getCareers } from "./api/career";
+import Section from "@/components/layout/Section";
+import { careers } from "@/data/mockCareer";
+import CareerCard from "./CareerCard";
 
-/**
- * <카드>
- * 회사명
- * 개요
- * 기여 및 역할
- */
-
-export default async function CareerSection() {
-  const careers = await getCareers();
+export default function CareerSection() {
+  // const careers = await getCareers();
 
   return (
-    <section>
-      <h2>커리어</h2>
-      {JSON.stringify(careers)}
-    </section>
+    <Section title="Career" id="career">
+      {careers?.map((career) => <CareerCard key={career.id} career={career} />)}
+    </Section>
   );
 }
