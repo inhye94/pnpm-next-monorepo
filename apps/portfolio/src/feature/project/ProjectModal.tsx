@@ -47,7 +47,7 @@ export default function ProjectModal({
       <Modal.Portal>
         <Modal.Overlay>
           <Modal.Content className="relative">
-            <header className="md:rounded-t-modal border-border sticky top-0 left-0 border-b-1 bg-white">
+            <header className="md:rounded-t-modal border-border sticky top-0 left-0 z-10 border-b-1 bg-white">
               <div className="flex min-h-48 items-center justify-between px-16 lg:h-54">
                 <Modal.Title className="text-14 text-neutral-20 font-semibold whitespace-nowrap">
                   {title}
