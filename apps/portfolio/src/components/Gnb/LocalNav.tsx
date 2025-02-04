@@ -28,16 +28,21 @@ const localNavMenu: ILocalNavMenu[] = [
   },
   {
     id: "localnav-2",
-    text: "contact",
-    icon: <Icon name="link" />,
+    text: "skill",
+    icon: <Icon name="tool" />,
   },
   {
     id: "localnav-3",
+    text: "link",
+    icon: <Icon name="link" />,
+  },
+  {
+    id: "localnav-4",
     text: "project",
     icon: <Icon name="folder" />,
   },
   {
-    id: "localnav-4",
+    id: "localnav-5",
     text: "career",
     icon: <Icon name="company" />,
   },
