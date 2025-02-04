@@ -175,12 +175,9 @@
   --color-purple-10: #290247;
 
   /* primary */
-  --color-primary: var(--color-blue-50);
-  --color-primary-dark: var(--color-blue-60);
+  --color-primary: var(--color-blue-60);
   --color-primary-strong: var(--color-blue-45);
-  --color-primary-strong-dark: var(--color-blue-55);
   --color-primary-heavy: var(--color-blue-40);
-  --color-primary-heavy-dark: var(--color-blue-50);
 
   /* positive */
   --color-positive: var(--color-green-50);
