@@ -8,9 +8,7 @@ export default function Home() {
   return (
     <>
       <AboutSection />
-      <hr />
       <SkillSection />
-      <hr />
       <ContactSection />
       <ProjectSection />
       <CareerSection />
