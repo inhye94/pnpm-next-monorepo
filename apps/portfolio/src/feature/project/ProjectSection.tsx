@@ -14,19 +14,18 @@ import ProjectModal from "./ProjectModal";
 export default function ProjectSection() {
   return (
     <Section title="Project" id="project">
-      <ul className="flex flex-col gap-12 md:grid md:grid-cols-3">
+      <div className="flex flex-col gap-12 md:grid md:grid-cols-3">
         {projects?.map((project) => (
-          <li key={project.id} className="*:h-full">
-            <ProjectModal
-              title={project.title}
-              links={project.links}
-              trigger={<ProjectCard project={project} className="h-full" />}
-            >
-              <ProjectDetail key={project.id} project={project} />
-            </ProjectModal>
-          </li>
+          <ProjectModal
+            key={project.id}
+            title={project.title}
+            links={project.links}
+            trigger={<ProjectCard project={project} className="h-full" />}
+          >
+            <ProjectDetail project={project} />
+          </ProjectModal>
         ))}
-      </ul>
+      </div>
     </Section>
   );
 }
