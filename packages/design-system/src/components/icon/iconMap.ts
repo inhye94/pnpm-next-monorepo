@@ -43,4 +43,7 @@ export const iconMap = {
   velog: lazy(() =>
     import("react-icons/si").then((m) => ({ default: m.SiVelog })),
   ),
+  tool: lazy(() =>
+    import("react-icons/fa").then((m) => ({ default: m.FaTools })),
+  ),
 };
