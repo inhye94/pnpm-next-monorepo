@@ -1,10 +1,10 @@
 import { BaseBadge } from "@workspace/design-system/components";
 import classNames from "classnames";
-import type { IContactItem } from "./ContactSection";
+import type { ILinkItem } from "./LinkSection";
 
 // type
-interface IContactCardProps {
-  contact: IContactItem;
+interface ILinkCardProps {
+  link: ILinkItem;
 }
 
 // style
@@ -12,7 +12,7 @@ const CARD_HOVER_STYLE =
   "transition-transform group-hover:-translate-y-full duration-350";
 
 // component
-export default function ContactCard({ contact }: IContactCardProps) {
+export default function LinkCard({ link }: ILinkCardProps) {
   return (
     <article className="group rounded-base relative h-160 w-280 overflow-hidden bg-white *:flex *:h-full *:w-full *:shrink-0 *:flex-wrap *:items-center *:justify-center *:gap-4">
       <h4
@@ -21,12 +21,12 @@ export default function ContactCard({ contact }: IContactCardProps) {
           CARD_HOVER_STYLE,
         )}
       >
-        {contact.icon}
-        {contact.title}
+        {link.icon}
+        {link.title}
       </h4>
 
       <ol className={classNames("flex-col", CARD_HOVER_STYLE)}>
-        {contact.points?.map((point) => (
+        {link.points?.map((point) => (
           <li key={point.id}>
             <BaseBadge size="md" variant="soft" color={point.color}>
               {point.title}
@@ -37,9 +37,9 @@ export default function ContactCard({ contact }: IContactCardProps) {
 
       <a
         className="absolute top-0 left-0 h-full w-full"
-        href={contact.url}
+        href={link.url}
         target="_blank"
-        aria-label={`${contact.title} 링크로 이동`}
+        aria-label={`${link.title} 링크로 이동`}
       ></a>
     </article>
   );
