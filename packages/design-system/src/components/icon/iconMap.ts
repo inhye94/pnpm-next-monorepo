@@ -46,4 +46,19 @@ export const iconMap = {
   tool: lazy(() =>
     import("react-icons/fa").then((m) => ({ default: m.FaTools })),
   ),
+  email: lazy(() =>
+    import("react-icons/md").then((m) => ({ default: m.MdEmail })),
+  ),
+  birth: lazy(() =>
+    import("react-icons/fa").then((m) => ({ default: m.FaBirthdayCake })),
+  ),
+  phone: lazy(() =>
+    import("react-icons/md").then((m) => ({ default: m.MdPhoneIphone })),
+  ),
+  school: lazy(() =>
+    import("react-icons/md").then((m) => ({ default: m.MdSchool })),
+  ),
+  person: lazy(() =>
+    import("react-icons/md").then((m) => ({ default: m.MdPerson })),
+  ),
 };
