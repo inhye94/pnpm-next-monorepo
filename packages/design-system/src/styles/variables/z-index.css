@@ -1,7 +1,9 @@
 @theme {
   --z-index-gnb: 100;
   --z-index-progress: 100;
+  --z-index-cta: 100;
   --z-index-overlay: 200;
   --z-index-modal: 300;
   --z-index-dropdown: 400;
+  --z-index-toast: 500;
 }

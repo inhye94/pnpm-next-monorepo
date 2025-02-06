@@ -11,3 +11,4 @@ export { default as Markdown } from "./markdown/ReactMarkdown";
 export { default as Modal } from "./modal/BaseModal";
 export { default as RadioGroup } from "./radioGroup/RadioGroup";
 export { default as TextField } from "./textField/TextField";
+export { default as ToastContainer } from "./toast/ToastContainer";

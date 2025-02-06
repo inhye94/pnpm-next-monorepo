@@ -26,6 +26,7 @@
 @import "./components/iconButton.css" layer(components);
 @import "./components/markdown.css" layer(components);
 @import "./components/dropdown.css" layer(components);
+@import "./components/toast.css" layer(components);
 
 /* utilities */
 @utility text-heading-* {

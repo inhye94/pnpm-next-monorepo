@@ -1,0 +1,41 @@
+@layer components {
+  .toast-container {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: var(--z-index-toast);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .toast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    padding: 8px 16px;
+    border-radius: var(--radius-8);
+    font-size: var(--text-14);
+    color: var(--color-white);
+    box-shadow: 0 3px 17px 0 var(--color-neutral-70);
+  }
+
+  .is-info {
+    background-color: var(--color-primary);
+  }
+
+  .is-success {
+    background-color: var(--color-positive);
+  }
+
+  .is-error {
+    background-color: var(--color-negative);
+  }
+
+  .close-button {
+    position: relative;
+    right: -8px;
+    color: var(--color-white);
+  }
+}

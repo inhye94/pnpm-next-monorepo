@@ -1,8 +1,10 @@
-import { Container, Modal } from "./components";
+import { BaseButton, Container, Modal, ToastContainer } from "./components";
 import CheckboxGroup from "./components/checkboxGroup/CheckboxGroup";
 import RadioGroup from "./components/radioGroup/RadioGroup";
+import { useToastContext } from "./providers";
 
 function App() {
+  const { showToast } = useToastContext();
   return (
     <>
       <p className="bg-primary text-heading-1 text-white">
@@ -23,6 +25,19 @@ function App() {
           </Modal.Portal>
         </Modal.Root>
       </Container>
+
+      <Container>
+        <BaseButton onClick={() => showToast("됐서요!", "success")}>
+          토스트 나와랏
+        </BaseButton>
+        <BaseButton onClick={() => showToast("info!", "info")}>
+          토스트 나와랏
+        </BaseButton>
+        <BaseButton onClick={() => showToast("error!", "error")}>
+          토스트 나와랏
+        </BaseButton>
+      </Container>
+      <ToastContainer />
 
       <RadioGroup.Root error="뿡" title="누구야" name="who" required>
         <RadioGroup.Item value="123" label="123" />
