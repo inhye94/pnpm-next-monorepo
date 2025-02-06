@@ -7,7 +7,7 @@ export default function ProgressBar() {
 
   return (
     <motion.div
-      className="z-progress bg-cautionary sticky top-50 right-0 left-0 h-6 origin-left"
+      className="z-progress bg-cautionary fixed top-50 right-0 left-0 h-6 origin-left"
       style={{ scaleX: scrollYProgress }}
     />
   );
