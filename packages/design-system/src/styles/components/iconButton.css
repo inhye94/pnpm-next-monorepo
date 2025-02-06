@@ -21,7 +21,11 @@
   }
 
   .is-ghost {
-    background-color: var(--color-white);
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.14);
+    }
   }
 
   .is-float {
