@@ -1,8 +1,10 @@
-import Cta from "@/components/Cta";
+import Cta from "@/components/Cta/Cta";
 import Finish from "@/components/Finish";
 import Gnb from "@/components/Gnb/Gnb";
-import ProgressBar from "@/components/Progressbar";
-import { Metadata } from "next";
+import ProgressBar from "@/components/ProgressBar";
+import Providers from "@/providers";
+import { ToastContainer } from "@workspace/design-system/components";
+import type { Metadata } from "next";
 import "./global.css";
 
 export const metadata: Metadata = {
@@ -18,12 +20,16 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Gnb />
-        <ProgressBar />
-        <Cta />
-        <main>{children}</main>
-        <div id="modal-root"></div>
-        <Finish />
+        <Providers>
+          <Gnb />
+          <ProgressBar />
+          <main>{children}</main>
+          <Cta />
+          <Finish />
+
+          <ToastContainer />
+          <div id="modal-root"></div>
+        </Providers>
       </body>
     </html>
   );

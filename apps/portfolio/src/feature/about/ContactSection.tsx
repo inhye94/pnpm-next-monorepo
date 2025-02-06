@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Icon, {
   IIconProps,
 } from "node_modules/@workspace/design-system/src/components/icon";
+import { ADDRESS_EMAIL } from "./constants";
 
 // data
 interface IAboutItem {
@@ -20,7 +21,7 @@ const abouts: IAboutItem[] = [
     id: "about-4",
     icon: "email",
     title: "이메일",
-    content: "inhye0359@nate.com",
+    content: ADDRESS_EMAIL,
   },
   {
     id: "about-5",
