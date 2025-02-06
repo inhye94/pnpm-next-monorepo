@@ -1,5 +1,4 @@
-import { useCallback } from "react";
-import { useModalContext } from "../../providers/ModalProvider";
+import { Dialog } from "radix-ui";
 
 /**
  * Overlay 컴포넌트
@@ -15,25 +14,10 @@ import { useModalContext } from "../../providers/ModalProvider";
  * @param {function} onClick 클릭 이벤트 핸들러
  */
 
-// type
-interface IModalOverlayProps {
-  onClick?: () => void;
+export default function ModalOverlay({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
+  return <Dialog.Overlay className="overlay">{children}</Dialog.Overlay>;
 }
-
-// component
-const ModalOverlay = ({ onClick }: IModalOverlayProps) => {
-  const { closeModal } = useModalContext();
-
-  const handleClick = useCallback(() => {
-    closeModal();
-
-    // NOTE: 주입된 클릭 이벤트
-    if (onClick) {
-      onClick();
-    }
-  }, [closeModal, onClick]);
-
-  return <div className="overlay" onClick={handleClick} aria-hidden></div>;
-};
-
-export default ModalOverlay;

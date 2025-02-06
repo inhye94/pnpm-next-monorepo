@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { Dialog } from "radix-ui";
+import { ModalContent } from "./ModalContent";
+import ModalOverlay from "./ModalOverlay";
 
 /**
  * Modal 컴포넌트
@@ -30,24 +31,6 @@ import { Dialog } from "radix-ui";
 
 export default function Modal({ children }: { children: React.ReactNode }) {
   return <Dialog.Root>{children}</Dialog.Root>;
-}
-
-function ModalOverlay({ children }: { children: React.ReactNode }) {
-  return <Dialog.Overlay className="overlay">{children}</Dialog.Overlay>;
-}
-
-function ModalContent({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <Dialog.Content className={classNames("modal-content", className)}>
-      {children}
-    </Dialog.Content>
-  );
 }
 
 Modal.Root = Dialog.Root;
