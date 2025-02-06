@@ -2,7 +2,7 @@
   .toast-container {
     position: fixed;
     left: 16px;
-    bottom: 16px;
+    bottom: 60px;
     z-index: var(--z-index-toast);
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 280px;
+    width: 240px;
     padding: 8px 16px;
     border-radius: var(--radius-8);
     font-size: var(--text-14);
@@ -37,5 +37,12 @@
     position: relative;
     right: -8px;
     color: var(--color-white);
+  }
+
+  @media screen and (min-width: 768px) {
+    .toast-container {
+      width: 280px;
+      bottom: 16px;
+    }
   }
 }
