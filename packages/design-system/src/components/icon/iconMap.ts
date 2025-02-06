@@ -61,4 +61,7 @@ export const iconMap = {
   person: lazy(() =>
     import("react-icons/md").then((m) => ({ default: m.MdPerson })),
   ),
+  doubleArrow: lazy(() =>
+    import("react-icons/pi").then((m) => ({ default: m.PiCaretDoubleUpBold })),
+  ),
 };
