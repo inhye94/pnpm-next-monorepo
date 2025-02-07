@@ -34,7 +34,7 @@ const abouts: IAboutItem[] = [
 // component
 export default function ContactSection() {
   return (
-    <Section title="Contact" className="bg-background-gray" hideTitle>
+    <Section id="contact" title="Contact" className="bg-background-gray">
       <dl className="flex flex-col gap-y-16 lg:flex-row lg:justify-center lg:gap-x-36">
         {abouts?.map((about) => (
           <div key={about.id} className="flex items-center gap-x-12">

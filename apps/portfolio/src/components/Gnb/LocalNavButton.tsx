@@ -1,10 +1,10 @@
+import type { ILocalNavMenu } from "@/providers/ScrollMenuProvider";
 import classNames from "classnames";
-import { ActiveMenuType, ILocalNavMenu } from "./LocalNav";
 
 // type
 interface ILocalNavButton {
   menu: ILocalNavMenu;
-  activeMenu: ActiveMenuType;
+  activeMenu: string | null;
   onClick: () => void;
 }
 

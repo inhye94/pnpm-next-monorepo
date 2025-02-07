@@ -1,6 +1,7 @@
 "use client";
 
 import { ToastProvider } from "@workspace/design-system/providers";
+import { ScrollMenuProvider } from "./ScrollMenuProvider";
 
 /**
  * 전역 Provider 관리 컴포넌트
@@ -12,8 +13,13 @@ import { ToastProvider } from "@workspace/design-system/providers";
  *
  * Provider 순서:
  * 1. ToastMessageProvider (알림)
+ * 2. ScrollMenuProvider (메뉴)
  */
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  return <ToastProvider>{children}</ToastProvider>;
+  return (
+    <ToastProvider>
+      <ScrollMenuProvider>{children}</ScrollMenuProvider>
+    </ToastProvider>
+  );
 }
