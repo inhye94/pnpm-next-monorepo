@@ -6,6 +6,7 @@
   "scripts": {
     "design-system": "pnpm --filter @workspace/design-system",
     "portfolio": "pnpm --filter @project/portfolio",
+    "portfolio-admin": "pnpm --filter @project/portfolio-admin",
     "prepare": "husky"
   },
   "type": "module",
