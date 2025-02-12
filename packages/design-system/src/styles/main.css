@@ -22,6 +22,7 @@
 - 최종 빌드 CSS에 포함하도록 보장됨
 - 꼭 필요한 것만 넣기
 */
+@import "./components/container.css" layer(components);
 @import "./components/modal.css" layer(components);
 @import "./components/iconButton.css" layer(components);
 @import "./components/markdown.css" layer(components);

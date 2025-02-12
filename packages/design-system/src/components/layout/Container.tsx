@@ -7,10 +7,8 @@ interface IContainerProps {
 
 const Container = ({ children, className }: IContainerProps) => {
   return (
-    <div className="flex w-full flex-col items-center gap-8">
-      <div className={classNames("w-full max-w-1200 px-8", className)}>
-        {children}
-      </div>
+    <div className="container">
+      <div className={classNames("wrapper", className)}>{children}</div>
     </div>
   );
 };
