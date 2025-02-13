@@ -9,6 +9,18 @@ import {
   CHECKBOX_UNCHECKED_STYLE,
 } from "./checkbox.styles";
 
+/**
+ * CheckboxItem 컴포넌트
+ *
+ * @param {string} name checkbox 필드명
+ * @param {string} value checkbox 값
+ * @param {string} label 화면에 표시되는 타이틀
+ * @param {boolean} disabled 비활성화
+ * @param {boolean} required 필수 항목
+ * @param {boolean} checked 체크 여부
+ * @param {function} onCheckedChange change 핸들러
+ */
+
 export interface ICheckboxItemProps {
   name: string;
   value: string;

@@ -3,6 +3,18 @@
 import { useToastContext } from "../../providers/ToastProvider";
 import ToastItem from "./ToastItem";
 
+/**
+ * ToastContainer 컴포넌트
+ *
+ * 특징:
+ * 1. ToastProvider에서 제공하는 context를 useToastContext로 받아옴
+ *
+ * @example
+<Providers>
+  <ToastContainer />
+</Providers>
+ */
+
 export default function ToastContainer() {
   const { toastMessages } = useToastContext();
 

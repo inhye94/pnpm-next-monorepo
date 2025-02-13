@@ -1,4 +1,6 @@
-const RequiredAsterisk = () => {
+import { memo } from "react";
+
+const RequiredAsterisk = memo(function RequiredAsterisk() {
   return (
     <strong
       className="text-negative text-12 ml-2 font-normal"
@@ -7,6 +9,6 @@ const RequiredAsterisk = () => {
       *
     </strong>
   );
-};
+});
 
 export default RequiredAsterisk;

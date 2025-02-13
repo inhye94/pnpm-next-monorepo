@@ -14,13 +14,14 @@ import ModalOverlay from "./ModalOverlay";
  * 1. tailwind의 @layer components 사용 - ModalContent, ModalOverlay
  * 2. styles/components/modal.css
  * 
- * @param {React.ReactNode} 모달 내용
+ * @param {React.ReactNode} children 모달 내용
  * @example 
 <Modal.Root>
   <Modal.Trigger>트리거</Modal.Trigger>
   <Modal.Portal>
     <Modal.Overlay>
       <Modal.Content>
+        <Modal.Title></Modal.Title>
         <Modal.Close>닫기</Modal.Close>
         <p>모달 내용</p>
       </Modal.Content>

@@ -7,6 +7,15 @@ import {
   INPUT_VALIDATION_STATE_STYLE,
 } from "./input.styles";
 
+/**
+ * BaseInput 컴포넌트
+ *
+ * @param {"sm" | "md" | "lg"} size 크기
+ * @param {"simple" | "full"} radius 모서리
+ * @param {"default" | "valid" | "invalid"} validationState 유효성 검사 상태
+ * @param {string} className 외부 스타일 주입
+ */
+
 const BaseInput = ({
   size = "md",
   radius = "simple",

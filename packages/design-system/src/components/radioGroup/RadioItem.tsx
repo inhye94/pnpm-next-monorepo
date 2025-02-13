@@ -9,6 +9,20 @@ import {
   RADIO_UNCHECKED_STYLE,
 } from "./radio.styles";
 
+/**
+ * RadioItem 컴포넌트
+ *
+ * 특징:
+ * 1. 웹 접근성 개선: radix-ui의 RadixRadioGroup을 커스텀
+ *
+ * @param {string} value radio 값
+ * @param {string} label 화면에 표시되는 radio 값
+ * @param {boolean} required 필수 항목
+ * @param {boolean} disabled 비활성화
+ *
+ * @example <RadioGroup.Item value="123" label="123" />
+ */
+
 export interface IRadioItemProps {
   value: string;
   label: string;

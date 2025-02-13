@@ -11,6 +11,14 @@ import {
 import { IToastContext, IToastMessage } from "src/components/toast/toast";
 import { v4 as uuidv4 } from "uuid";
 
+/**
+ * ToastProvider 컴포넌트, useToastContext
+ *
+ * 특징:
+ * 1. 관심사 분리: toast 관련된 state와 동작을 분리
+ * 2. 파일 관리: 동일 관심사라서 하나의 파일로 관리
+ */
+
 const ToastContext = createContext<IToastContext | null>(null);
 
 // provider

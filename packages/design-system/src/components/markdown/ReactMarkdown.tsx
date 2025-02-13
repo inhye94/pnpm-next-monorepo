@@ -3,27 +3,31 @@ import remarkGfm from "remark-gfm";
 
 /**
  * Markdown 컴포넌트
- * @param {boolean} list 리스트 형태로 출력
- * @param {string} children 마크다운 언어
+ * @param {React.ReactNode} children 마크다운 언어
+ * 
+ * @example - 리스트 출력
+<Markdown>
+  {project.highlights
+    ?.map((highlight) => `- ${highlight.content}\n`)
+    .join("")}
+</Markdown>
+ * @example - 일반
+<Markdown>
+안녕하세요. 저는 **세상에서 제일 멋진 프론트엔드 개발자**에요.  
+제가 잘 하는 건 `긍정으로 이겨내고 성장하기`입니다!
+</Markdown>
  */
 
 // type
 interface IReactMarkdownProps {
-  list?: boolean;
-  children: string;
+  children: React.ReactNode;
 }
 
 // component
-export default function ReactMarkdown({ list, children }: IReactMarkdownProps) {
-  let markdown = String(children);
-
-  if (list) {
-    markdown = `- ${markdown}`;
-  }
-
+export default function ReactMarkdown({ children }: IReactMarkdownProps) {
   return (
     <Markdown className="markdown" remarkPlugins={[remarkGfm]}>
-      {markdown}
+      {String(children)}
     </Markdown>
   );
 }
