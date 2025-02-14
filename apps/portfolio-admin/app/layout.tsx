@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import Gnb from "@/components/Gnb";
+import { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Gnb />
+        {children}
+      </body>
     </html>
   );
 }
