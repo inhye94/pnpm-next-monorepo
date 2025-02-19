@@ -1,8 +1,8 @@
 import { BaseBadge, Markdown } from "@workspace/design-system/components";
 import Image from "next/image";
+import { IProjectItem } from "../project";
 import DetailArticle from "./DetailArticle";
 import DetailSection from "./DetailSection";
-import { IProjectItem } from "./project";
 
 /**
  * ProjectDetail 컴포넌트
@@ -60,32 +60,30 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
       <hr className="border-border my-24 block h-1 border border-t-0 lg:my-40" />
 
       <div className="flex flex-col gap-24 lg:gap-48">
-        <DetailSection title="작업 내역">
-          {project.highlights?.map((highlight) => (
-            <Markdown key={highlight.id} list>
-              {highlight.content}
-            </Markdown>
-          ))}
+        <DetailSection title="🚀 작업 내역">
+          <Markdown>
+            {project.highlights
+              ?.map((highlight) => `- ${highlight.content}\n`)
+              .join("")}
+          </Markdown>
         </DetailSection>
 
-        <DetailSection title="트러블 슈팅">
+        <DetailSection title="🤔 트러블 슈팅">
           {project.troubleShooting?.map((trouble) => (
             <DetailArticle key={trouble.id} title={trouble.title}>
-              {trouble.contents?.map((content, i) => (
-                <Markdown key={`content-${i}`} list>
-                  {content}
-                </Markdown>
-              ))}
+              <Markdown>
+                {trouble.contents?.map((content) => `- ${content}\n`).join("")}
+              </Markdown>
             </DetailArticle>
           ))}
         </DetailSection>
 
-        <DetailSection title="인사이트">
+        <DetailSection title="💫 배운 점">
           {project.learnings?.map((learning) => (
             <DetailArticle key={learning.id} title={learning.title}>
-              {learning.contents?.map((content, index) => (
-                <Markdown key={index}>{content}</Markdown>
-              ))}
+              <Markdown>
+                {learning.contents?.map((content) => `${content}  `).join("")}
+              </Markdown>
             </DetailArticle>
           ))}
         </DetailSection>

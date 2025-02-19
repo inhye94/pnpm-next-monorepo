@@ -1,6 +1,6 @@
 import { BaseBadge } from "@workspace/design-system/components";
 import classNames from "classnames";
-import { IProjectItem } from "./project";
+import { IProjectItem } from "../project";
 
 /**
  * ProjectCard 컴포넌트

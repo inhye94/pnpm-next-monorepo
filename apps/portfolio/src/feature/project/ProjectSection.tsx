@@ -1,8 +1,8 @@
 import Section from "@/components/layout/Section";
 import { projects } from "@/data/mockProject";
-import ProjectCard from "./ProjectCard";
-import ProjectDetail from "./ProjectDetail";
-import ProjectModal from "./ProjectModal";
+import ProjectCard from "./components/ProjectCard";
+import ProjectDetail from "./components/ProjectDetail";
+import ProjectModal from "./components/ProjectModal";
 
 /**
  * ProjectSection 컴포넌트

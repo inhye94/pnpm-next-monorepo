@@ -1,6 +1,6 @@
 import { BaseBadge } from "@workspace/design-system/components";
 import classNames from "classnames";
-import type { ILinkItem } from "./LinkSection";
+import type { ILinkItem } from "../LinkSection";
 
 // type
 interface ILinkCardProps {

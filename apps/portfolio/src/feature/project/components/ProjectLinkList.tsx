@@ -4,7 +4,7 @@ import {
   IconLink,
 } from "@workspace/design-system/components";
 import classNames from "classnames";
-import type { IProjectItem } from "./project";
+import type { IProjectItem } from "../project";
 import ProjectLinkItem from "./ProjectLinkItem";
 
 /**

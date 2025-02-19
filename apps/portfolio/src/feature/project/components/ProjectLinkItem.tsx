@@ -31,7 +31,7 @@ export default function ProjectLinkItem({
 }: IProjectLinkItemProps) {
   return (
     <a className={className} target="_blank" {...props}>
-      <Icon name={icon} className="text-20" />
+      <Icon name={icon} className="text-20 shrink-0" />
       <span className="truncate">{text}</span>
     </a>
   );

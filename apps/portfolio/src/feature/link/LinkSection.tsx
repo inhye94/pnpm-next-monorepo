@@ -1,6 +1,6 @@
 import Section from "@/components/layout/Section";
 import { Icon } from "@workspace/design-system/components";
-import LinkCard from "./LinkCard";
+import LinkCard from "./components/LinkCard";
 
 export interface ILinkItem {
   id: string;

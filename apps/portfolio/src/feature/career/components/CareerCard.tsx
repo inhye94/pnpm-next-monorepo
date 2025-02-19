@@ -1,4 +1,4 @@
-import { ICareerItem } from "./career";
+import { ICareerItem } from "../career";
 
 interface ICareerCard {
   career: ICareerItem;
