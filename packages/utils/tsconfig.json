@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    /* Bundler mode */
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+
+    /* Output */
+    "composite": true, // 프로젝트 참조를 위해 필요
+    "declaration": true, // 빌드 시 타입 선언 파일 생성
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+
+    /* Aliases */
+    "baseUrl": "."
+  },
+  "include": ["src"]
+}
