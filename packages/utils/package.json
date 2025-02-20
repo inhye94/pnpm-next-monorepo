@@ -6,6 +6,9 @@
   "files": [
     "**"
   ],
+  "exports": {
+    ".": "./src/main.ts"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -16,6 +19,7 @@
     "vite": "^6.1.0"
   },
   "dependencies": {
+    "firebase": "^11.2.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "packageManager": "pnpm@9.7.1"
