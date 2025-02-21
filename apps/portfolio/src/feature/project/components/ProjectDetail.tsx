@@ -1,6 +1,6 @@
 import { BaseBadge, Markdown } from "@workspace/design-system/components";
+import type { IProjectItem } from "@workspace/utils/types";
 import Image from "next/image";
-import { IProjectItem } from "../project";
 import DetailArticle from "./DetailArticle";
 import DetailSection from "./DetailSection";
 

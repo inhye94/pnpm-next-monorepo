@@ -3,8 +3,8 @@ import {
   IconButton,
   IconLink,
 } from "@workspace/design-system/components";
+import type { IProjectItem } from "@workspace/utils/types";
 import classNames from "classnames";
-import type { IProjectItem } from "../project";
 import ProjectLinkItem from "./ProjectLinkItem";
 
 /**

@@ -1,4 +1,4 @@
-import { ICareerItem } from "@/feature/career/career";
+import type { ICareerItem } from "@workspace/utils/types";
 
 export const careers: ICareerItem[] = [
   {

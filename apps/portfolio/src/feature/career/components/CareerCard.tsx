@@ -1,4 +1,4 @@
-import { ICareerItem } from "../career";
+import type { ICareerItem } from "@workspace/utils/types";
 
 interface ICareerCard {
   career: ICareerItem;

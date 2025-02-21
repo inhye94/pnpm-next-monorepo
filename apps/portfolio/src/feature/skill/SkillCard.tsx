@@ -1,5 +1,5 @@
 import { Markdown } from "@workspace/design-system/components";
-import { ISkillType } from "./skill";
+import type { ISkillType } from "@workspace/utils/types";
 
 interface ISkillCardProps {
   skill: ISkillType;

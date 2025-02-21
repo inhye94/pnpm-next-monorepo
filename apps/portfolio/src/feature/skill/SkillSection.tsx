@@ -1,17 +1,19 @@
-// 🔥 skills > content + experience 모두 넣어보고, 가독성이 나쁘면 내용 정리하기
-
 import Section from "@/components/layout/Section";
-import { skills } from "@/data/mockSkill";
 import { stacks } from "@/data/mockStack";
 import { BaseBadge } from "@workspace/design-system/components";
+import { getSkills, getStacks } from "@workspace/utils/apis";
 import SkillCard from "./SkillCard";
 
 export default async function SkillSection() {
-  // const skills = await getSkills();
-  // const stacks = await getStacks();
+  const skills = await getSkills();
+  const stacksAPI = await getStacks();
 
   return (
     <Section title="Skill" id="skill" className="bg-background-gray">
+      {JSON.stringify(skills)}
+      <hr />
+      {JSON.stringify(stacksAPI)}
+
       <div className="mb-24 flex flex-wrap gap-4">
         {stacks?.map((stack) => (
           <BaseBadge key={stack.id} color="light" shape="pill" size="lg">

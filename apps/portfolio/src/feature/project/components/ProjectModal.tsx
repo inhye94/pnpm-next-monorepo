@@ -1,5 +1,5 @@
 import { IconButton, Modal } from "@workspace/design-system/components";
-import { IProjectItem } from "../project";
+import type { IProjectItem } from "@workspace/utils/types";
 import ProjectLinkList from "./ProjectLinkList";
 
 /**

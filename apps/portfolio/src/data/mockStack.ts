@@ -1,4 +1,4 @@
-import { IStackType } from "@/feature/skill/skill";
+import type { IStackType } from "@workspace/utils/types";
 
 export const stacks: IStackType[] = [
   { id: "stack-react", content: "React" },

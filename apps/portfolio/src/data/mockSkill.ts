@@ -1,4 +1,4 @@
-import { ISkillType } from "@/feature/skill/skill";
+import type { ISkillType } from "@workspace/utils/types";
 
 export const skills: ISkillType[] = [
   {

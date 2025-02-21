@@ -1,5 +1,6 @@
 import Section from "@/components/layout/Section";
 import { projects } from "@/data/mockProject";
+import { getProjects } from "@workspace/utils/apis";
 import ProjectCard from "./components/ProjectCard";
 import ProjectDetail from "./components/ProjectDetail";
 import ProjectModal from "./components/ProjectModal";
@@ -10,9 +11,13 @@ import ProjectModal from "./components/ProjectModal";
  * 특징:
  * 1. 진행했던 프로젝트를 카드 형태로 보여주는 section
  */
-export default function ProjectSection() {
+export default async function ProjectSection() {
+  const projectsAPI = await getProjects();
+
   return (
     <Section title="Project" id="project">
+      {JSON.stringify(projectsAPI)}
+
       <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
         {projects?.map((project) => (
           <ProjectModal
