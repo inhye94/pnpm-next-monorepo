@@ -7,7 +7,8 @@
     "**"
   ],
   "exports": {
-    ".": "./src/main.ts"
+    "./apis": "./src/apis/index.ts",
+    "./types": "./src/types/index.ts"
   },
   "scripts": {
     "dev": "vite",
