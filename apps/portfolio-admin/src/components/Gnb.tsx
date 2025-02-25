@@ -2,6 +2,7 @@ import { Container } from "@workspace/design-system/components";
 import Link from "next/link";
 
 const menus = ["career", "project", "skill"];
+const id = "12345";
 
 export default function Gnb() {
   return (
@@ -18,12 +19,12 @@ export default function Gnb() {
           <Link href="/auth">auth</Link>
 
           {menus.map((menu, index) => (
-            <Link key={`${menu}-detail-${index}`} href={`/123/${menu}`}>
+            <Link key={`${menu}-detail-${index}`} href={`/${id}/${menu}`}>
               {menu} detail
             </Link>
           ))}
           {menus.map((menu, index) => (
-            <Link key={`${menu}-edit-${index}`} href={`/123/${menu}/edit`}>
+            <Link key={`${menu}-edit-${index}`} href={`/${id}/${menu}/edit`}>
               {menu} edit
             </Link>
           ))}
