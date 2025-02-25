@@ -8,7 +8,8 @@
   ],
   "exports": {
     "./apis": "./src/apis/index.ts",
-    "./types": "./src/types/index.ts"
+    "./types": "./src/types/index.ts",
+    "./datas": "./src/datas/index.ts"
   },
   "scripts": {
     "dev": "vite",
