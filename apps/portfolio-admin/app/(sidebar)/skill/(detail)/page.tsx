@@ -3,17 +3,12 @@ import DetailSection from "@/components/DetailSection";
 import { BaseBadge, Markdown } from "@workspace/design-system/components";
 import { skills, stacks } from "@workspace/utils/datas";
 
-export default async function SkillDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default async function SkillDetailPage() {
   // const skills = await getSkills();
   // const stacks = await getStacks();
-  const id = (await params).id;
 
   return (
-    <DetailSection title="Skills And Stacks" subject="skill" id={id}>
+    <DetailSection title="Skills And Stacks" subject="skill">
       <Article title="Stacks" className="mb-24 md:mb-48">
         <ul className="flex flex-wrap gap-8">
           {stacks.map((stack) => (
