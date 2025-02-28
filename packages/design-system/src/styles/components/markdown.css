@@ -3,10 +3,11 @@
   .markdown {
     code {
       display: inline-block;
-      padding: 2px 6px !important;
+      padding: 0 6px !important;
       border: none;
       border-radius: var(--radius-4);
       background-color: var(--color-background-darkgray);
+      font-size: var(--text-14);
     }
 
     li {
