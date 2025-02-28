@@ -13,10 +13,10 @@
     "composite": true, // 프로젝트 참조를 위해 필요
     "declaration": true, // 빌드 시 타입 선언 파일 생성
     "declarationMap": true,
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": true
 
     /* Aliases */
-    "baseUrl": "."
+    // "baseUrl": "."
   },
   "include": ["src"]
 }
