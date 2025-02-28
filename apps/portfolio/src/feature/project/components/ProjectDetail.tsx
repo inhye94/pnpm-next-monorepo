@@ -53,6 +53,7 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
             loading="lazy"
             layout="fill"
             objectFit="cover"
+            objectPosition="top"
           />
         </div>
       </header>
