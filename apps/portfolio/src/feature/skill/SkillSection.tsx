@@ -1,11 +1,11 @@
 import Section from "@/components/layout/Section";
 import { BaseBadge } from "@workspace/design-system/components";
-import { getSkills, getStacks } from "@workspace/utils/apis";
+import { skills, stacks } from "@workspace/utils/datas";
 import SkillCard from "./SkillCard";
 
 export default async function SkillSection() {
-  const skills = await getSkills();
-  const stacks = await getStacks();
+  // const skills = await getSkills();
+  // const stacks = await getStacks();
 
   return (
     <Section title="Skill" id="skill" className="bg-background-gray">

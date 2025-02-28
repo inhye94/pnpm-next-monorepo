@@ -1,11 +1,11 @@
 import Section from "@/components/layout/Section";
-import { getProjects } from "@workspace/utils/apis";
+import { projects } from "@workspace/utils/datas";
 import ProjectCard from "./components/ProjectCard";
 import ProjectDetail from "./components/ProjectDetail";
 import ProjectModal from "./components/ProjectModal";
 
 export default async function ProjectSection() {
-  const projects = await getProjects();
+  // const projects = await getProjects();
 
   return (
     <Section title="Project" id="project">
