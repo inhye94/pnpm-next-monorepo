@@ -186,7 +186,7 @@ export const projects: IProjectItem[] = [
     period: "2024.11.14 ~ 2024.12.21",
     team: "개인 프로젝트",
     thumbnailUrl:
-      "https://private-user-images.githubusercontent.com/69448900/403294030-ed129376-c615-4d1c-a5fe-38c44cb72003.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzg1ODU3NDksIm5iZiI6MTczODU4NTQ0OSwicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTQwMzAtZWQxMjkzNzYtYzYxNS00ZDFjLWE1ZmUtMzhjNDRjYjcyMDAzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjAzVDEyMjQwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRhMTg1YWU3NWU5Yzc4OGEzOGE0MzMyMTMwODk2M2VkNTY5M2ZlMDgwNTY4Njc3MTIyZTIxMTM3ZTgxNTYyMDImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.v6ovnRWnaJhXmQwZaGS2hyzSpq8J47oGGY25_jd8YwE",
+      "https://private-user-images.githubusercontent.com/69448900/401048238-910ec475-cb97-4d20-a756-fc1cf1a31379.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA3MjczNzgsIm5iZiI6MTc0MDcyNzA3OCwicGF0aCI6Ii82OTQ0ODkwMC80MDEwNDgyMzgtOTEwZWM0NzUtY2I5Ny00ZDIwLWE3NTYtZmMxY2YxYTMxMzc5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjI4VDA3MTc1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTExODYxZjgyNDBiNDFkNGJhZGNhYWMyZTk2ZTdjYjBhNjdhOTE3NDNjZGUwNDJmZThhZTU2ZjlmZWQ1Y2MzOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.OdJoifxG8L7QjPGfz5R9tlFvGUIhBVP7XPT0Z7B71Oo",
     stacks: [
       { id: "stack-1", title: "Vite" },
       { id: "stack-2", title: "React" },
@@ -267,7 +267,7 @@ export const projects: IProjectItem[] = [
     period: "2024.10.01 ~ 2024.10.11",
     team: "개인 프로젝트",
     thumbnailUrl:
-      "https://private-user-images.githubusercontent.com/69448900/403294030-ed129376-c615-4d1c-a5fe-38c44cb72003.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzg1ODU3NDksIm5iZiI6MTczODU4NTQ0OSwicGF0aCI6Ii82OTQ0ODkwMC80MDMyOTQwMzAtZWQxMjkzNzYtYzYxNS00ZDFjLWE1ZmUtMzhjNDRjYjcyMDAzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjAzVDEyMjQwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRhMTg1YWU3NWU5Yzc4OGEzOGE0MzMyMTMwODk2M2VkNTY5M2ZlMDgwNTY4Njc3MTIyZTIxMTM3ZTgxNTYyMDImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.v6ovnRWnaJhXmQwZaGS2hyzSpq8J47oGGY25_jd8YwE",
+      "https://private-user-images.githubusercontent.com/69448900/401789224-f72537ae-3e55-40d3-a327-63984dcee7b1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA3MjcyODcsIm5iZiI6MTc0MDcyNjk4NywicGF0aCI6Ii82OTQ0ODkwMC80MDE3ODkyMjQtZjcyNTM3YWUtM2U1NS00MGQzLWEzMjctNjM5ODRkY2VlN2IxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjI4VDA3MTYyN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTYyNzVmZjM4YjAzNjhjZWY0NDA4MWM4ZGY0MzE1ODI2YzE2NzQ1MTI4YmJjZWU5Yzg3OTZjYzI0YTYxYmMwY2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.kyIBHQ-xe0UahLsSWN5rLPpoGbnnm8hAGFYFEcEaLEs",
     stacks: [
       { id: "stack-1", title: "NextJS" },
       { id: "stack-3", title: "TypeScript" },
@@ -493,7 +493,7 @@ export const projects: IProjectItem[] = [
     ],
     links: {
       github: "https://github.com/inhye94/socket-chat-app-client",
-      deploy: "",
+      deploy: "https://socket-chat-app-client.vercel.app/",
     },
   },
   {
@@ -502,7 +502,7 @@ export const projects: IProjectItem[] = [
     period: "2024.01.08 ~ 2024.7.25",
     team: "개인 프로젝트",
     thumbnailUrl:
-      "https://github.com/user-attachments/assets/1e29d2a7-953f-4b17-86ab-61d067f73297",
+      "https://private-user-images.githubusercontent.com/69448900/417905164-2c460f31-2cfa-4888-b5a3-d7635ca07c1f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA3MjY4NDEsIm5iZiI6MTc0MDcyNjU0MSwicGF0aCI6Ii82OTQ0ODkwMC80MTc5MDUxNjQtMmM0NjBmMzEtMmNmYS00ODg4LWI1YTMtZDc2MzVjYTA3YzFmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjI4VDA3MDkwMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlmZjVlYmJkMzZjODE1NWE1OTFjZDA1OGU1NmY3MTIzMzFhZTkyOTVmMWUzOTYzNzIyODMwZTZlMDY0YzE0ZDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.BJYSF3pIMcjjmK8W6vBPZdaV1nrQnRgPdK9673mlZM4",
     stacks: [
       { id: "stack-1", title: "React" },
       { id: "stack-2", title: "TypeScript" },
@@ -567,8 +567,16 @@ export const projects: IProjectItem[] = [
       },
     ],
     links: {
+      blog: [
+        {
+          id: "blog-link-1",
+          title: "TailwindCSS에서 SCSS Module로 변경",
+          content:
+            "https://velog.io/@inhye94/TailwindCSS%EC%97%90%EC%84%9C-SCSS-module%EB%A1%9C-%EB%B3%80%EA%B2%BD",
+        },
+      ],
       github: "https://github.com/inhye94/super-super-glue",
-      deploy: "",
+      deploy: "https://super-super-glue.netlify.app/",
     },
   },
   {
@@ -577,7 +585,7 @@ export const projects: IProjectItem[] = [
     period: "2023.12.26 ~ 2024.1.09",
     team: "개인 프로젝트",
     thumbnailUrl:
-      "https://github.com/user-attachments/assets/1e29d2a7-953f-4b17-86ab-61d067f73297",
+      "https://private-user-images.githubusercontent.com/69448900/402450875-51b8a165-b335-4d50-b7e6-e7c89ebdba22.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA3MjcwOTYsIm5iZiI6MTc0MDcyNjc5NiwicGF0aCI6Ii82OTQ0ODkwMC80MDI0NTA4NzUtNTFiOGExNjUtYjMzNS00ZDUwLWI3ZTYtZTdjODllYmRiYTIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjI4VDA3MTMxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAxMmNmM2E2NzVmMGI2MzFkMTdjZjFiNWMxZTc2ZjRmZTdkOTQ1YjQzYTRmNTNjOGU3ZjRmYTdlZWJjOTRiNzAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.CFuDvjKNEKAV1poqrImJX2f0ehnmeMtq95bcGQDwS6U",
     stacks: [
       { id: "stack-1", title: "React" },
       { id: "stack-2", title: "React-query" },
@@ -631,8 +639,8 @@ export const projects: IProjectItem[] = [
       },
     ],
     links: {
-      github: "https://github.com/inhye94/socket-chat-app-client",
-      deploy: "",
+      github: "https://github.com/inhye94/duetube",
+      deploy: "https://duetube.netlify.app/",
     },
   },
 ];
