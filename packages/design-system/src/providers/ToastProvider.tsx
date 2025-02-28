@@ -8,7 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { IToastContext, IToastMessage } from "src/components/toast/toast";
+import type { IToastContext, IToastMessage } from "src/components/toast/toast";
 import { v4 as uuidv4 } from "uuid";
 
 /**

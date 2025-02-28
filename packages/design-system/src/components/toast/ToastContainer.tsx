@@ -1,6 +1,7 @@
 "use client";
 
 import { useToastContext } from "../../providers/ToastProvider";
+import { IToastMessage } from "./toast";
 import ToastItem from "./ToastItem";
 
 /**
@@ -16,7 +17,9 @@ import ToastItem from "./ToastItem";
  */
 
 export default function ToastContainer() {
-  const { toastMessages } = useToastContext();
+  const { toastMessages } = useToastContext() as {
+    toastMessages: IToastMessage[];
+  };
 
   return (
     <ul className="toast-container">
