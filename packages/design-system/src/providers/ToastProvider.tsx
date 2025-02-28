@@ -8,8 +8,8 @@ import {
   useRef,
   useState,
 } from "react";
-import type { IToastContext, IToastMessage } from "src/components/toast/toast";
 import { v4 as uuidv4 } from "uuid";
+import type { IToastContext, IToastMessage } from "../components/toast/toast";
 
 /**
  * ToastProvider 컴포넌트, useToastContext

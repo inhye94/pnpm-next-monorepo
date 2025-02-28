@@ -7,7 +7,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import type { IModalContext } from "src/components/modal/modal";
+import type { IModalContext } from "../components/modal/modal";
 
 /**
  * Modal Provider
