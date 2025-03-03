@@ -12,6 +12,7 @@
 
     li {
       list-style: inside;
+      line-height: 1.8;
     }
   }
 }
