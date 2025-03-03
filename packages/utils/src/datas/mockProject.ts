@@ -77,11 +77,16 @@ export const projects: IProjectItem[] = [
           content:
             "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-husky-commitlint",
         },
+        {
+          id: "blog-link-2",
+          title: "모노레포 PNPM으로 구성하기 - 환경변수",
+          content:
+            "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98",
+        },
       ],
       github:
         "https://github.com/inhye94/pnpm-next-monorepo/tree/main/apps/portfolio",
-      deploy:
-        "https://67875cd86620d78844d43146-dzvstjnmho.chromatic.com/?path=/docs/components-textfield--docs",
+      deploy: "https://pnpm-next-monorepo-portfolio.vercel.app/",
     },
   },
   {
@@ -172,6 +177,12 @@ export const projects: IProjectItem[] = [
           title: "모노레포 PNPM으로 구성하기 - TypeScript",
           content:
             "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-TypeScript",
+        },
+        {
+          id: "blog-link-4",
+          title: "모노레포 PNPM으로 구성하기 - storybook",
+          content:
+            "https://velog.io/@inhye94/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-PNPM%EC%9C%BC%EB%A1%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-storybook",
         },
       ],
       github:
