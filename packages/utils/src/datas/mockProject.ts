@@ -86,7 +86,7 @@ export const projects: IProjectItem[] = [
       ],
       github:
         "https://github.com/inhye94/pnpm-next-monorepo/tree/main/apps/portfolio",
-      deploy: "https://pnpm-next-monorepo-portfolio.vercel.app/",
+      deploy: "https://inhye-portfolio.vercel.app/",
     },
   },
   {
