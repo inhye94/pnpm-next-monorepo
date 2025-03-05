@@ -2,9 +2,9 @@ import Sidebar from "@/components/Sidebar";
 import { Container } from "@workspace/design-system/components";
 
 export default async function SidebarLayout({
-  children,
+  tabs,
 }: Readonly<{
-  children: React.ReactNode;
+  tabs: React.ReactNode;
 }>) {
   return (
     <main>
@@ -14,7 +14,7 @@ export default async function SidebarLayout({
             <Sidebar />
           </div>
 
-          <div className="md:col-span-3">{children}</div>
+          <div className="md:col-span-3">{tabs}</div>
         </div>
       </Container>
     </main>
