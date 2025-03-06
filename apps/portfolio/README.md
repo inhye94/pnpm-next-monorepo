@@ -7,7 +7,7 @@
 - 작업기간: 2025.01.06 ~ 진행중
 - stack: NextJS, React, TypeScript, TailwindCSS, Husky, PNPM
 - 깃허브: https://github.com/inhye94/pnpm-next-monorepo/tree/main/apps/portfolio
-- 배포링크: https://pnpm-next-monorepo-portfolio.vercel.app/
+- 배포링크: https://inhye-portfolio.vercel.app/
 
 ## 개발 배경
 
