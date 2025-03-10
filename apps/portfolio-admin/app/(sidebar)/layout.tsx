@@ -7,16 +7,14 @@ export default async function SidebarLayout({
   tabs: React.ReactNode;
 }>) {
   return (
-    <main>
-      <Container>
-        <div className="grid gap-24 md:grid-cols-4 md:py-34">
-          <div className="md:col-span-1">
-            <Sidebar />
-          </div>
-
-          <div className="md:col-span-3">{tabs}</div>
+    <Container>
+      <div className="grid gap-24 md:grid-cols-4 md:py-34">
+        <div className="md:col-span-1">
+          <Sidebar />
         </div>
-      </Container>
-    </main>
+
+        <div className="md:col-span-3">{tabs}</div>
+      </div>
+    </Container>
   );
 }

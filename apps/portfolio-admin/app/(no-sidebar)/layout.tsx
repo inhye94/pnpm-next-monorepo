@@ -3,5 +3,5 @@ export default function NoSidebarLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main>{children}</main>;
+  return { children };
 }
