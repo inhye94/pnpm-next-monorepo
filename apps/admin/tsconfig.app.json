@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "useDefineForClassFields": true,
+
+    /* Bundler mode */
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force"
+  },
+  "include": [
+    "src",
+    "./node_modules/@workspace/design-system/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/@workspace/utils/**/*.{js,jsx,ts,tsx}",
+    "global.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}
