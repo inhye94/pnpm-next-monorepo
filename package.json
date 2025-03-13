@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "design-system": "pnpm --filter @workspace/design-system",
+    "utils": "pnpm --filter @workspace/utils",
     "portfolio": "pnpm --filter @project/portfolio",
+    "admin": "pnpm --filter @project/admin",
     "portfolio-admin": "pnpm --filter @project/portfolio-admin",
-    "prepare": "husky",
-    "utils": "pnpm --filter @workspace/utils"
+    "prepare": "husky"
   },
   "type": "module",
   "keywords": [],
