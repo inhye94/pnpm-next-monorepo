@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-/* (지우지 마세요!) 다른 프로젝트에도 컴포 스타일 적용 */
-@source "../components/**/*.{ts, tsx}";
-
-@layer theme, base, components;
-
 /* variables */
 @import "./variables/color.css" layer(theme);
 @import "./variables/typo.css" layer(theme);
@@ -28,6 +23,11 @@
 @import "./components/markdown.css" layer(components);
 @import "./components/dropdown.css" layer(components);
 @import "./components/toast.css" layer(components);
+
+@layer theme, base, components;
+
+/* (지우지 마세요!) 다른 프로젝트에도 컴포 스타일 적용 */
+@source "../components/**/*.{ts, tsx}";
 
 /* utilities */
 @utility text-heading-* {
