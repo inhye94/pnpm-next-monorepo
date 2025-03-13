@@ -1,9 +1,9 @@
-import { BaseButton } from "@workspace/design-system/components";
+import { ToastContainer } from "@workspace/design-system/components";
 
 function App() {
   return (
     <>
-      <BaseButton>asd</BaseButton>
+      <ToastContainer />
     </>
   );
 }
