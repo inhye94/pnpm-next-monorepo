@@ -1,9 +1,19 @@
-import { ToastContainer } from "@workspace/design-system/components";
+import { Link, Outlet } from "react-router";
 
 function App() {
   return (
     <>
-      <ToastContainer />
+      <header>
+        <h1>
+          <Link to="/">홈</Link>
+        </h1>
+      </header>
+
+      <main>
+        <Outlet />
+      </main>
+
+      <footer>푸터</footer>
     </>
   );
 }

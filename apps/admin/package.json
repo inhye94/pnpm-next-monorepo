@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@workspace/design-system": "workspace:^",
-    "@workspace/utils": "workspace:^"
+    "@workspace/utils": "workspace:^",
+    "react-router": "^7.3.0"
   }
 }
