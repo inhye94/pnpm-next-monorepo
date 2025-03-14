@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import App from "../app/App";
+import NotFound from "../app/error/NotFound";
 import SidebarLayout from "../layouts/SidebarLayout";
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             ],
           },
         ],
+      },
+      {
+        path: "*", // ❗ 잘못된 경로를 모두 처리
+        element: <NotFound />,
       },
     ],
   },
