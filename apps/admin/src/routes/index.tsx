@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router";
-import App from "../App";
+import App from "../app/App";
 import SidebarLayout from "../layouts/SidebarLayout";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -37,3 +37,5 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+
+export default router;
