@@ -7,6 +7,9 @@ export default function SidebarLayout() {
         <nav>
           <h2>사이드바 메뉴</h2>
           <li>
+            <Link to="/stack">stack</Link>
+          </li>
+          <li>
             <Link to="/skill">skill</Link>
           </li>
           <li>
