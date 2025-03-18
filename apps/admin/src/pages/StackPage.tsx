@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import Article from "../../components/Article";
-import Empty from "../../components/Empty";
-import Loading from "../../components/Loading";
-import { portfolioQueries } from "../../entity/portfolioQueries";
-import StackList from "./StackList";
+import Article from "../components/Article";
+import Empty from "../components/Empty";
+import Loading from "../components/Loading";
+import { portfolioQueries } from "../entity/portfolioQueries";
+import StackList from "../feature/stack/StackList";
 
 export default function StackPage() {
   const { data: stacks, isLoading } = useQuery(portfolioQueries.stack());

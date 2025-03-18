@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router";
-import App from "../app/App";
-import NotFound from "../app/error/NotFound";
+import App from "../App";
 import { skillLoader, stackLoader } from "../entity/loaders";
-import SkillPage from "../feature/skill/SkillPage";
-import StackPage from "../feature/stack/StackPage";
-import SidebarLayout from "../layouts/SidebarLayout";
 import { queryClient } from "../providers/QueryProvider";
+import NotFound from "./NotFound";
+import SidebarLayout from "./SidebarLayout";
+import SkillPage from "./SkillPage";
+import StackPage from "./StackPage";
 
 const router = createBrowserRouter([
   {

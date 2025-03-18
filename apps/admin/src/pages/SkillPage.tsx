@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import Article from "../../components/Article";
-import Empty from "../../components/Empty";
-import Loading from "../../components/Loading";
-import { portfolioQueries } from "../../entity/portfolioQueries";
-import SkillList from "./SkillList";
+import Article from "../components/Article";
+import Empty from "../components/Empty";
+import Loading from "../components/Loading";
+import { portfolioQueries } from "../entity/portfolioQueries";
+import SkillList from "../feature/skill/SkillList";
 
 export default function SkillPage() {
   const { data: skills, isLoading } = useQuery(portfolioQueries.skill());
