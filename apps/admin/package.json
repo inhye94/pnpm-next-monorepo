@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.68.0",
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^6.2.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.68.0",
     "@workspace/design-system": "workspace:^",
     "@workspace/utils": "workspace:^",
     "react-router": "^7.3.0"
