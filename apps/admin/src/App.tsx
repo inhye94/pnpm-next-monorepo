@@ -1,13 +1,10 @@
-import { Link, Outlet } from "react-router";
+import { Outlet } from "react-router";
+import Gnb from "./components/Gnb";
 
 function App() {
   return (
     <>
-      <header>
-        <h1>
-          <Link to="/">홈</Link>
-        </h1>
-      </header>
+      <Gnb />
 
       <main>
         <Outlet />
