@@ -5,11 +5,7 @@ function App() {
   return (
     <>
       <Gnb />
-
-      <main>
-        <Outlet />
-      </main>
-
+      <Outlet />
       <footer>푸터</footer>
     </>
   );

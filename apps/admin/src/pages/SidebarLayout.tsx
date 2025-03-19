@@ -1,30 +1,20 @@
-import { Link, Outlet } from "react-router";
+import { Container } from "@workspace/design-system/components";
+import { Outlet } from "react-router";
+import Sidebar from "../components/Sidebar";
+import { sidebarMenus } from "../entity/menus";
 
 export default function SidebarLayout() {
   return (
-    <div>
-      <div>
-        <nav>
-          <h2>사이드바 메뉴</h2>
-          <li>
-            <Link to="/stack">stack</Link>
-          </li>
-          <li>
-            <Link to="/skill">skill</Link>
-          </li>
-          <li>
-            <Link to="/career">career</Link>
-          </li>
-          <li>
-            <Link to="/project">project</Link>
-          </li>
-        </nav>
+    <Container className="py-24">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="md:col-span-1">
+          <Sidebar menus={sidebarMenus} />
+        </div>
 
-        <section>
-          <h2>내용</h2>
+        <main className="md:col-span-3">
           <Outlet />
-        </section>
+        </main>
       </div>
-    </div>
+    </Container>
   );
 }
