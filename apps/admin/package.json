@@ -20,5 +20,6 @@
     "@workspace/design-system": "workspace:^",
     "@workspace/utils": "workspace:^",
     "react-router": "^7.3.0"
-  }
+  },
+  "packageManager": "pnpm@9.7.1"
 }

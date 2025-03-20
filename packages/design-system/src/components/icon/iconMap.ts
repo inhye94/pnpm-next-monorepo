@@ -64,4 +64,7 @@ export const iconMap = {
   doubleArrow: lazy(() =>
     import("react-icons/pi").then((m) => ({ default: m.PiCaretDoubleUpBold })),
   ),
+  chevron: lazy(() =>
+    import("react-icons/io5").then((m) => ({ default: m.IoChevronBack })),
+  ),
 };

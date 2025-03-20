@@ -4,6 +4,7 @@ import { skillLoader, stackLoader } from "../entity/loaders";
 import { queryClient } from "../providers/QueryProvider";
 import NotFound from "./NotFound";
 import SidebarLayout from "./SidebarLayout";
+import SkillEditPage from "./SkillEditPage";
 import SkillPage from "./SkillPage";
 import StackPage from "./StackPage";
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             loader: async () => stackLoader(queryClient),
             children: [
               { index: true, element: <StackPage /> },
-              { path: "edit", element: <p>스텍 - 수정</p> },
+              { path: "edit", element: <p>스택 - 수정</p> },
             ],
           },
           {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             loader: async () => skillLoader(queryClient),
             children: [
               { index: true, element: <SkillPage /> },
-              { path: "edit", element: <p>스킬 - 수정</p> },
+              { path: "edit", element: <SkillEditPage /> },
             ],
           },
           {
