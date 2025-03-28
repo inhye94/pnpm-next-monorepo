@@ -1,4 +1,4 @@
-import { getData } from "../firebase/client";
+import { getData, updateData } from "../firebase/client";
 import type {
   ICareerItem,
   IProjectItem,
@@ -23,3 +23,10 @@ export const getProjects = async (): Promise<IProjectItem[]> =>
 // 경력 목록
 export const getCareers = async (): Promise<ICareerItem[]> =>
   getData("careers");
+
+/**
+ * 데이터 수정 API
+ */
+
+export const updateSkills = async (newData: ISkillType[]): Promise<void> =>
+  updateData("skills", newData);

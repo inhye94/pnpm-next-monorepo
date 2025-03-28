@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { child, get, getDatabase, ref } from "firebase/database";
+import { child, get, getDatabase, ref, set } from "firebase/database";
 
 // 서버 환경 체크
 const isServer = typeof window === "undefined";
@@ -80,3 +80,21 @@ export const getData: FirebaseGetType = async (subject) =>
         `🚨 [API - ERROR] GET ${subject} | 알 수 없는 오류가 발생했습니다.`,
       );
     });
+
+type FirebasePostType = <T>(
+  subject: string,
+  updateDataObject: T,
+) => Promise<void>;
+
+export const updateData: FirebasePostType = (subject, updateDataObject) => {
+  return set(ref(db, subject), updateDataObject) //
+    .catch((error) => {
+      if (error instanceof Error) {
+        throw error;
+      }
+
+      throw new Error(
+        `🚨 [API - ERROR] POST ${subject} | 알 수 없는 오류가 발생했습니다.`,
+      );
+    });
+};
