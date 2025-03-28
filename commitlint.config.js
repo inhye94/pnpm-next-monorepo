@@ -5,11 +5,14 @@ export default {
       2,
       "always",
       [
-        "lower-case",
-        "sentence-case",
-        "start-case",
-        "pascal-case",
-        "upper-case",
+        "lower-case", // default
+        "upper-case", // UPPERCASE
+        "camel-case", // camelCase
+        "kebab-case", // kebab-case
+        "pascal-case", // PascalCase
+        "sentence-case", // Sentence case
+        "snake-case", // snake_case
+        "start-case", // Start Case
       ],
     ],
     "type-enum": [
@@ -27,6 +30,7 @@ export default {
         "rename",
         "remove",
         "docs",
+        "wip",
       ],
     ],
   },
