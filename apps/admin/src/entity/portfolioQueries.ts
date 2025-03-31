@@ -3,16 +3,18 @@ import { getSkills, getStacks } from "@workspace/utils/apis";
 
 export const portfolioQueries = {
   all: () => ["portfolio"] as const,
+  skillKey: () => [...portfolioQueries.all(), "skill"] as const,
+  stackKey: () => [...portfolioQueries.all(), "stack"] as const,
   skill: () =>
     queryOptions({
-      queryKey: [...portfolioQueries.all(), "skill"] as const,
+      queryKey: [...portfolioQueries.skillKey()],
       queryFn: async () => getSkills(),
     }),
   stack: () =>
     queryOptions({
-      queryKey: [...portfolioQueries.all(), "stack"] as const,
+      queryKey: [...portfolioQueries.stackKey()],
       queryFn: async () => getStacks(),
     }),
-  career: () => [...portfolioQueries.all(), "career"] as const,
-  project: () => [...portfolioQueries.all(), "project"] as const,
+  career: () => [...portfolioQueries.all(), "career"],
+  project: () => [...portfolioQueries.all(), "project"],
 };

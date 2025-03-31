@@ -1,14 +1,23 @@
+import { useMutation } from "@tanstack/react-query";
 import {
   BaseButton,
   IconButton,
   TextField,
 } from "@workspace/design-system/components";
+import { useToastContext } from "@workspace/design-system/providers";
+import { updateSkills } from "@workspace/utils/apis";
 import { ISkillType } from "@workspace/utils/types";
+import { useCallback } from "react";
+import { useNavigate } from "react-router";
 import AddedAnimation from "../../components/AddedAnimation";
 import Empty from "../../components/Empty";
+import { portfolioQueries } from "../../entity/portfolioQueries";
+import { queryClient } from "../../providers/QueryProvider";
 import { useSkill } from "./hook/useSkill";
 
 export default function SkillForm({ skills }: { skills: ISkillType[] }) {
+  const navigate = useNavigate();
+  const { showToast } = useToastContext();
   const {
     skillDatas,
     addSkillItem,
@@ -18,6 +27,24 @@ export default function SkillForm({ skills }: { skills: ISkillType[] }) {
     updateExperience,
     removeExperience,
   } = useSkill(skills);
+
+  const { mutate } = useMutation({
+    mutationFn: () => updateSkills(skillDatas),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: [...portfolioQueries.skillKey()],
+      });
+
+      showToast("수정이 완료되었습니다.", "info");
+      navigate("/skill");
+    },
+  });
+
+  const submitSkillForm = useCallback(() => {
+    if (confirm("수정하시겠습니까?")) {
+      mutate();
+    }
+  }, []);
 
   return (
     <form className="grid gap-12">
@@ -93,6 +120,10 @@ export default function SkillForm({ skills }: { skills: ISkillType[] }) {
 
       <BaseButton type="button" onClick={addSkillItem}>
         <span aria-hidden>+</span>스킬 추가하기
+      </BaseButton>
+
+      <BaseButton type="button" onClick={submitSkillForm}>
+        저장하기
       </BaseButton>
     </form>
   );
