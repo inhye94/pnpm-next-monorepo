@@ -8,7 +8,6 @@
     "utils": "pnpm --filter @workspace/utils",
     "portfolio": "pnpm --filter @project/portfolio",
     "admin": "pnpm --filter @project/admin",
-    "portfolio-admin": "pnpm --filter @project/portfolio-admin",
     "prepare": "husky"
   },
   "type": "module",
