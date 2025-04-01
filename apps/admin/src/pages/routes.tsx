@@ -6,6 +6,7 @@ import NotFound from "./NotFound";
 import SidebarLayout from "./SidebarLayout";
 import SkillEditPage from "./SkillEditPage";
 import SkillPage from "./SkillPage";
+import StackEditPage from "./StackEditPage";
 import StackPage from "./StackPage";
 
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
             loader: async () => stackLoader(queryClient),
             children: [
               { index: true, element: <StackPage /> },
-              { path: "edit", element: <p>스택 - 수정</p> },
+              { path: "edit", element: <StackEditPage /> },
             ],
           },
           {
