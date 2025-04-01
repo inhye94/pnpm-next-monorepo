@@ -28,5 +28,10 @@ export const getCareers = async (): Promise<ICareerItem[]> =>
  * 데이터 수정 API
  */
 
+// 대표 스킬 수정
 export const updateSkills = async (newData: ISkillType[]): Promise<void> =>
   updateData("skills", newData);
+
+// 기술 스택 수정
+export const updateStacks = async (newData: IStackType[]): Promise<void> =>
+  updateData("stacks", newData);
