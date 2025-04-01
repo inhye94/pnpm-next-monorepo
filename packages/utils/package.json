@@ -9,7 +9,8 @@
   "exports": {
     "./apis": "./src/apis/index.ts",
     "./types": "./src/types/index.ts",
-    "./datas": "./src/datas/index.ts"
+    "./datas": "./src/datas/index.ts",
+    "./shared": "./src/shared/index.ts"
   },
   "scripts": {
     "dev": "vite",
