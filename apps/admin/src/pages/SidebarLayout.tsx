@@ -5,7 +5,7 @@ import { sidebarMenus } from "../entity/menus";
 
 export default function SidebarLayout() {
   return (
-    <Container className="py-24">
+    <Container className="min-h-[80vh] py-24">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
         <div className="md:col-span-1">
           <Sidebar menus={sidebarMenus} />

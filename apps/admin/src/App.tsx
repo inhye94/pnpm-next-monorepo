@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import Footer from "./components/Footer";
 import Gnb from "./components/Gnb";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <Gnb />
       <Outlet />
-      <footer>푸터</footer>
+      <Footer />
     </>
   );
 }
