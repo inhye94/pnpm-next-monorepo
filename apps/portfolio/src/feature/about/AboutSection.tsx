@@ -12,9 +12,10 @@ interface IAboutText {
 
 const ABOUT_TEXT: IAboutText[] = [
   { id: "about-1", title: "안녕하세요!", icon: <ShakingHand /> },
-  { id: "about-2", title: "버그를 기회로," },
-  { id: "about-3", title: "장애물을 성장으로 바꾸는" },
-  { id: "about-4", title: "개발자 박인혜입니다." },
+  { id: "about-2", title: "사용자 피드백을 바탕으로" },
+  { id: "about-3", title: "사용자 경험(UX)을 개선하는" },
+  { id: "about-4", title: "프론트엔드 개발자" },
+  { id: "about-5", title: "박인혜입니다" },
 ];
 
 // component
