@@ -1,6 +1,6 @@
 import { GNB_HEIGHT } from "@/components/Gnb/constants";
 import { Icon } from "@workspace/design-system/components";
-import { iconMap } from "node_modules/@workspace/design-system/src/components/icon/iconMap";
+import { iconMap } from "@workspace/utils/shared";
 import {
   createContext,
   RefObject,

@@ -9,6 +9,7 @@ export const BADGE_BASIC_STYLE = `
   inline-flex
   items-center
   justify-center
+  gap-4
   font-normal
 `;
 

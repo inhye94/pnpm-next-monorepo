@@ -1,5 +1,5 @@
+import { iconMap } from "@workspace/utils/shared";
 import { Suspense } from "react";
-import { iconMap } from "./iconMap";
 
 /**
  * Icon 컴포넌트

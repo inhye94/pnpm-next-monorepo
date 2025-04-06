@@ -34,14 +34,8 @@ export const iconMap = {
   checkboxGhost: lazy(() =>
     import("react-icons/io").then((m) => ({ default: m.IoIosCheckmark })),
   ),
-  github: lazy(() =>
-    import("react-icons/io").then((m) => ({ default: m.IoLogoGithub })),
-  ),
   externalLink: lazy(() =>
     import("react-icons/fi").then((m) => ({ default: m.FiExternalLink })),
-  ),
-  velog: lazy(() =>
-    import("react-icons/si").then((m) => ({ default: m.SiVelog })),
   ),
   tool: lazy(() =>
     import("react-icons/fa").then((m) => ({ default: m.FaTools })),
@@ -66,5 +60,39 @@ export const iconMap = {
   ),
   chevron: lazy(() =>
     import("react-icons/io5").then((m) => ({ default: m.IoChevronBack })),
+  ),
+
+  // social
+  github: lazy(() =>
+    import("react-icons/io").then((m) => ({ default: m.IoLogoGithub })),
+  ),
+  velog: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiVelog })),
+  ),
+
+  // stack
+  react: lazy(() =>
+    import("react-icons/fa").then((m) => ({ default: m.FaReact })),
+  ),
+  next: lazy(() =>
+    import("react-icons/ri").then((m) => ({ default: m.RiNextjsFill })),
+  ),
+  typescript: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiTypescript })),
+  ),
+  javascript: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiJavascript })),
+  ),
+  storybook: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiStorybook })),
+  ),
+  tailwindcss: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiTailwindcss })),
+  ),
+  scss: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiSass })),
+  ),
+  emotion: lazy(() =>
+    import("react-icons/gi").then((m) => ({ default: m.GiHarryPotterSkull })),
   ),
 };

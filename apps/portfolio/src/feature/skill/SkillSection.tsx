@@ -1,5 +1,5 @@
 import Section from "@/components/layout/Section";
-import { BaseBadge } from "@workspace/design-system/components";
+import { BaseBadge, Icon } from "@workspace/design-system/components";
 import { skills, stacks } from "@workspace/utils/datas";
 import SkillCard from "./SkillCard";
 
@@ -12,7 +12,7 @@ export default async function SkillSection() {
       <div className="mb-24 flex flex-wrap gap-4">
         {stacks?.map((stack) => (
           <BaseBadge key={stack.id} color="light" shape="pill" size="lg">
-            {stack.content}
+            <Icon name={stack.icon} /> {stack.content}
           </BaseBadge>
         ))}
       </div>
