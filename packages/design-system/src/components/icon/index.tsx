@@ -25,7 +25,11 @@ export default function Icon({ name, label, className }: IIconProps) {
 
   return (
     <Suspense fallback={<span className={className}></span>}>
-      <LazyIcon aria-label={label} className={className} />
+      <LazyIcon
+        aria-label={label}
+        className={className}
+        aria-hidden={label ? false : true}
+      />
     </Suspense>
   );
 }

@@ -1,4 +1,4 @@
-import { BaseBadge, Markdown } from "@workspace/design-system/components";
+import { BaseBadge, Icon, Markdown } from "@workspace/design-system/components";
 import type { IProjectItem } from "@workspace/utils/types";
 import Image from "next/image";
 import DetailArticle from "./DetailArticle";
@@ -30,17 +30,24 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
             <span>{project.period}</span>
           </p>
 
+          <div className="text-body-md text-neutral-10 mb-32">
+            <Markdown>{project.description}</Markdown>
+          </div>
+
           <div className="flex flex-wrap gap-8">
-            {project.stacks.map((stack) => (
-              <BaseBadge
-                key={stack.id}
-                variant="soft"
-                color="light"
-                shape="pill"
-                size="lg"
-              >
-                {stack.title}
-              </BaseBadge>
+            {project.stacks.map((stack, i) => (
+              <div key={i}>
+                <BaseBadge
+                  key={stack.id}
+                  variant="soft"
+                  color="light"
+                  shape="pill"
+                  size="lg"
+                >
+                  <Icon name={stack.content} />
+                  {stack.title}
+                </BaseBadge>
+              </div>
             ))}
           </div>
         </div>
@@ -69,6 +76,20 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
           </Markdown>
         </DetailSection>
 
+        {project.uxImprovements.length > 0 && (
+          <DetailSection title="🎯 UX 개선 포인트">
+            {project.uxImprovements?.map((trouble) => (
+              <DetailArticle key={trouble.id} title={trouble.title}>
+                <Markdown>
+                  {trouble.contents
+                    ?.map((content) => `- ${content}\n`)
+                    .join("")}
+                </Markdown>
+              </DetailArticle>
+            ))}
+          </DetailSection>
+        )}
+
         <DetailSection title="🤔 트러블 슈팅">
           {project.troubleShooting?.map((trouble) => (
             <DetailArticle key={trouble.id} title={trouble.title}>
@@ -83,7 +104,9 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
           {project.learnings?.map((learning) => (
             <DetailArticle key={learning.id} title={learning.title}>
               <Markdown>
-                {learning.contents?.map((content) => `${content}  `).join("")}
+                {learning.contents
+                  ?.map((content) => `${content + "\n\n"}`)
+                  .join("")}
               </Markdown>
             </DetailArticle>
           ))}
