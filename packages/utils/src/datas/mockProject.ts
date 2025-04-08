@@ -9,52 +9,71 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740752226/home_portfolio_nozs1e.png",
     stacks: [
-      { id: "stack-1", title: "NextJS" },
-      { id: "stack-2", title: "React" },
-      { id: "stack-3", title: "TypeScript" },
-      { id: "stack-4", title: "TailwindCSS" },
-      { id: "stack-5", title: "Husky" },
-      { id: "stack-6", title: "PNPM" },
+      { id: "stack-1", title: "NextJS", content: "next" },
+      { id: "stack-2", title: "React", content: "react" },
+      { id: "stack-3", title: "TypeScript", content: "typescript" },
+      { id: "stack-4", title: "TailwindCSS", content: "tailwindcss" },
+      { id: "stack-5", title: "Husky", content: "husky" },
+      { id: "stack-6", title: "PNPM", content: "pnpm" },
     ],
+    description:
+      "Next.js 기반으로 제작된 개인 포트폴리오 페이지입니다.\n\n**정적인 PDF가 아닌, “내가 어떤 사람인지”를 직관적으로 보여주기** 위한 목적으로 제작되었으며, motion 효과와 커스텀 폴더 구조, 커밋 관리 자동화 등 다양한 프론트엔드 실험을 적용해보았습니다.",
     highlights: [
       {
-        id: "highlight-0",
-        content: "NextJS 기반의 포트폴리오 페이지",
-      },
-      {
         id: "highlight-1",
-        content: "정적인 PDF에서 벗어나 생동감있는 UI/UX를 표현하기 위해 제작",
+        content: "motion 라이브러리로 부드러운 인터랙션 구현",
       },
       {
         id: "highlight-2",
-        content: "motion 라이브러리를 사용하여 애니메이션 구현",
+        content: "스크롤 메뉴를 위한 custom context hook 구성",
       },
       {
         id: "highlight-3",
-        content: "Context를 이용한 스크롤 메뉴 구현",
+        content:
+          "모노레포 구조에 맞춘 커밋 컨벤션 자동화 (husky + lint-staged)",
       },
       {
         id: "highlight-4",
-        content: "커밋 관리를 위해 husky 도입",
+        content: "iconMap과 React.lazy를 활용한 아이콘 최적화",
+      },
+    ],
+    uxImprovements: [
+      {
+        id: "improvement-1",
+        title: "카드형 UI 도입",
+        contents: [
+          "**[문제점]** 기존 포트폴리오는 **리스트 형태**로 구성되어, 스크롤을 내리지 않으면 사용자들이 프로젝트의 정보를 빠르게 파악하기 어려웠습니다.",
+          "**[해결]** **카드형 UI**로 핵심 정보(이름, 기술 스택, 활동 시간)를 한눈에 보이게 배치했습니다.",
+          "**[성과]** 사용자들이 스크롤 없이도 **정보를 빠르게 파악**할 수 있었습니다. 또한, **모바일에서 가독성이 개선**되었습니다.",
+        ],
+      },
+      {
+        id: "improvement-2",
+        title: "About Me 문구 수정",
+        contents: [
+          "**[문제점]** 초기 포트폴리오에는 **텍스트 위주로 정리**되어 있어 내가 어떤 성향의 개발자인지가 한눈에 보이지 않았습니다.",
+          "**[해결]** **인트로 문구를 상단에 배치**해서 제가 지향하는 개발자상을 짧고 명확하게 전달했습니다. 또한 motion 효과를 도입해 부드럽게 시선을 유도하도록 구성했습니다.",
+          "**[성과]** 방문자는 인트로를 통해 “이 개발자는 뭘 중요하게 생각하는지”를 **5초 안에 파악**할 수 있게 되었습니다.",
+        ],
       },
     ],
     troubleShooting: [
       {
         id: "trouble-1",
-        title: "커밋 관리를 위해 husky 도입",
+        title: "커밋 컨벤션 문제",
         contents: [
-          "**[문제점]** 모노레포에 프로젝트가 늘어가면서, 어느 프로젝트의 작업인지 커밋 메시지에 표기되지 않아 일일이 히스토리를 열어서 확인해야하는 불편함이 있었습니다.",
-          "**[해결]** 변경된 커밋 컨벤션이 엄격하게 적용되도록 `husky`를 도입했습니다.",
-          "**[성과]** 커밋 전에 컨벤션을 검사하여 일관된 커밋 메시지를 유지하고 linter를 강제 적용하여 코드 스타일을 통일할 수 있었습니다.",
+          "**[문제점]** 모노레포의 규모가 조금씩 커짐에 따라 **커밋 내용의 일관성 유지가 어려웠습니다.**",
+          "**[해결]** `husky`를 활용해 커밋 전에 **lint, 타입 검사, 커밋 메시지 체크**를 수행했습니다",
+          "**[성과]** **커밋 로그의 일관성**을 유지하고, linter의 자동 적용으로 코드 스타일이 통일되었습니다.",
         ],
       },
       {
         id: "trouble-2",
         title: "아이콘 최적화",
         contents: [
-          "**[문제점]** 아이콘의 종류가 늘어남에 따라, SVG를 그대로 출력하는 Icon 컴포넌트의 구조는 확장성이 떨어졌습니다.",
-          "**[해결]** react-icons 라이브러리의 icon을 별도의 객체에 맵핑하고 Icon 컴포넌트의 props에 객체의 key를 전달하는 구조로 변경하고, `React.lazy`로 **dynamic import**를 적용하여 사용할 때만 아이콘을 로드하도록 구현했습니다.",
-          "**[성과1]** 동적 import로 인해 브라우저에 캐싱되어 중복 다운로드가 발생하지 않아 로드 속도가 빨라졌습니다.",
+          "**[문제점]** **SVG 출력 방식**은 아이콘이 늘어날수록 확장성과 유지보수가 어려워졌습니다.",
+          "**[해결]** **`react-icons` 라이브러리 + `iconMap` 객체 + `React.lazy` 구조**로 개선했습니다. **dynamic import**를 적용하여 사용할 때만 아이콘을 로드하도록 구현했습니다.",
+          "**[성과1]** 동적 import로 인해 브라우저에 캐싱되어 중복 다운로드를 방지하고 **로딩 속도가 개선**되었습니다.",
           "**[성과2]** 아이콘 라이브러리 변경이 쉬워졌습니다. 다른 아이콘 라이브러리로 변경하고자 한다면, 아이콘 매핑 테이블(iconMap)만 수정하면 됩니다.",
         ],
       },
@@ -62,10 +81,19 @@ export const projects: IProjectItem[] = [
     learnings: [
       {
         id: "learning-1",
-        title: "상추에서 배운 프로젝트 구조 설계",
+        title: "사용자 시선 흐름에 따른 UX 설계",
         contents: [
-          "밥을 먹다가 우연히 상추의 프렉탈 구조를 발견하곤 프로젝트에 적용해보았습니다. 예를들어, 공용 컴포넌트는 src/components 폴더에 저장하고, 특정 기능에만 사용되는 컴포넌트는 src/feature/[기능]/components 폴더에 저장했습니다. 덕분에 컴포넌트의 성격에 따라 구분하기 수월해졌습니다. 이 경험을 통해 방법론을 무조건 따르기보다는, **프로젝트 특성에 맞는 구조 또는 예측 가능한 구조가 더 중요하다**는 깨달음을 얻었습니다.",
-          "여러 방법론을 시도하며 얻은 인사이트와 주변 사물을 관찰하며 얻은 아이디어를 적극적으로 프로젝트에 반영해보며, 수직/수평 방향으로 균형있게 확장되는 구조를 만들어 보고자 합니다.",
+          "단순히 UI를 구현하는 데 그치지 않고 사용자 시선 흐름을 어떻게 설계할지를 고민하게 되었습니다.",
+          "motion을 사용한 애니메이션으로 시선을 유도하는 경험을 통해 실험을 두려워하지 않고 **사용자 경험을 최우선으로 고려**하는 것이 얼마나 중요한지 깨달았습니다.",
+        ],
+      },
+      {
+        id: "learning-2",
+        title: "상추 프랙탈 구조에서 착안한 폴더 구조 적용 경험",
+        contents: [
+          "밥을 먹다가 우연히 상추의 프렉탈 구조를 발견하곤 프로젝트에 적용해보았습니다. 예를들어, 공용 컴포넌트는 `src/components` 폴더에 저장하고, 특정 기능에만 사용되는 컴포넌트는 `src/feature/[기능]/components` 폴더에 저장했습니다.",
+          "덕분에 **기능별/공용 컴포넌트를 명확히 분리**하여 유지보수성 향상 되었습니다. 이 경험을 통해 방법론을 무조건 따르기보다는, **예측 가능한 구조가 중요하다**는 깨달음을 얻었습니다.",
+          "주변에서 얻은 인사이트를 실험적으로 프로젝트에 적용하며, 수직/수평 방향으로 균형있게 확장되는 구조를 만들어 보고자 합니다.",
         ],
       },
     ],
@@ -97,36 +125,31 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740750645/storybook_design-system-mono_dgdxia.png",
     stacks: [
-      { id: "stack-1", title: "Vite" },
-      { id: "stack-2", title: "React" },
-      { id: "stack-3", title: "TypeScript" },
-      { id: "stack-4", title: "Radix UI" },
-      { id: "stack-5", title: "TailwindCSS" },
-      { id: "stack-6", title: "Storybook" },
-      { id: "stack-7", title: "PNPM" },
+      { id: "stack-1", title: "Vite", content: "vite" },
+      { id: "stack-2", title: "React", content: "react" },
+      { id: "stack-3", title: "TypeScript", content: "typescript" },
+      { id: "stack-4", title: "Radix UI", content: "radix" },
+      { id: "stack-5", title: "TailwindCSS", content: "tailwindcss" },
+      { id: "stack-6", title: "Storybook", content: "storybook" },
+      { id: "stack-7", title: "PNPM", content: "pnpm" },
     ],
+    description:
+      "React 기반의 **디자인 시스템**을 제작하여 모노레포 구조의 다양한 프로젝트에서 **일관된 UI/UX**를 구현할 수 있도록 구성했습니다. 컴포넌트 단위의 재사용성과 TailwindCSS의 안정성을 중점적으로 고려했습니다.",
     highlights: [
       {
-        id: "highlight-0",
-        content: "React 기반의 디자인 시스템",
-      },
-      {
         id: "highlight-1",
-        content: "모노레포의 일관된 UI/UX 구현을 위해 제작",
+        content: "TailwindCSS Tree-Shaking 및 상속 이슈 대응",
       },
       {
         id: "highlight-2",
-        content: "TailwindCSS의 Tree-Shaking 에러 대응",
+        content: "Figma의 AI 기능을 활용한 디자인 가이드 자동화",
       },
       {
         id: "highlight-3",
-        content: "단순한 전역 상태를 가진 UI(toast, modal 등)는 Context로 구현",
-      },
-      {
-        id: "highlight-4",
-        content: "CCP 패턴처럼 특이사항이 있는 경우, 자세한 주석 추가",
+        content: "CCP 패턴으로 구성된 Radix UI 모달 컴포넌트",
       },
     ],
+    uxImprovements: [],
     troubleShooting: [
       {
         id: "trouble-1",
@@ -150,10 +173,18 @@ export const projects: IProjectItem[] = [
     learnings: [
       {
         id: "learning-1",
-        title: "Figma Dev 모드의 생산성",
+        title: "Figma AI 기능의 생산성",
         contents: [
-          "운 좋게 친구의 **Figma Dev 모드**를 체험할 수 있었습니다. 덕분에 디자인 가이드에 필요한 token(color, text 등)을 몇 번의 클릭으로 손쉽게 추출할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 하루가 소요되었지만, **Figma의 강력한 AI 기능 덕분에 단순 반복 작업을 건너뛸 수 있었습니다.**",
+          "운 좋게 친구의 **Figma Dev 모드**를 체험할 수 있었습니다. 덕분에 디자인 가이드에 필요한 token(color, text 등)을 몇 번의 클릭으로 손쉽게 추출할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 하루가 소요되었지만, **Figma의 강력한 AI 기능 덕분에 단순 반복 작업을 생략**할 수 있었습니다.",
           "이 경험을 통해, AI의 생산성은 개발자의 창의적이고 전략적인 작업을 도와준다는 것을 깨닫게 되었습니다. 새롭게 나오는 AI 툴에 열린 마음으로 다가가게 된 계기가 되었습니다.",
+        ],
+      },
+      {
+        id: "learning-2",
+        title: "확장이 용이한 디자인 시스템 제작",
+        contents: [
+          "디자인 시스템은 **디자인 일관성**뿐만 아니라 **도입 및 확장 용이성**까지 고려해야 한다는 점을 깨달았습니다. 특히, Radix UI의 모달 컴포넌트를 CCP 패턴으로 구현하면서, **부모나 조상에게 구조 결정을 위임**함으로써 내부 구조의 자율성을 높이고, 재사용성을 극대화할 수 있었습니다.",
+          "그리고 Context를 이용해 상태를 주입하는 방식으로 Modal과 Toast를 구현했습니다. 이로 인해 **상태 관리가 용이해졌고, 컴포넌트 간의 의존성을 줄일 수 있었습니다.**",
         ],
       },
     ],
@@ -191,87 +222,89 @@ export const projects: IProjectItem[] = [
         "https://67875cd86620d78844d43146-dzvstjnmho.chromatic.com/?path=/docs/components-textfield--docs",
     },
   },
-  {
-    id: "project-id-3",
-    title: "원티드 프리온보딩 11월 사전과제",
-    period: "2024.11.14 ~ 2024.12.21",
-    team: "개인 프로젝트",
-    thumbnailUrl:
-      "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751251/detail_preonboarding-todos_iv3sr1.png",
-    stacks: [
-      { id: "stack-1", title: "Vite" },
-      { id: "stack-2", title: "React" },
-      { id: "stack-3", title: "TypeScript" },
-      { id: "stack-4", title: "Zustand" },
-      { id: "stack-5", title: "Tanstack Query" },
-      { id: "stack-6", title: "Emotion" },
-      { id: "stack-7", title: "PNPM" },
-    ],
-    highlights: [
-      { id: "highlight-1", content: "React 기반의 To do list 페이지" },
-      {
-        id: "highlight-3",
-        content: "기존의 방식에서 벗어나 새로운 방식을 시도하기 위해 제작",
-      },
-      {
-        id: "highlight-2",
-        content:
-          "redirect를 페이지 진입하기 전에 처리하기위해 React-router의 loader 패턴을 도입",
-      },
-      {
-        id: "highlight-4",
-        content:
-          "백엔드와 프론트엔드 코드를 하나의 레포에서 관리하기 위해 모노레포 도입",
-      },
-      {
-        id: "highlight-5",
-        content:
-          "모노레포 Workspace의 TS 버전 에러와 dependencies의 버전 충돌로 인해 패키지 매니저 변경 (Yarn berry > PNPM)",
-      },
-    ],
-    troubleShooting: [
-      {
-        id: "trouble-1",
-        title: "react-router loader와 tanstackQuery 캐싱",
-        contents: [
-          "**[문제점]** `react-router`의 `loader`를 활용해 데이터를 패칭할 수 있다는 점을 알게 되었지만, **TS 파일에서 구현된 `loader` 내부에서는 `useQueryClient` 훅을 사용할 수 없는 문제**가 발생했습니다.",
-          "**[해결]** `loader`의 매개변수에 **`queryClient`를 주입하는 방식**으로 문제를 해결하여 데이터 캐싱을 효과적으로 활용할 수 있도록 개선했습니다.",
-          "**[성과]** 데이터 패칭 및 캐싱 최적화를 통해 **애플리케이션의 성능을 개선**했으며, 파일 단위로 로직을 분리함으로써 유지보수성을 크게 향상시킬 수 있었습니다. 이를 통해 **다양한 최적화 방식과 아키텍처 설계의 중요성을 체감**하는 계기가 되었습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
-        title: "Emotion 스타일링과 타입 일관성 유지",
-        contents: [
-          "**[문제점]** `emotion`을 사용하면서 **스타일 관련 props 값의 일관성을 유지하는 것이 어려웠고**, 타입을 수동으로 관리해야 하는 불편함이 있었습니다.",
-          "**[해결]** 스타일 객체를 생성하고, `keyof`와 `typeof`를 활용하여 **타입이 자동으로 갱신**되도록 구현했습니다. 이를 통해 컴포넌트의 props를 보다 효율적으로 관리할 수 있도록 개선했습니다.",
-          "**[성과]** 코드의 안정성과 일관성을 높였으며, 타입이 자동으로 갱신됨에 따라 **스타일 관리의 효율성도 크게 향상**되었습니다.",
-        ],
-      },
-      {
-        id: "trouble-3",
-        title: "모노레포 환경에서 Ghost Dependency 문제",
-        contents: [
-          "**[문제점]** 모노레포를 `Yarn Berry`로 구현하는 과정에서 **workspace 내 TypeScript 버전 충돌 및 패키지 의존성 관리 문제가 발생**했습니다. 이는 **Yarn Berry의 호이스팅 방식으로 인해 `Ghost Dependency`가 생성된 것이 원인**이었습니다.",
-          "**[해결]** 패키지 매니저를 **`pnpm`으로 변경하여 의존성 문제를 해결**하고, workspace의 패키지들이 일관된 환경에서 동작하도록 설정했습니다.",
-          "**[성과]** **의존성 관리가 한층 안정적**으로 이루어졌으며, 모노레포 환경에서의 개발 생산성을 크게 향상시킬 수 있었습니다. 이를 통해 패키지 매니저별 의존성 처리 방식의 차이를 이해하고, 적절한 도구 선택이 중요하다는 점을 실감할 수 있었습니다.",
-        ],
-      },
-    ],
-    learnings: [
-      {
-        id: "learning-1",
-        title: "편안함을 넘어 새로운 패턴으로: CCP, FSD, 그리고 구조적 설계",
-        contents: [
-          "기존에는 주로 UI 라이브러리를 활용해 toast와 모달을 구현했지만, 직접 구현하면서 간단한 **state 주입에는 context가 적합하다**는 점을 깨달았습니다. 특히 Radix UI의 Dialog 구현 코드를 분석하며 **CCP 패턴**을 발견하고, 이를 활용해 직접 모달을 구현하며 컴포넌트의 **부모나 조상에게 구조 결정을 위임**함으로써 내부 구조의 자율성을 높이고, 재사용성을 극대화할 수 있음을 알게 되었습니다. 또한, props를 기반으로 return 컴포넌트를 결정할 때 발생하던 중복 코드를 CCP 패턴으로 효과적으로 줄일 수 있었습니다.",
-          "개발을 처음 시작했을 때 만들었던 프로젝트는 간단한 todos 앱이었습니다. 그때 늦은 밤까지 눈을 반짝이며 코드를 짜던 설렘을 다시금 느낄 수 있는 경험이었습니다. 새로운 시도(emotion, 모노레포, loader, vite, CCP 패턴, FSD 디렉토리 구조 등)를 하면서, 익숙하고 편안한 방식에 안주하지 않고 꾸준히 새로운 개념을 접하고 적용하는 것이 얼마나 중요한지 다시 한 번 깨달았습니다.",
-        ],
-      },
-    ],
-    links: {
-      github: "https://github.com/inhye94/react-todos-monorepo",
-    },
-  },
+  // {
+  //   id: "project-id-3",
+  //   title: "원티드 프리온보딩 11월 사전과제",
+  //   period: "2024.11.14 ~ 2024.12.21",
+  //   team: "개인 프로젝트",
+  //   thumbnailUrl:
+  //     "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751251/detail_preonboarding-todos_iv3sr1.png",
+  //   stacks: [
+  //     { id: "stack-1", title: "Vite" },
+  //     { id: "stack-2", title: "React" },
+  //     { id: "stack-3", title: "TypeScript" },
+  //     { id: "stack-4", title: "Zustand" },
+  //     { id: "stack-5", title: "Tanstack Query" },
+  //     { id: "stack-6", title: "Emotion" },
+  //     { id: "stack-7", title: "PNPM" },
+  //   ],
+  //   description: "",
+  //   highlights: [
+  //     { id: "highlight-1", content: "React 기반의 To do list 페이지" },
+  //     {
+  //       id: "highlight-3",
+  //       content: "기존의 방식에서 벗어나 새로운 방식을 시도하기 위해 제작",
+  //     },
+  //     {
+  //       id: "highlight-2",
+  //       content:
+  //         "redirect를 페이지 진입하기 전에 처리하기위해 React-router의 loader 패턴을 도입",
+  //     },
+  //     {
+  //       id: "highlight-4",
+  //       content:
+  //         "백엔드와 프론트엔드 코드를 하나의 레포에서 관리하기 위해 모노레포 도입",
+  //     },
+  //     {
+  //       id: "highlight-5",
+  //       content:
+  //         "모노레포 Workspace의 TS 버전 에러와 dependencies의 버전 충돌로 인해 패키지 매니저 변경 (Yarn berry > PNPM)",
+  //     },
+  //   ],
+  //   uxImprovements: [],
+  //   troubleShooting: [
+  //     {
+  //       id: "trouble-1",
+  //       title: "react-router loader와 tanstackQuery 캐싱",
+  //       contents: [
+  //         "**[문제점]** `react-router`의 `loader`를 활용해 데이터를 패칭할 수 있다는 점을 알게 되었지만, **TS 파일에서 구현된 `loader` 내부에서는 `useQueryClient` 훅을 사용할 수 없는 문제**가 발생했습니다.",
+  //         "**[해결]** `loader`의 매개변수에 **`queryClient`를 주입하는 방식**으로 문제를 해결하여 데이터 캐싱을 효과적으로 활용할 수 있도록 개선했습니다.",
+  //         "**[성과]** 데이터 패칭 및 캐싱 최적화를 통해 **애플리케이션의 성능을 개선**했으며, 파일 단위로 로직을 분리함으로써 유지보수성을 크게 향상시킬 수 있었습니다. 이를 통해 **다양한 최적화 방식과 아키텍처 설계의 중요성을 체감**하는 계기가 되었습니다.",
+  //       ],
+  //     },
+  //     {
+  //       id: "trouble-2",
+  //       title: "Emotion 스타일링과 타입 일관성 유지",
+  //       contents: [
+  //         "**[문제점]** `emotion`을 사용하면서 **스타일 관련 props 값의 일관성을 유지하는 것이 어려웠고**, 타입을 수동으로 관리해야 하는 불편함이 있었습니다.",
+  //         "**[해결]** 스타일 객체를 생성하고, `keyof`와 `typeof`를 활용하여 **타입이 자동으로 갱신**되도록 구현했습니다. 이를 통해 컴포넌트의 props를 보다 효율적으로 관리할 수 있도록 개선했습니다.",
+  //         "**[성과]** 코드의 안정성과 일관성을 높였으며, 타입이 자동으로 갱신됨에 따라 **스타일 관리의 효율성도 크게 향상**되었습니다.",
+  //       ],
+  //     },
+  //     {
+  //       id: "trouble-3",
+  //       title: "모노레포 환경에서 Ghost Dependency 문제",
+  //       contents: [
+  //         "**[문제점]** 모노레포를 `Yarn Berry`로 구현하는 과정에서 **workspace 내 TypeScript 버전 충돌 및 패키지 의존성 관리 문제가 발생**했습니다. 이는 **Yarn Berry의 호이스팅 방식으로 인해 `Ghost Dependency`가 생성된 것이 원인**이었습니다.",
+  //         "**[해결]** 패키지 매니저를 **`pnpm`으로 변경하여 의존성 문제를 해결**하고, workspace의 패키지들이 일관된 환경에서 동작하도록 설정했습니다.",
+  //         "**[성과]** **의존성 관리가 한층 안정적**으로 이루어졌으며, 모노레포 환경에서의 개발 생산성을 크게 향상시킬 수 있었습니다. 이를 통해 패키지 매니저별 의존성 처리 방식의 차이를 이해하고, 적절한 도구 선택이 중요하다는 점을 실감할 수 있었습니다.",
+  //       ],
+  //     },
+  //   ],
+  //   learnings: [
+  //     {
+  //       id: "learning-1",
+  //       title: "편안함을 넘어 새로운 패턴으로: CCP, FSD, 그리고 구조적 설계",
+  //       contents: [
+  //         "기존에는 주로 UI 라이브러리를 활용해 toast와 모달을 구현했지만, 직접 구현하면서 간단한 **state 주입에는 context가 적합하다**는 점을 깨달았습니다. 특히 Radix UI의 Dialog 구현 코드를 분석하며 **CCP 패턴**을 발견하고, 이를 활용해 직접 모달을 구현하며 컴포넌트의 **부모나 조상에게 구조 결정을 위임**함으로써 내부 구조의 자율성을 높이고, 재사용성을 극대화할 수 있음을 알게 되었습니다. 또한, props를 기반으로 return 컴포넌트를 결정할 때 발생하던 중복 코드를 CCP 패턴으로 효과적으로 줄일 수 있었습니다.",
+  //         "개발을 처음 시작했을 때 만들었던 프로젝트는 간단한 todos 앱이었습니다. 그때 늦은 밤까지 눈을 반짝이며 코드를 짜던 설렘을 다시금 느낄 수 있는 경험이었습니다. 새로운 시도(emotion, 모노레포, loader, vite, CCP 패턴, FSD 디렉토리 구조 등)를 하면서, 익숙하고 편안한 방식에 안주하지 않고 꾸준히 새로운 개념을 접하고 적용하는 것이 얼마나 중요한지 다시 한 번 깨달았습니다.",
+  //       ],
+  //     },
+  //   ],
+  //   links: {
+  //     github: "https://github.com/inhye94/react-todos-monorepo",
+  //   },
+  // },
   {
     id: "project-id-4",
     title: "OTT Search",
@@ -280,29 +313,40 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740750987/home_ott-search_maqwhs.png",
     stacks: [
-      { id: "stack-1", title: "NextJS" },
-      { id: "stack-3", title: "TypeScript" },
-      { id: "stack-4", title: "Lighthouse" },
-      { id: "stack-5", title: "Tanstack Query" },
-      { id: "stack-6", title: "Module CSS" },
-      { id: "stack-7", title: "Yarn berry" },
+      { id: "stack-1", title: "NextJS", content: "next" },
+      { id: "stack-3", title: "TypeScript", content: "typescript" },
+      { id: "stack-4", title: "Lighthouse", content: "lighthouse" },
+      { id: "stack-5", title: "Tanstack Query", content: "tanstack" },
+      { id: "stack-6", title: "Module CSS", content: "css" },
+      { id: "stack-7", title: "Yarn berry", content: "yarn" },
     ],
+    description:
+      "Next.js 기반으로 제작한 콘텐츠 검색 웹 애플리케이션입니다. \n\n다양한 OTT 플랫폼에서 원하는 콘텐츠를 어디에서 볼 수 있는지 한 눈에 확인할 수 있도록 구현했습니다. \n\n검색 최적화, API 효율화, 성능 개선에 중점을 두고 제작했습니다.",
     highlights: [
-      { id: "highlight-1", content: "NextJS 기반의 콘텐츠 검색 페이지" },
+      { id: "highlight-1", content: "실시간 검색 기능 구현 (debounce 적용)" },
       {
         id: "highlight-2",
-        content:
-          "한 플랫폼에서 모든 시청 콘텐츠의 Provider를 확인하고 싶어서 제작",
+        content: "Lighthouse 기반 성능 점검",
+      },
+    ],
+    uxImprovements: [
+      {
+        id: "improvement-1",
+        title: "검색 UI 개선",
+        contents: [
+          "**[문제점]** OTT 검색은 사용자 입장에서 “내가 원하는 콘텐츠가 어디 있는지”를 빠르게 알고 싶어서 들어오는 서비스인데, **초기 화면**에서는 너무 많은 리스트와 검색 UI가 한 번에 보이며 **혼란스러웠습니다.**",
+          "**[해결]** **검색 중심 인터페이스로 구조를 개편**했습니다. 검색어 입력 → 실시간 결과 확인 → 상세 페이지까지 자연스러운 흐름으로 UX를 단순화했고, 검색 결과가 없을 경우에도 부드러운 fallback 메시지를 제공해 이탈을 줄였습니다.",
+          "**[성과]** “검색”이라는 핵심 기능에 집중하게 되어, 사용자는 최소 클릭으로 콘텐츠 위치를 파악할 수 있게 되었고, **처음 써본 사람도 바로 쓸 수 있는 검색 경험**을 만들 수 있었습니다.",
+        ],
       },
       {
-        id: "highlight-3",
-        content:
-          "'페이지가 덜컹거려요'라는 피드백을 받고, lighthouse 도입해서 성능 문제를 측정",
-      },
-      {
-        id: "highlight-4",
-        content:
-          "실시간 검색 기능에서 Input의 Change Handler의 호출 최적화를 위해 debounce 적용하여 이벤트 그룹화",
+        id: "improvement-2",
+        title: "피드백 반영",
+        contents: [
+          "**[문제점]** “**페이지가 덜컹거린다**”는 피드백을 받았습니다.",
+          "**[해결]** 페이지 렌더 최적화를 위해 **성능 분석 도구(Lighthouse)를 도입**하고 컴포넌트에 기본 크기를 설정했습니다.",
+          "**[성과]** Lighthouse 100점을 달성했으며, **사용자 피드백을 적극 반영**하여 UI/UX를 개선하는 경험을 통해 **사용자 중심의 개발**이 얼마나 중요한지 깨달았습니다.",
+        ],
       },
     ],
     troubleShooting: [
@@ -310,27 +354,19 @@ export const projects: IProjectItem[] = [
         id: "trouble-1",
         title: "검색 최적화",
         contents: [
-          "**[문제점]** **검색 기능 최적화** 과정에서 `debounce`를 적용해 이벤트 호출 빈도를 줄이고자 했지만, 컴포넌트가 리렌더링될 때마다 새로운 `debounce` 함수가 생성되어, 기존 **`debounce` 함수와 병렬로 실행**되는 문제를 겪었습니다. (입력창에 “abc”를 입력했을 때 “a”, “ab”, “abc”에 대해 각각 API 호출이 발생)",
-          "**[해결]** **함수의 참조를 고정하기 위해 `useCallback`을 활용**했습니다. 그 결과, 함수가 리렌더링 시에도 동일한 참조를 유지하여 debounce된 API 호출이 실행되었습니다.",
-          "**[성과]** API 호출 횟수를 줄여 **네트워크 비용을 절감**, `useCallback`과 `debounce`의 조합을 통해 **상태 의존적 함수를 효율적으로 관리하는 방법을 학습**했습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
-        title: "Props로 전달하는 데이터 타입 안정성 개선",
-        contents: [
-          "**[문제점]** 재사용 가능한 컴포넌트에 **API Response 데이터를 Props로 전달**할 때, **API 응답 데이터의 구조가 달라서** 데이터 구조를 일일이 검사하거나 변환해야 했기 때문에 컴포넌트 재사용성과 유지보수성이 저하되는 문제를 겪었습니다.",
-          "**[해결]** **제네릭(Generic) 타입**과 `extends`를 활용해 Props에 전달되는 데이터 타입을 동적으로 정의해 타입스크립트의 `조건부 타입`을 활용해 데이터 구조가 달라질 때도 컴파일 단계에서 타입 안정성을 보장하도록 구현했습니다.",
-          "**[성과]** 컴파일 단계에서 잘못된 데이터 구조를 감지해 `타입 안정성을 확보`하고, 제네릭 타입을 통해 다양한 데이터 구조를 사용하는 **컴포넌트를 반복적으로 재활용**이 가능합니다.",
+          "**[문제점]** 검색 기능 최적화에서 `debounce`를 적용했음에도 불구하고 입력마다 **API가 중복 호출**되는 문제가 발생했습니다.",
+          "**[해결]** **`useCallback`으로 `debounce` 함수 참조를 고정**시켜,리렌더링에도 동일 함수가 재사용되도록 구조 변경",
+          "**[성과]** 중복 호출 제거로 **API 호출 비용 절감**했고, 입력 반응성이 향상되었습니다.",
         ],
       },
     ],
     learnings: [
       {
         id: "learning-1",
-        title: "Next.js에서 배운 직관적인 라우팅과 개발 효율성",
+        title: "실시간 검색 기능과 성능 최적화",
         contents: [
-          "Next.js를 처음 사용하면서 파일 시스템 기반의 App Routing이 제공하는 간결함과 편리함을 경험할 수 있었습니다. 별도의 router 설정 없이 동작하고, URL params를 util 함수나 hook 없이 바로 활용할 수 있다는 점은 개발 효율성을 크게 높여주었습니다. 이를 통해 Next.js의 생산성 향상에 큰 매력을 느꼈습니다.",
+          "실시간 기능이 있는 앱에서 성능과 UX의 균형이 얼마나 중요한지 체감할 수 있었습니다. 특히, **Lighthouse**를 통해 성능을 점검하고 개선하는 과정에서 **사용자 경험을 최우선으로 고려**하는 것이 얼마나 중요한지 깨달았습니다.",
+          "또한, **API 호출 비용을 줄이는 방법**에 대해 깊이 고민하게 되었고, 이를 통해 **효율적인 데이터 패칭과 상태 관리를 위한 다양한 패턴**을 탐구하게 되었습니다.",
         ],
       },
     ],
@@ -347,33 +383,34 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751420/storybook_poly_design-system_tspvth.png",
     stacks: [
-      { id: "stack-1", title: "React" },
-      { id: "stack-3", title: "TypeScript" },
-      { id: "stack-4", title: "SCSS" },
-      { id: "stack-5", title: "Storybook" },
-      { id: "stack-6", title: "Radix Primitive UI" },
-      { id: "stack-7", title: "Yarn berry" },
+      { id: "stack-1", title: "React", content: "react" },
+      { id: "stack-3", title: "TypeScript", content: "typescript" },
+      { id: "stack-4", title: "SCSS", content: "scss" },
+      { id: "stack-5", title: "Storybook", content: "storybook" },
+      { id: "stack-6", title: "Radix Primitive UI", content: "radix" },
+      { id: "stack-7", title: "Yarn berry", content: "yarn" },
     ],
+    description:
+      "실무에서 겪은 Atomic UI의 유지보수 문제를 개선하기 위해 React 기반의 디자인 시스템을 구축했습니다.\n\nRadix UI와 SCSS를 기반으로 **웹 접근성과 스타일 커스터마이징**의 유연성을 확보했으며, Storybook을 통해 **테스트 환경과 문서화 환경을 통합**하여 생산성을 높였습니다.",
     highlights: [
-      { id: "highlight-1", content: "React 기반의 디자인 시스템" },
+      {
+        id: "highlight-1",
+        content: "Headless 컴포넌트 라이브러리(Radix Primitive) 기반 UI 설계",
+      },
       {
         id: "highlight-2",
-        content: "실무에서 부족했던 Atomic UI의 유지보수를 개선하기 위해 제작",
+        content: "번웹 접근성과 스타일 재정의 기능 중심 설계",
       },
       {
         id: "highlight-3",
-        content: "Headless 라이브러리를 사용하여 웹 접근성 개선",
+        content: "SCSS 내 동적 색상 처리 로직 구현",
       },
       {
         id: "highlight-4",
-        content:
-          "번들크기와 스타일 커스텀 여부를 비교하여 Radix Primitive UI를 사용",
-      },
-      {
-        id: "highlight-5",
-        content: "문서화와 UI 테스트의 불편함을 개선하고자 Storybook 사용",
+        content: "Storybook 기반 테스트/문서화 통합",
       },
     ],
+    uxImprovements: [],
     troubleShooting: [
       {
         id: "trouble-1",
@@ -399,14 +436,7 @@ export const projects: IProjectItem[] = [
         id: "learning-1",
         title: "모든 걸 직접 만들 필요는 없다: 실용적인 개발 태도 배우기",
         contents: [
-          "개발 환경의 일관성과 효율성을 높이려면, 단순한 코드 재사용을 넘어 체계적인 디자인 시스템 구축이 필수적임을 깨달았습니다. 기존에는 Props를 미리 정의한 후 구현하는 방식을 따랐지만, UI를 구축하면서 필요한 Props를 점진적으로 정의하는 방식으로 전환했습니다. 이를 통해 UI 설계와 구현 과정에서 **확장성을 제한하지 않는 유연한 접근 방식**을 익힐 수 있었습니다.",
-          "하지만 혼자 작업을 진행하다 보니 **시간과 체력의 한계**를 느끼게 되었고, 이는 ‘모든 것을 직접 구현해야 한다’는 내 개발 성향에서 비롯되었다고 생각했습니다. 이를 극복하기 위해 **라이브러리 활용도를 높이되, 지나친 의존은 피하고자** 노력했습니다. 특히, 라이브러리를 도입할 때는 유지보수가 활발하게 이루어지고 있는지, 프로젝트에 적합한지를 신중히 검토하는 과정을 거쳤습니다. 이를 통해 실무에서 선배 개발자들이 라이브러리 선택에 신중했던 이유를 깊이 이해할 수 있었습니다.",
-        ],
-      },
-      {
-        id: "learning-2",
-        title: "",
-        contents: [
+          "혼자 작업을 진행하다 보니 **시간과 체력의 한계**를 느끼게 되었고, 이는 ‘모든 것을 직접 구현해야 한다’는 내 개발 성향에서 비롯되었다고 생각했습니다. 이를 극복하기 위해 **라이브러리 활용도를 높이되, 지나친 의존은 피하고자** 노력했습니다. 특히, 라이브러리를 도입할 때는 유지보수가 활발하게 이루어지고 있는지, 프로젝트에 적합한지를 신중히 검토하는 과정을 거쳤습니다. 이를 통해 실무에서 선배 개발자들이 라이브러리 선택에 신중했던 이유를 깊이 이해할 수 있었습니다.",
           "또한, Atomic UI를 구축하면서 재사용성을 높이기 위한 **이벤트 주입**, 데이터 타입 안정화를 위한 **조건부 타입**, UI 테스트를 위한 **Storybook 활용** 등의 실무적인 기술을 경험할 수 있었습니다. 이 프로젝트는 단순한 UI 구현을 넘어, 유지보수성과 안정성을 고려한 **개발 환경 개선의 중요성**을 직접 체감할 수 있었던 의미 있는 경험이었습니다.",
         ],
       },
@@ -433,36 +463,30 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751985/chat_chat-app_yza5l6.png",
     stacks: [
-      { id: "stack-1", title: "React" },
-      { id: "stack-2", title: "Node.js" },
-      { id: "stack-3", title: "JavaScript" },
-      { id: "stack-4", title: "Express" },
-      { id: "stack-5", title: "socket.io" },
-      { id: "stack-6", title: "Yarn" },
+      { id: "stack-1", title: "React", content: "react" },
+      { id: "stack-2", title: "Node.js", content: "node" },
+      { id: "stack-3", title: "JavaScript", content: "javascript" },
+      { id: "stack-4", title: "Express", content: "express" },
+      { id: "stack-5", title: "socket.io", content: "socket" },
+      { id: "stack-6", title: "Yarn", content: "yarn" },
     ],
+    description:
+      "실무에서 Socket.io 기반의 실시간 알림 기능을 도입하지 못했던 아쉬움을 바탕으로, React + Socket.io 환경에서 **실시간 상호작용이 가능한 채팅 애플리케이션**을 제작했습니다.\n\n초기부터 서버와 클라이언트를 분리하여 구조화했으며, 실시간 UX를 고려해 다양한 사용자 접근 방식에 대응할 수 있도록 라우팅 설정과 배포 전략을 개선했습니다.",
     highlights: [
-      { id: "highlight-1", content: "React와 Socket.io를 이용한 채팅 페이지" },
+      {
+        id: "highlight-1",
+        content: "Socket.io 기반의 실시간 채팅 인터페이스 구현",
+      },
       {
         id: "highlight-2",
-        content:
-          "실무에서 실시간 알림에 Socket.io를 사용하지 못했던 것이 아쉬워서 제작",
+        content: "Nodemon과 concurrently를 활용한 개발 효율성 확보",
       },
       {
         id: "highlight-3",
-        content:
-          "Socket.io 사용하여 다른 유저와 실시간으로 상호작용 가능한 UI 구현",
-      },
-      {
-        id: "highlight-4",
-        content:
-          "node.js 소스 코드에 발생한 변경을 감지하고, 자동으로 서버 재시작 하기위해 Nodemon 사용",
-      },
-      {
-        id: "highlight-5",
-        content:
-          "Concurrently 방식으로 백엔드/프론트엔드 코드를 동시에 실행하여 작업 효율성 개선",
+        content: "Fly.io & Netlify를 활용한 서버-클라이언트 분리 배포",
       },
     ],
+    uxImprovements: [],
     troubleShooting: [
       {
         id: "trouble-1",
@@ -495,7 +519,7 @@ export const projects: IProjectItem[] = [
     learnings: [
       {
         id: "learning-1",
-        title: "",
+        title: "실무에서의 실패 경험을 극복한 프로젝트",
         contents: [
           "서버 작업은 처음이었고 우여곡절이 많았습니다. 환경 설정부터 배포까지 모든 과정에 에러가 발행했기 때문이니다. 중간에 포기하고 싶은 마음도 들었지만 그럼에도 불구하고 프로젝트를 끝까지 마무리한 이유는, 실무에서의 실패경험 때문이었습니다. 실무 개발 환경에서 Socket.io의 차선책으로 설정 시간이 지나면 알림 API를 호출하는 방식으로 구현했지만 실시간 상호작용을 구현하지 못한 것에 대해 큰 아쉬움이 남았기 때문입니다.",
           "이대로 포기하면 실패한 경험이 쌓이지만 성공할 때까지 도전하면 실패는 과정이 될 뿐입니다. 실무에서의 실패는 이 프로젝트를 제작함으로써 성공으로 나아가는 경험이 되었습니다. 당장 눈 앞의 결과에 좌절하지 않는 태도를 기를 수 있었습니다.",
@@ -515,42 +539,41 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740750255/home_suer-super-glue_tmjhxx.png",
     stacks: [
-      { id: "stack-1", title: "React" },
-      { id: "stack-2", title: "TypeScript" },
-      { id: "stack-3", title: "React-query" },
-      { id: "stack-4", title: "SCSS" },
-      { id: "stack-5", title: "Firebase" },
-      { id: "stack-6", title: "Cloudinary" },
-      { id: "stack-7", title: "Yarn" },
+      { id: "stack-1", title: "React", content: "react" },
+      { id: "stack-2", title: "TypeScript", content: "typescript" },
+      { id: "stack-3", title: "Tanstack-query", content: "tanstack" },
+      { id: "stack-4", title: "SCSS", content: "scss" },
+      { id: "stack-5", title: "Firebase", content: "firebase" },
+      { id: "stack-6", title: "Cloudinary", content: "cloudinary" },
+      { id: "stack-7", title: "Yarn", content: "yarn" },
     ],
+    description:
+      "Super Super Glue는 React의 핵심 개념을 익히고, 실제 전자상거래 UI를 클론하며 프론트엔드 개발의 전반적인 흐름을 체험하기 위해 제작한 쇼핑몰 프로젝트입니다.\n\n초기에는 msw를 사용한 목업 기반의 데이터로 작업했지만, 실무와 유사한 경험을 위해 Firebase와 Cloudinary로 전환하며 백엔드 통신과 파일 업로드 경험을 심화시켰습니다. 또한 **TypeScript 마이그레이션** 과정에서 컴포넌트 단위로 점진적으로 적용하는 전략을 통해 안정적인 코드 전환을 경험했습니다.",
     highlights: [
-      { id: "highlight-1", content: "React 기반의 쇼핑몰 페이지" },
+      { id: "highlight-1", content: "다중 파일 유효성 검사 구현" },
       {
         id: "highlight-2",
-        content: "React의 컨셉을 이해하기위해 제작",
+        content: "Firebase & Cloudinary를 활용한 실데이터 환경 구성",
       },
       {
         id: "highlight-3",
-        content:
-          "데이터 유지를 위해 msw로 구현된 코드를 Firebase와 Cloudinary로 변경",
+        content: "타입 안정성을 위한 Typescript 마이그레이션",
       },
+    ],
+    uxImprovements: [
       {
-        id: "highlight-4",
-        content: "코드 안정성을 위해 TypeScript를 도입",
+        id: "improvement-1",
+        title: "다중 파일 업로드 유효성 검사 구현",
+        contents: [
+          "**[문제점]** 파일 업로드, 특히 **다중 파일 유효성 검사**와 같은 고급 기능은 대부분의 라이브러리에서 지원되지 않았습니다.",
+          "**[해결]** `useState + DataTransfer`를 조합하여 업로드 용량과 개수 제한 로직을 구현했습니다.",
+          "**[성과]** 파일 업로드에서의 UX를 **사전에 검증하고 예외를 차단**함으로써, 사용자 입장에서 혼란을 줄이고 신뢰도 높은 서비스를 제공할 수 있었습니다.",
+        ],
       },
     ],
     troubleShooting: [
       {
         id: "trouble-1",
-        title: "다중 파일 업로드 유효성 검사 구현",
-        contents: [
-          "**[문제점]** `react-hook-form`에서 **다중 파일의 유효성 검사 기능이 기본적으로 제공되지 않는 문제**가 있었습니다.",
-          "**[해결]** `useState`와 `DataTransfer`를 활용하여 **파일의 용량과 개수를 검증하는 기능을 직접 구현**했습니다.",
-          "**[성과]** **필요한 기능이 라이브러리에 없다고 포기하는 것이 아니라, 직접 구현함으로써 사용자 경험을 향상**시킬 수 있었습니다. 이를 통해 사용자의 편의성을 고려한 기능을 스스로 만들어가는 과정에서 큰 성취감을 느낄 수 있었습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
         title: "Typescript 적용",
         contents: [
           "**[문제점]** `TypeScript` 마이그레이션을 진행할 때, **page 단위부터 적용하는 방식**을 선택했지만, 예상보다 많은 **산발적인 에러가 발생**하며 대응하는 데 시간이 많이 소요되었습니다.",
@@ -562,18 +585,10 @@ export const projects: IProjectItem[] = [
     learnings: [
       {
         id: "learning-1",
-        title: "백엔드 개발자와의 협업 경험",
+        title: "없으면 내가 만든다",
         contents: [
-          "`MSW`로 구현된 코드를 `Firebase`와 `Cloudinary`로 변경하면서, 실무에서 백엔드 개발자님과 협업했던 과정이 떠올랐습니다. 특히, **이미지 파일 등록 API를 구현하며 디렉토리 구조를 함께 설계했던 경험**이 이번 프로젝트에서 큰 도움이 되었습니다.",
-          "이 경험을 통해, **실무에서 백엔드 개발자와 적극적으로 소통**하며 API 설계와 데이터 구조를 함께 고민하는 것이 얼마나 중요한지 다시 한번 깨닫게 되었습니다. 또한, **서로의 역할을 존중하며 협업하는 과정 자체가 즐겁고 의미 있는 경험**이라는 것을 배울 수 있었습니다.",
-        ],
-      },
-      {
-        id: "learning-2",
-        title: "Git flow 전략의 중요성",
-        contents: [
-          "실무에서처럼 프로젝트에 Git flow 전략을 도입했습니다. 이를 통해 **버전 관리의 중요성**을 깨달을 수 있었으며, **코드의 안정성을 높이고 협업을 위한 환경을 구축**할 수 있었습니다. 덕분에 커밋 메시지를 통해 **코드 변경 이유와 내용을 명확히 전달**할 수 있었습니다.",
-          "대신, 프로젝트의 규모가 작다보니 **Git flow 전략을 적용하는 데에 시간이 많이 소요**되었습니다. 이를 통해 **프로젝트 규모에 따라 적절한 Git flow 전략을 선택**해야 한다는 점을 배울 수 있었습니다.",
+          "개발자는 단순히 화면을 만드는 사람이 아니라, **사용자가 예상하지 못한 행동을 미리 방지하고, 불편함 없이 서비스를 이용할 수 있도록 설계하는 사람**이라는 걸 다시금 깨달았습니다.",
+          "특히 다중 파일 업로드 유효성 검사를 직접 구현하면서, '없으면 내가 만든다'는 태도가 사용자 경험을 지키는 데 얼마나 중요한지 실감했습니다.",
         ],
       },
     ],
@@ -598,39 +613,37 @@ export const projects: IProjectItem[] = [
     thumbnailUrl:
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740750509/search_duetube_pikmt7.png",
     stacks: [
-      { id: "stack-1", title: "React" },
-      { id: "stack-2", title: "React-query" },
-      { id: "stack-3", title: "TailwindCSS" },
-      { id: "stack-4", title: "Yarn" },
+      { id: "stack-1", title: "React", content: "react" },
+      { id: "stack-2", title: "Tanstack-query", content: "tanstack" },
+      { id: "stack-3", title: "TailwindCSS", content: "tailwindcss" },
+      { id: "stack-4", title: "Yarn", content: "yarn" },
     ],
+    description:
+      "Duetube는 YouTube UI/UX를 모방한 클론 프로젝트로, 실무에서 부족하다고 느꼈던 **데이터 전처리 구조와 상태 관리 로직을 개선**하기 위해 기획했습니다.\n\nReact Query를 중심으로 데이터 Fetching의 안정성과 성능을 확보했고, TailwindCSS로 스타일 가독성을 높였습니다. 특히 반복되는 API 요청, 페이지 상태 초기화 등의 실무적 이슈들을 해결하며 React 애플리케이션 아키텍처에 대한 이해도를 높일 수 있었습니다.",
     highlights: [
-      { id: "highlight-1", content: "React 기반의 Youtube 클론 페이지" },
+      {
+        id: "highlight-1",
+        content: "LocalStorage를 활용한 다크모드 상태 저장",
+      },
       {
         id: "highlight-2",
-        content: "실무에서 부족했던 데이터 전처리 코드를 개선하기위해 제작",
+        content: "React Query를 사용하여 데이터 Fetching 안정성 및 가독성 향상",
       },
+    ],
+    uxImprovements: [
       {
-        id: "highlight-3",
-        content:
-          "데이터 Fetching 매커니즘을 React-query로 대체하여 코드 안정성 개선",
-      },
-      {
-        id: "highlight-4",
-        content: "TailwindCSS를 사용해서 일관된 UI/UX 구현",
+        id: "improvement-1",
+        title: "다크모드 상태 저장",
+        contents: [
+          "**[문제점]** `Context`를 활용해 다크모드를 구현했으나, 페이지를 새로고침하거나 재진입할 때마다 상태가 초기화되는 문제가 발생했습니다.",
+          "**[해결]** 서버를 활용한 상태 저장도 고려했지만, **간단한 UI 설정 값**을 위해 네트워크 통신까지 사용할 필요는 없다고 판단했습니다. 대신, **localStorage를 활용하여 다크모드 상태를 저장**하고, 페이지 로드 시 저장된 값을 불러오도록 구현했습니다.",
+          "**[성과]** 사용자는 반복 설정 없이 일관된 인터페이스를 경험할 수 있게 되었습니다.",
+        ],
       },
     ],
     troubleShooting: [
       {
         id: "trouble-1",
-        title: "다크모드 상태 저장",
-        contents: [
-          "**[문제점]** `Context`를 활용해 다크모드를 구현했으나, 페이지를 새로고침하거나 재진입할 때마다 상태가 초기화되는 문제가 발생했습니다.",
-          "**[해결]** 서버를 활용한 상태 저장도 고려했지만, **간단한 UI 설정 값**을 위해 네트워크 통신까지 사용할 필요는 없다고 판단했습니다. 대신, **localStorage를 활용하여 다크모드 상태를 저장**하고, 페이지 로드 시 저장된 값을 불러오도록 구현했습니다.",
-          "**[성과]** **페이지 새로고침과 관계없이 다크모드 상태를 유지**할 수 있어 사용자 경험이 향상되었습니다. 이를 통해 **상태 관리를 다양한 방식으로 구현**할 수 있다는 점을 인지할 수 있었습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
         title: "데이터 Fetching 최적화",
         contents: [
           "**[문제점]** 동일한 검색어가 입력될 때마다 **불필요한 API 호출**이 발생하여 성능 저하와 네트워크 비용 증가 문제가 있었습니다.",
@@ -642,10 +655,10 @@ export const projects: IProjectItem[] = [
     learnings: [
       {
         id: "learning-1",
-        title: "",
+        title: "실무 회고를 담은 성장의 기록",
         contents: [
-          "실무에서 `fetch` 사용 시 `null` 체크와 `loading` 처리를 위한 코드가 많아지면서 가독성이 떨어지는 문제가 있었습니다. 또한, 모듈의 `import/export` 개념을 제대로 숙지하지 못해 불필요한 중복 코드가 많았습니다.",
-          "이러한 부족함을 인정하고 개선하기 위해 `then` 체이닝을 활용하여 데이터 Fetching을 구현해 보았고, 이를 계기로 **React Query를 사용하면 코드의 가독성과 안정성을 더욱 높일 수 있다는 것을 깨달았습니다.** React Query를 도입하면서 **데이터 Fetching 로직을 분리**하여 코드의 가독성을 개선할 수 있었으며, **Fetching 로직을 중앙화**함으로써 코드의 안정성도 높일 수 있었습니다.",
+          "이번 프로젝트는 React에서의 **데이터 흐름**, **상태 저장 전략**, **라이브러리 도입의 타이밍** 등을 실제로 적용해 보며 실무에 더 가까운 코드 구조와 UX를 구현할 수 있었던 성장의 계기였습니다.",
+          "특히, 실무에서 fetch 사용 시 발생했던 null 체크 및 loading 처리가 반복되며 가독성이 떨어졌던 문제를 반성하고, Tanstack Query를 프로젝트에 적용하여 **로딩, 에러, 캐싱 등 상태 처리를 자동화**하면서 코드의 가독성과 UX 안정성 확보할 수 있었습니다.",
         ],
       },
     ],

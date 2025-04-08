@@ -58,7 +58,7 @@ export const skills: ISkillType[] = [
       {
         id: "exp-htmlcss-1",
         content:
-          "Radix를 사용해, 웹 접근성을 보완한 디자인 시스템을 구현한 경험이 있습니다",
+          "Radix를 사용해, 웹 접근성을 보완한 디자인 시스템을 구현한 경험이 있습니다.",
       },
       {
         id: "exp-htmlcss-2",
@@ -66,7 +66,8 @@ export const skills: ISkillType[] = [
       },
       {
         id: "exp-htmlcss-3",
-        content: "keyframe을 활용한 애니메이션 기법을 활용할 수 있습니다.",
+        content:
+          "framer-motion을 활용하여 부드러운 애니메이션을 구현할 수 있습니다.",
       },
     ],
   },

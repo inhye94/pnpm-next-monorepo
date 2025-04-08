@@ -3,7 +3,7 @@ import { iconMap } from "../shared/iconMap";
 export interface IStackType {
   id: string;
   content: string;
-  icon: keyof typeof iconMap;
+  icon?: keyof typeof iconMap;
 }
 
 export interface ISkillType {

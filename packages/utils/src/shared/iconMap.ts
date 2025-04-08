@@ -95,4 +95,43 @@ export const iconMap = {
   emotion: lazy(() =>
     import("react-icons/gi").then((m) => ({ default: m.GiHarryPotterSkull })),
   ),
+  pnpm: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiPnpm })),
+  ),
+  husky: lazy(() =>
+    import("react-icons/pi").then((m) => ({ default: m.PiDogFill })),
+  ),
+  vite: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiVite })),
+  ),
+  radix: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiRadixui })),
+  ),
+  lighthouse: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiLighthouse })),
+  ),
+  tanstack: lazy(() =>
+    import("react-icons/lu").then((m) => ({ default: m.LuTreePalm })),
+  ),
+  css: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiCss3 })),
+  ),
+  yarn: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiYarn })),
+  ),
+  node: lazy(() =>
+    import("react-icons/io5").then((m) => ({ default: m.IoLogoNodejs })),
+  ),
+  express: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiExpress })),
+  ),
+  socket: lazy(() =>
+    import("react-icons/tb").then((m) => ({ default: m.TbBrandSocketIo })),
+  ),
+  firebase: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiFirebase })),
+  ),
+  cloudinary: lazy(() =>
+    import("react-icons/si").then((m) => ({ default: m.SiCloudinary })),
+  ),
 };
