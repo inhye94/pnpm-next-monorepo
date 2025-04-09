@@ -61,6 +61,9 @@ export const iconMap = {
   chevron: lazy(() =>
     import("react-icons/io5").then((m) => ({ default: m.IoChevronBack })),
   ),
+  document: lazy(() =>
+    import("react-icons/io5").then((m) => ({ default: m.IoDocumentText })),
+  ),
 
   // social
   github: lazy(() =>
