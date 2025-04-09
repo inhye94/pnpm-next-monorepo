@@ -399,7 +399,7 @@ export const projects: IProjectItem[] = [
       },
       {
         id: "highlight-2",
-        content: "번웹 접근성과 스타일 재정의 기능 중심 설계",
+        content: "웹 접근성과 스타일 재정의 기능 중심 설계",
       },
       {
         id: "highlight-3",
