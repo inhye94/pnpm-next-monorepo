@@ -13,18 +13,23 @@ import classNames from "classnames";
 interface IProjectCardProps {
   className?: string;
   project: IProjectItem;
+  children?: React.ReactNode;
 }
 
 // component
-export default function ProjectCard({ project, className }: IProjectCardProps) {
+export default function ProjectCard({
+  project,
+  className,
+  children,
+}: IProjectCardProps) {
   return (
     <article
       className={classNames(
-        "bg-background-gray rounded-base hover:bg-background-darkgray relative min-h-300 overflow-hidden p-32",
+        "bg-background-gray rounded-base hover:bg-background-darkgray relative flex min-h-300 flex-col gap-16 overflow-hidden p-32 transition hover:shadow-2xl",
         className,
       )}
     >
-      <header className="mb-16 flex flex-col-reverse">
+      <header className="flex flex-col-reverse">
         <h3 className="text-heading-5 text-neutral-30 mb-8 flex items-center gap-x-8">
           {project.title}
         </h3>
@@ -36,7 +41,7 @@ export default function ProjectCard({ project, className }: IProjectCardProps) {
         </div>
       </header>
 
-      <ul className="marker:text-neutral-10 mb-8 list-disc pl-12">
+      <ul className="marker:text-neutral-10 list-disc pl-12">
         {project.highlights?.map((highlight) => (
           <li key={highlight.id}>
             <p className="text-body-xs text-neutral-10">{highlight.content}</p>
@@ -44,13 +49,15 @@ export default function ProjectCard({ project, className }: IProjectCardProps) {
         ))}
       </ul>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="mb-auto flex flex-wrap gap-4">
         {project.stacks.map((stack) => (
           <BaseBadge key={stack.id} variant="soft" shape="pill">
             {stack.title}
           </BaseBadge>
         ))}
       </div>
+
+      {children}
     </article>
   );
 }

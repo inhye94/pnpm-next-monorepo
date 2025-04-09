@@ -20,7 +20,7 @@ export default function DetailArticle({
 }: IDetailArticleProps) {
   return (
     <article className="not-last:mb-12">
-      <h5 className="bg-background-gray mb-4 p-4 font-semibold">{title}</h5>
+      <h5 className="bg-background-darkgray mb-4 p-4 font-semibold">{title}</h5>
       {children}
     </article>
   );

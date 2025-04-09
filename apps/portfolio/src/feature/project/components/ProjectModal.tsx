@@ -41,9 +41,7 @@ export default function ProjectModal({
 }: IProjectModalProps) {
   return (
     <Modal.Root>
-      <Modal.Trigger className="rounded-base before:bg-primary before:rounded-2 before:text-12 relative w-full text-left transition before:pointer-events-none before:absolute before:top-0 before:right-8 before:z-1 before:inline-block before:-translate-y-full before:px-4 before:py-2 before:text-white before:opacity-0 before:transition-all before:content-['상세보기'] hover:-translate-y-10 hover:border-solid hover:shadow-2xl hover:before:translate-y-0 hover:before:opacity-100 focus:-translate-y-10 focus:border-solid focus:shadow-2xl">
-        {trigger}
-      </Modal.Trigger>
+      <Modal.Trigger asChild>{trigger}</Modal.Trigger>
       <Modal.Portal>
         <Modal.Overlay>
           <Modal.Content className="relative">
