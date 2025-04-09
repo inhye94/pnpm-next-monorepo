@@ -12,7 +12,7 @@ export default async function SkillSection() {
       <div className="mb-24 flex flex-wrap gap-4">
         {stacks?.map((stack) => (
           <BaseBadge key={stack.id} color="light" shape="pill" size="lg">
-            <Icon name={stack.icon} /> {stack.content}
+            {stack.icon && <Icon name={stack.icon} />} {stack.content}
           </BaseBadge>
         ))}
       </div>
