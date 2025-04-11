@@ -314,6 +314,7 @@ export const projects: IProjectItem[] = [
       "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740750987/home_ott-search_maqwhs.png",
     stacks: [
       { id: "stack-1", title: "NextJS", content: "next" },
+      { id: "stack-2", title: "React", content: "react" },
       { id: "stack-3", title: "TypeScript", content: "typescript" },
       { id: "stack-4", title: "Lighthouse", content: "lighthouse" },
       { id: "stack-5", title: "Tanstack Query", content: "tanstack" },
