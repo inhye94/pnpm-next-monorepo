@@ -456,82 +456,82 @@ export const projects: IProjectItem[] = [
         "https://672b99b618065f759d3ae16e-lyfkzljnvx.chromatic.com/?path=/docs/atoms-avatar--docs",
     },
   },
-  {
-    id: "project-id-6",
-    title: "Chat App과 Cyber AirConditioner",
-    period: "2024.07.10 ~ 2024.7.30",
-    team: "개인 프로젝트",
-    thumbnailUrl:
-      "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751985/chat_chat-app_yza5l6.png",
-    stacks: [
-      { id: "stack-1", title: "React", content: "react" },
-      { id: "stack-2", title: "Node.js", content: "node" },
-      { id: "stack-3", title: "JavaScript", content: "javascript" },
-      { id: "stack-4", title: "Express", content: "express" },
-      { id: "stack-5", title: "socket.io", content: "socket" },
-      { id: "stack-6", title: "Yarn", content: "yarn" },
-    ],
-    description:
-      "실무에서 Socket.io 기반의 실시간 알림 기능을 도입하지 못했던 아쉬움을 바탕으로, React + Socket.io 환경에서 **실시간 상호작용이 가능한 채팅 애플리케이션**을 제작했습니다.\n\n초기부터 서버와 클라이언트를 분리하여 구조화했으며, 실시간 UX를 고려해 다양한 사용자 접근 방식에 대응할 수 있도록 라우팅 설정과 배포 전략을 개선했습니다.",
-    highlights: [
-      {
-        id: "highlight-1",
-        content: "Socket.io 기반의 실시간 채팅 인터페이스 구현",
-      },
-      {
-        id: "highlight-2",
-        content: "Nodemon과 concurrently를 활용한 개발 효율성 확보",
-      },
-      {
-        id: "highlight-3",
-        content: "Fly.io & Netlify를 활용한 서버-클라이언트 분리 배포",
-      },
-    ],
-    uxImprovements: [],
-    troubleShooting: [
-      {
-        id: "trouble-1",
-        title: "서버와 클라이언트 동시 배포 문제 해결 및 배포 전략 변경",
-        contents: [
-          "**[문제점]** `concurrently`를 사용해 서버와 클라이언트를 하나로 묶어 배포하려 했으나, 빌드 과정에서 오류가 발생했습니다.",
-          "**[해결]** 서버와 클라이언트를 함께 배포할 수 없다는 점을 확인한 후, 서버는 **fly.io**, 클라이언트는 **Netlify**에 각각 배포하여 문제를 해결했습니다.",
-          "**[성과]** 배포 환경을 분리함으로써 안정적인 서비스 운영이 가능해졌으며, 각각의 플랫폼에서 최적화된 배포를 수행할 수 있게 되었습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
-        title: "서버 배포 후 502 오류 해결 및 설정 최적화",
-        contents: [
-          "**[문제점]** 서버 배포에 성공했으나, 502 에러가 발생했습니다.",
-          "**[해결]** 서버 과부하나 네트워크 문제가 아님을 확인한 후, 서버 설정에서 서로 다른 포트 값이 지정되어 있음을 발견했습니다. 이를 동일한 값으로 수정하여 문제를 해결했습니다.",
-          "**[성과]** 배포 서비스에서 사용량을 분석하며 네트워크 및 과부하 문제가 아님을 확인하는 과정에서 **실시간 모니터링의 중요성**을 배우는 계기가 되었습니다",
-        ],
-      },
-      {
-        id: "trouble-3",
-        title: "배포 후 새로고침 오류 해결을 위한 라우팅 설정 개선",
-        contents: [
-          "**[문제점]** 배포 후 새로고침하거나 링크로 직접 접근하면 오류가 발생했습니다.",
-          "**[해결]** Client-side routing을 지원하기 위해 **public 폴더**에 `_redirects` 설정을 추가하여 경로 문제를 해결했습니다.",
-          "**[성과]** 새로고침 및 직접 접근 시에도 정상적으로 페이지가 로드되며, 원활한 사용자 경험을 제공할 수 있게 되었습니다. 또한, **사용자가 되어 다양한 접근 방식을 직접 시도하며 테스트한 경험을 통해, 예상치 못한 오류를 미리 발견하고 대응할 수 있는 능력을 기를 수 있었습니다.**",
-        ],
-      },
-    ],
-    learnings: [
-      {
-        id: "learning-1",
-        title: "실무에서의 실패 경험을 극복한 프로젝트",
-        contents: [
-          "서버 작업은 처음이었고 우여곡절이 많았습니다. 환경 설정부터 배포까지 모든 과정에 에러가 발행했기 때문이니다. 중간에 포기하고 싶은 마음도 들었지만 그럼에도 불구하고 프로젝트를 끝까지 마무리한 이유는, 실무에서의 실패경험 때문이었습니다. 실무 개발 환경에서 Socket.io의 차선책으로 설정 시간이 지나면 알림 API를 호출하는 방식으로 구현했지만 실시간 상호작용을 구현하지 못한 것에 대해 큰 아쉬움이 남았기 때문입니다.",
-          "이대로 포기하면 실패한 경험이 쌓이지만 성공할 때까지 도전하면 실패는 과정이 될 뿐입니다. 실무에서의 실패는 이 프로젝트를 제작함으로써 성공으로 나아가는 경험이 되었습니다. 당장 눈 앞의 결과에 좌절하지 않는 태도를 기를 수 있었습니다.",
-        ],
-      },
-    ],
-    links: {
-      github: "https://github.com/inhye94/socket-chat-app-client",
-      deploy: "https://socket-chat-app-client.vercel.app/",
-    },
-  },
+  // {
+  //   id: "project-id-6",
+  //   title: "Chat App과 Cyber AirConditioner",
+  //   period: "2024.07.10 ~ 2024.7.30",
+  //   team: "개인 프로젝트",
+  //   thumbnailUrl:
+  //     "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751985/chat_chat-app_yza5l6.png",
+  //   stacks: [
+  //     { id: "stack-1", title: "React", content: "react" },
+  //     { id: "stack-2", title: "Node.js", content: "node" },
+  //     { id: "stack-3", title: "JavaScript", content: "javascript" },
+  //     { id: "stack-4", title: "Express", content: "express" },
+  //     { id: "stack-5", title: "socket.io", content: "socket" },
+  //     { id: "stack-6", title: "Yarn", content: "yarn" },
+  //   ],
+  //   description:
+  //     "실무에서 Socket.io 기반의 실시간 알림 기능을 도입하지 못했던 아쉬움을 바탕으로, React + Socket.io 환경에서 **실시간 상호작용이 가능한 채팅 애플리케이션**을 제작했습니다.\n\n초기부터 서버와 클라이언트를 분리하여 구조화했으며, 실시간 UX를 고려해 다양한 사용자 접근 방식에 대응할 수 있도록 라우팅 설정과 배포 전략을 개선했습니다.",
+  //   highlights: [
+  //     {
+  //       id: "highlight-1",
+  //       content: "Socket.io 기반의 실시간 채팅 인터페이스 구현",
+  //     },
+  //     {
+  //       id: "highlight-2",
+  //       content: "Nodemon과 concurrently를 활용한 개발 효율성 확보",
+  //     },
+  //     {
+  //       id: "highlight-3",
+  //       content: "Fly.io & Netlify를 활용한 서버-클라이언트 분리 배포",
+  //     },
+  //   ],
+  //   uxImprovements: [],
+  //   troubleShooting: [
+  //     {
+  //       id: "trouble-1",
+  //       title: "서버와 클라이언트 동시 배포 문제 해결 및 배포 전략 변경",
+  //       contents: [
+  //         "**[문제점]** `concurrently`를 사용해 서버와 클라이언트를 하나로 묶어 배포하려 했으나, 빌드 과정에서 오류가 발생했습니다.",
+  //         "**[해결]** 서버와 클라이언트를 함께 배포할 수 없다는 점을 확인한 후, 서버는 **fly.io**, 클라이언트는 **Netlify**에 각각 배포하여 문제를 해결했습니다.",
+  //         "**[성과]** 배포 환경을 분리함으로써 안정적인 서비스 운영이 가능해졌으며, 각각의 플랫폼에서 최적화된 배포를 수행할 수 있게 되었습니다.",
+  //       ],
+  //     },
+  //     {
+  //       id: "trouble-2",
+  //       title: "서버 배포 후 502 오류 해결 및 설정 최적화",
+  //       contents: [
+  //         "**[문제점]** 서버 배포에 성공했으나, 502 에러가 발생했습니다.",
+  //         "**[해결]** 서버 과부하나 네트워크 문제가 아님을 확인한 후, 서버 설정에서 서로 다른 포트 값이 지정되어 있음을 발견했습니다. 이를 동일한 값으로 수정하여 문제를 해결했습니다.",
+  //         "**[성과]** 배포 서비스에서 사용량을 분석하며 네트워크 및 과부하 문제가 아님을 확인하는 과정에서 **실시간 모니터링의 중요성**을 배우는 계기가 되었습니다",
+  //       ],
+  //     },
+  //     {
+  //       id: "trouble-3",
+  //       title: "배포 후 새로고침 오류 해결을 위한 라우팅 설정 개선",
+  //       contents: [
+  //         "**[문제점]** 배포 후 새로고침하거나 링크로 직접 접근하면 오류가 발생했습니다.",
+  //         "**[해결]** Client-side routing을 지원하기 위해 **public 폴더**에 `_redirects` 설정을 추가하여 경로 문제를 해결했습니다.",
+  //         "**[성과]** 새로고침 및 직접 접근 시에도 정상적으로 페이지가 로드되며, 원활한 사용자 경험을 제공할 수 있게 되었습니다. 또한, **사용자가 되어 다양한 접근 방식을 직접 시도하며 테스트한 경험을 통해, 예상치 못한 오류를 미리 발견하고 대응할 수 있는 능력을 기를 수 있었습니다.**",
+  //       ],
+  //     },
+  //   ],
+  //   learnings: [
+  //     {
+  //       id: "learning-1",
+  //       title: "실무에서의 실패 경험을 극복한 프로젝트",
+  //       contents: [
+  //         "서버 작업은 처음이었고 우여곡절이 많았습니다. 환경 설정부터 배포까지 모든 과정에 에러가 발행했기 때문이니다. 중간에 포기하고 싶은 마음도 들었지만 그럼에도 불구하고 프로젝트를 끝까지 마무리한 이유는, 실무에서의 실패경험 때문이었습니다. 실무 개발 환경에서 Socket.io의 차선책으로 설정 시간이 지나면 알림 API를 호출하는 방식으로 구현했지만 실시간 상호작용을 구현하지 못한 것에 대해 큰 아쉬움이 남았기 때문입니다.",
+  //         "이대로 포기하면 실패한 경험이 쌓이지만 성공할 때까지 도전하면 실패는 과정이 될 뿐입니다. 실무에서의 실패는 이 프로젝트를 제작함으로써 성공으로 나아가는 경험이 되었습니다. 당장 눈 앞의 결과에 좌절하지 않는 태도를 기를 수 있었습니다.",
+  //       ],
+  //     },
+  //   ],
+  //   links: {
+  //     github: "https://github.com/inhye94/socket-chat-app-client",
+  //     deploy: "https://socket-chat-app-client.vercel.app/",
+  //   },
+  // },
   {
     id: "project-id-7",
     title: "Super Super Glue",
