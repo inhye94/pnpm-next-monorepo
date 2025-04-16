@@ -41,21 +41,13 @@ export default function ProjectCard({
         </div>
       </header>
 
-      <ul className="marker:text-neutral-10 list-disc pl-12">
+      <ul className="marker:text-neutral-10 mb-auto list-disc pl-12">
         {project.highlights?.map((highlight) => (
           <li key={highlight.id}>
             <p className="text-body-xs text-neutral-10">{highlight.content}</p>
           </li>
         ))}
       </ul>
-
-      <div className="mb-auto flex flex-wrap gap-4">
-        {project.stacks.map((stack) => (
-          <BaseBadge key={stack.id} variant="soft" shape="pill">
-            {stack.title}
-          </BaseBadge>
-        ))}
-      </div>
 
       {children}
     </article>

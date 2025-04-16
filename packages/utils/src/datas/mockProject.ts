@@ -3,7 +3,7 @@ import type { IProjectItem } from "@workspace/utils/types";
 export const projects: IProjectItem[] = [
   {
     id: "project-id-1",
-    title: "Portfolio (MONO-REPO)",
+    title: "Portfolio (Mono-Repo)",
     period: "2025.01.06 ~ 진행중",
     team: "개인 프로젝트",
     thumbnailUrl:
@@ -120,7 +120,7 @@ export const projects: IProjectItem[] = [
   },
   {
     id: "project-id-2",
-    title: "Design-system (MONO-REPO)",
+    title: "Design-system (Mono-Repo)",
     period: "2024.12.23 ~ 진행중",
     team: "개인 프로젝트",
     thumbnailUrl:
