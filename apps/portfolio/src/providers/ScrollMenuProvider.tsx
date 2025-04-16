@@ -40,19 +40,19 @@ export function ScrollMenuProvider({
 
   // 메뉴 ref
   const menusRef = useRef<Record<string, RefObject<HTMLDivElement | null>>>({
-    contact: useRef<HTMLDivElement | null>(null),
-    skill: useRef<HTMLDivElement | null>(null),
-    link: useRef<HTMLDivElement | null>(null),
     project: useRef<HTMLDivElement | null>(null),
     career: useRef<HTMLDivElement | null>(null),
+    link: useRef<HTMLDivElement | null>(null),
+    contact: useRef<HTMLDivElement | null>(null),
+    skill: useRef<HTMLDivElement | null>(null),
   });
 
   const icons = useRef<Record<string, keyof typeof iconMap>>({
-    contact: "rocket",
-    skill: "tool",
-    link: "link",
     project: "folder",
     career: "company",
+    link: "link",
+    contact: "rocket",
+    skill: "tool",
   });
 
   // 메뉴

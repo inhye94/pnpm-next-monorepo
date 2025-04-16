@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <>
       <AboutSection />
-      <ContactSection />
-      <SkillSection />
-      <LinkSection />
       <ProjectSection />
       <CareerSection />
+      <LinkSection />
+      <ContactSection />
+      <SkillSection />
     </>
   );
 }
