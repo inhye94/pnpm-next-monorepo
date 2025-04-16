@@ -78,7 +78,7 @@ export function ScrollMenuProvider({
     const targetRef = getTargetRef(id);
 
     if (!targetRef || !targetRef.current) {
-      console.warn(`[ScrollMenu] ID "${id}"에 해당하는 요소가 없습니다.`);
+      console.log(`[ScrollMenu] ID "${id}"에 해당하는 요소가 없습니다.`);
       return;
     }
 
@@ -94,20 +94,14 @@ export function ScrollMenuProvider({
       setMenus((prevMenus) => {
         let updated = false;
 
-        const newMenus = prevMenus.map((menu, index) => {
+        const newMenus = prevMenus.map((menu) => {
           const target = getTargetRef(menu.id);
 
           if (target?.current) {
             // viewport 내부에 있으면 isActive 업데이트
             const rect = target.current.getBoundingClientRect();
-            let isActive =
+            const isActive =
               rect.top <= GNB_HEIGHT && rect.bottom > GNB_HEIGHT + 5;
-
-            // 마지막 메뉴 처리
-            const isLastItem = index === prevMenus.length - 1;
-            if (isLastItem) {
-              isActive = rect.bottom - window.innerHeight < 0;
-            }
 
             if (menu.isActive !== isActive) {
               updated = true;
