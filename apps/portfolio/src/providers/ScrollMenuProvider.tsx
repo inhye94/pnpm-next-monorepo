@@ -43,7 +43,6 @@ export function ScrollMenuProvider({
     project: useRef<HTMLDivElement | null>(null),
     career: useRef<HTMLDivElement | null>(null),
     link: useRef<HTMLDivElement | null>(null),
-    contact: useRef<HTMLDivElement | null>(null),
     skill: useRef<HTMLDivElement | null>(null),
   });
 
@@ -51,7 +50,6 @@ export function ScrollMenuProvider({
     project: "folder",
     career: "company",
     link: "link",
-    contact: "rocket",
     skill: "tool",
   });
 
