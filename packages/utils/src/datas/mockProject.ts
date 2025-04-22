@@ -139,35 +139,43 @@ export const projects: IProjectItem[] = [
     highlights: [
       {
         id: "highlight-1",
-        content: "TailwindCSS Tree-Shaking 및 상속 이슈 대응",
+        content: "Headless 컴포넌트 라이브러리(Radix Primitive) 기반 UI 설계",
       },
       {
         id: "highlight-2",
-        content: "Figma의 AI 기능을 활용한 디자인 가이드 자동화",
+        content: "웹 접근성과 스타일 재정의 기능 중심 설계",
       },
       {
         id: "highlight-3",
-        content: "CCP 패턴으로 구성된 Radix UI 모달 컴포넌트",
+        content: "Storybook 기반 테스트/문서화 통합",
+      },
+      {
+        id: "highlight-4",
+        content: "TailwindCSS Tree-Shaking 및 상속 이슈 대응",
+      },
+      {
+        id: "highlight-5",
+        content: "Figma의 AI 기능을 활용한 디자인 가이드 자동화",
       },
     ],
     uxImprovements: [],
     troubleShooting: [
       {
         id: "trouble-1",
+        title: "UI 테스트",
+        contents: [
+          "**[문제점]** 기존 UI 테스트는 별도의 **테스트 페이지**를 만들어 각 컴포넌트를 테스트 케이스별로 나열하여 검증했습니다. 하지만 이 방식은 테스트 페이지를 **개발할 때마다 새롭게 코드 작업이 필요**해 개발 시간이 증가했고, UI 변경 사항에 따라 **문서화(노션 등) 작업을 수동**으로 진행해 공수가 이중으로 들었습니다.",
+          "**[해결]** **Storybook을 도입**하여 **컴포넌트 UI 테스트 환경을 자동화**하고 **문서화를 통합**했습니다. 각 컴포넌트를 독립적으로 렌더링하여 테스트 가능한 환경을 구축하고 Docs 탭을 활용해 자동으로 문서화가 이루어지도록 설정했습니다.",
+          "**[성과]** UI 테스트 및 문서화 공수를 약 **50% 이상 절감**, 문서화 자동화로 **테스트 페이지 관리 필요성을 제거**했습니다.",
+        ],
+      },
+      {
+        id: "trouble-2",
         title: "TailwindCSS의 Tree-Shaking 에러 대응",
         contents: [
           "**[문제점]** 디자인 시스템에서 제공하는 모달의 스타일이 **사용자 프로젝트에서 정상적으로 적용되지 않는 문제**가 발생했습니다.",
           "**[해결]** 이는 **초기 렌더링되지 않는 컴포넌트의 스타일이 Tree-Shaking으로 제거되면서 발생한 문제**였습니다. 이를 해결하기 위해, TailwindCSS의 `@layer components`를 적용하여 스타일이 유지되도록 설정했습니다.",
           "**[성과]** 이 방식으로 **`React.Portal`을 사용하는 컴포넌트에서도 동일한 스타일 손실 문제를 예방**할 수 있었으며, 디자인 시스템의 일관성을 유지하는 데 기여할 수 있었습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
-        title: "TailwindCSS의 상속 에러",
-        contents: [
-          "**[문제점]** 사용자 프로젝트에서 컴포넌트는 정상적으로 호출되지만, **스타일이 적용되지 않는 문제**가 발생했습니다.",
-          "**[해결]** **디자인 시스템과 메인 프로젝트의 빌드 컨텍스트가 분리되어 발생한 문제**였습니다. 이를 해결하기 위해, 사용자 프로젝트의 `tailwind.config.js` 파일에서 디자인 시스템 모듈을 포함하도록 설정했습니다. 이를 통해, 디자인 시스템의 컴포넌트를 사용하는 프로젝트가 해당 모듈 내부의 템플릿을 `content` 설정에서 스캔하도록 보장했습니다.",
-          "**[성과]** 빌드 컨텍스트 문제를 해결하여, 다른 프로젝트에서도 동일한 방식으로 적용할 수 있도록 가이드할 수 있었습니다.",
         ],
       },
     ],
@@ -186,6 +194,15 @@ export const projects: IProjectItem[] = [
         contents: [
           "디자인 시스템은 **디자인 일관성**뿐만 아니라 **도입 및 확장 용이성**까지 고려해야 한다는 점을 깨달았습니다. 특히, Radix UI의 모달 컴포넌트를 CCP 패턴으로 구현하면서, **부모나 조상에게 구조 결정을 위임**함으로써 내부 구조의 자율성을 높이고, 재사용성을 극대화할 수 있었습니다.",
           "그리고 Context를 이용해 상태를 주입하는 방식으로 Modal과 Toast를 구현했습니다. 이로 인해 **상태 관리가 용이해졌고, 컴포넌트 간의 의존성을 줄일 수 있었습니다.**",
+        ],
+      },
+      {
+        id: "learning-3",
+        title: "모든 걸 직접 만들 필요는 없다: 실용적인 개발 태도 배우기",
+        contents: [
+          "혼자 작업을 진행하다 보니 **시간과 체력의 한계**를 느꼈습니다. 이는 ‘모든 것을 직접 구현해야 한다’는 내 개발 성향에서 비롯되었다고 생각합니다.",
+          "이를 극복하기 위해 **라이브러리 활용도를 높이되, 지나친 의존은 피하고자** 노력했습니다. 특히, 라이브러리를 도입할 때는 유지보수가 활발하게 이루어지고 있는지, 프로젝트에 적합한지를 신중히 검토하는 과정을 거쳤습니다. 이를 통해 실무에서 선배 개발자들이 라이브러리 선택에 신중했던 이유를 깊이 이해할 수 있었습니다.",
+          "또한, Atomic UI를 구축하면서 재사용성을 높이기 위한 **이벤트 주입**, 데이터 타입 안정화를 위한 **조건부 타입**, UI 테스트를 위한 **Storybook 활용** 등의 실무적인 기술을 경험할 수 있었습니다. 이 프로젝트는 단순한 UI 구현을 넘어, 유지보수성과 안정성을 고려한 **개발 환경 개선의 중요성**을 직접 체감할 수 있었던 의미 있는 경험이었습니다.",
         ],
       },
     ],
@@ -223,91 +240,8 @@ export const projects: IProjectItem[] = [
         "https://67875cd86620d78844d43146-dzvstjnmho.chromatic.com/?path=/docs/components-textfield--docs",
     },
   },
-  // {
-  //   id: "project-id-3",
-  //   title: "원티드 프리온보딩 11월 사전과제",
-  //   period: "2024.11.14 ~ 2024.12.21",
-  //   team: "개인 프로젝트",
-  //   thumbnailUrl:
-  //     "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751251/detail_preonboarding-todos_iv3sr1.png",
-  //   stacks: [
-  //     { id: "stack-1", title: "Vite" },
-  //     { id: "stack-2", title: "React" },
-  //     { id: "stack-3", title: "TypeScript" },
-  //     { id: "stack-4", title: "Zustand" },
-  //     { id: "stack-5", title: "Tanstack Query" },
-  //     { id: "stack-6", title: "Emotion" },
-  //     { id: "stack-7", title: "PNPM" },
-  //   ],
-  //   description: "",
-  //   highlights: [
-  //     { id: "highlight-1", content: "React 기반의 To do list 페이지" },
-  //     {
-  //       id: "highlight-3",
-  //       content: "기존의 방식에서 벗어나 새로운 방식을 시도하기 위해 제작",
-  //     },
-  //     {
-  //       id: "highlight-2",
-  //       content:
-  //         "redirect를 페이지 진입하기 전에 처리하기위해 React-router의 loader 패턴을 도입",
-  //     },
-  //     {
-  //       id: "highlight-4",
-  //       content:
-  //         "백엔드와 프론트엔드 코드를 하나의 레포에서 관리하기 위해 모노레포 도입",
-  //     },
-  //     {
-  //       id: "highlight-5",
-  //       content:
-  //         "모노레포 Workspace의 TS 버전 에러와 dependencies의 버전 충돌로 인해 패키지 매니저 변경 (Yarn berry > PNPM)",
-  //     },
-  //   ],
-  //   uxImprovements: [],
-  //   troubleShooting: [
-  //     {
-  //       id: "trouble-1",
-  //       title: "react-router loader와 tanstackQuery 캐싱",
-  //       contents: [
-  //         "**[문제점]** `react-router`의 `loader`를 활용해 데이터를 패칭할 수 있다는 점을 알게 되었지만, **TS 파일에서 구현된 `loader` 내부에서는 `useQueryClient` 훅을 사용할 수 없는 문제**가 발생했습니다.",
-  //         "**[해결]** `loader`의 매개변수에 **`queryClient`를 주입하는 방식**으로 문제를 해결하여 데이터 캐싱을 효과적으로 활용할 수 있도록 개선했습니다.",
-  //         "**[성과]** 데이터 패칭 및 캐싱 최적화를 통해 **애플리케이션의 성능을 개선**했으며, 파일 단위로 로직을 분리함으로써 유지보수성을 크게 향상시킬 수 있었습니다. 이를 통해 **다양한 최적화 방식과 아키텍처 설계의 중요성을 체감**하는 계기가 되었습니다.",
-  //       ],
-  //     },
-  //     {
-  //       id: "trouble-2",
-  //       title: "Emotion 스타일링과 타입 일관성 유지",
-  //       contents: [
-  //         "**[문제점]** `emotion`을 사용하면서 **스타일 관련 props 값의 일관성을 유지하는 것이 어려웠고**, 타입을 수동으로 관리해야 하는 불편함이 있었습니다.",
-  //         "**[해결]** 스타일 객체를 생성하고, `keyof`와 `typeof`를 활용하여 **타입이 자동으로 갱신**되도록 구현했습니다. 이를 통해 컴포넌트의 props를 보다 효율적으로 관리할 수 있도록 개선했습니다.",
-  //         "**[성과]** 코드의 안정성과 일관성을 높였으며, 타입이 자동으로 갱신됨에 따라 **스타일 관리의 효율성도 크게 향상**되었습니다.",
-  //       ],
-  //     },
-  //     {
-  //       id: "trouble-3",
-  //       title: "모노레포 환경에서 Ghost Dependency 문제",
-  //       contents: [
-  //         "**[문제점]** 모노레포를 `Yarn Berry`로 구현하는 과정에서 **workspace 내 TypeScript 버전 충돌 및 패키지 의존성 관리 문제가 발생**했습니다. 이는 **Yarn Berry의 호이스팅 방식으로 인해 `Ghost Dependency`가 생성된 것이 원인**이었습니다.",
-  //         "**[해결]** 패키지 매니저를 **`pnpm`으로 변경하여 의존성 문제를 해결**하고, workspace의 패키지들이 일관된 환경에서 동작하도록 설정했습니다.",
-  //         "**[성과]** **의존성 관리가 한층 안정적**으로 이루어졌으며, 모노레포 환경에서의 개발 생산성을 크게 향상시킬 수 있었습니다. 이를 통해 패키지 매니저별 의존성 처리 방식의 차이를 이해하고, 적절한 도구 선택이 중요하다는 점을 실감할 수 있었습니다.",
-  //       ],
-  //     },
-  //   ],
-  //   learnings: [
-  //     {
-  //       id: "learning-1",
-  //       title: "편안함을 넘어 새로운 패턴으로: CCP, FSD, 그리고 구조적 설계",
-  //       contents: [
-  //         "기존에는 주로 UI 라이브러리를 활용해 toast와 모달을 구현했지만, 직접 구현하면서 간단한 **state 주입에는 context가 적합하다**는 점을 깨달았습니다. 특히 Radix UI의 Dialog 구현 코드를 분석하며 **CCP 패턴**을 발견하고, 이를 활용해 직접 모달을 구현하며 컴포넌트의 **부모나 조상에게 구조 결정을 위임**함으로써 내부 구조의 자율성을 높이고, 재사용성을 극대화할 수 있음을 알게 되었습니다. 또한, props를 기반으로 return 컴포넌트를 결정할 때 발생하던 중복 코드를 CCP 패턴으로 효과적으로 줄일 수 있었습니다.",
-  //         "개발을 처음 시작했을 때 만들었던 프로젝트는 간단한 todos 앱이었습니다. 그때 늦은 밤까지 눈을 반짝이며 코드를 짜던 설렘을 다시금 느낄 수 있는 경험이었습니다. 새로운 시도(emotion, 모노레포, loader, vite, CCP 패턴, FSD 디렉토리 구조 등)를 하면서, 익숙하고 편안한 방식에 안주하지 않고 꾸준히 새로운 개념을 접하고 적용하는 것이 얼마나 중요한지 다시 한 번 깨달았습니다.",
-  //       ],
-  //     },
-  //   ],
-  //   links: {
-  //     github: "https://github.com/inhye94/react-todos-monorepo",
-  //   },
-  // },
   {
-    id: "project-id-4",
+    id: "project-id-3",
     title: "시각 콘텐츠 검색 페이지",
     period: "2024.10.01 ~ 2024.10.11",
     team: "개인 프로젝트",
@@ -379,164 +313,7 @@ export const projects: IProjectItem[] = [
     },
   },
   {
-    id: "project-id-5",
-    title: "Design system (Poly-Repo)",
-    period: "2024.08.15 ~ 2024.09.13",
-    team: "개인 프로젝트",
-    thumbnailUrl:
-      "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751420/storybook_poly_design-system_tspvth.png",
-    stacks: [
-      { id: "stack-1", title: "React", content: "react" },
-      { id: "stack-3", title: "TypeScript", content: "typescript" },
-      { id: "stack-4", title: "SCSS", content: "scss" },
-      { id: "stack-5", title: "Storybook", content: "storybook" },
-      { id: "stack-6", title: "Radix Primitive UI", content: "radix" },
-      { id: "stack-7", title: "Yarn berry", content: "yarn" },
-    ],
-    description:
-      "실무에서 겪은 Atomic UI의 유지보수 문제를 개선하기 위해 React 기반의 디자인 시스템을 구축했습니다.\n\nRadix UI와 SCSS를 기반으로 **웹 접근성과 스타일 커스터마이징**의 유연성을 확보했으며, Storybook을 통해 **테스트 환경과 문서화 환경을 통합**하여 생산성을 높였습니다.",
-    highlights: [
-      {
-        id: "highlight-1",
-        content: "Headless 컴포넌트 라이브러리(Radix Primitive) 기반 UI 설계",
-      },
-      {
-        id: "highlight-2",
-        content: "웹 접근성과 스타일 재정의 기능 중심 설계",
-      },
-      {
-        id: "highlight-3",
-        content: "SCSS 내 동적 색상 처리 로직 구현",
-      },
-      {
-        id: "highlight-4",
-        content: "Storybook 기반 테스트/문서화 통합",
-      },
-    ],
-    uxImprovements: [],
-    troubleShooting: [
-      {
-        id: "trouble-1",
-        title: "색상변수 다크/라이트 모드 구현",
-        contents: [
-          "**[문제점]** SCSS 컴파일러가 `$static-white: var(--static-white);`를 평가하지 못하는 에러를 겪었습니다. **SCSS 컴파일러는 CSS 변수를 동적으로 평가할 수 없어서**, 정적 색상값으로 치환되지 않았습니다. 이에 따라, 색상 관련 SCSS 로직을 활용할 수 없었고, **모듈화된 테마 관리**가 어려웠습니다.",
-          "**[해결]** rgba() 값을 반환하는 **SCSS 헬퍼 함수**를 작성했습니다. 함수 내부에서 기본 색상값을 SCSS 변수로 처리하고, 동적인 투명도를 조합하도록 설정했습니다.",
-          "**[성과]** 색상 값을 SCSS 로직 내에서 안전하게 활용 가능합니다. SCSS 변수의 VS Code 자동완성 기능을 통해 **휴먼 에러를 방지**하고, **작업 속도**를 높임. **코드 재사용성과 일관성**이 향상되었습니다.",
-        ],
-      },
-      {
-        id: "trouble-2",
-        title: "UI 테스트",
-        contents: [
-          "**[문제점]** 기존 UI 테스트는 별도의 **테스트 페이지**를 만들어 각 컴포넌트를 테스트 케이스별로 나열하여 검증했습니다. 하지만 이 방식은 테스트 페이지를 **개발할 때마다 새롭게 코드 작업이 필요**해 개발 시간이 증가했고, UI 변경 사항에 따라 **문서화(노션 등) 작업을 수동**으로 진행해 공수가 이중으로 들었습니다.",
-          "**[해결]** **Storybook을 도입**하여 **컴포넌트 UI 테스트 환경을 자동화**하고 **문서화를 통합**했습니다. 각 컴포넌트를 독립적으로 렌더링하여 테스트 가능한 환경을 구축하고 Docs 탭을 활용해 자동으로 문서화가 이루어지도록 설정했습니다.",
-          "**[성과]** UI 테스트 및 문서화 공수를 약 **50% 이상 절감**, 문서화 자동화로 **테스트 페이지 관리 필요성을 제거**했습니다.",
-        ],
-      },
-    ],
-    learnings: [
-      {
-        id: "learning-1",
-        title: "모든 걸 직접 만들 필요는 없다: 실용적인 개발 태도 배우기",
-        contents: [
-          "혼자 작업을 진행하다 보니 **시간과 체력의 한계**를 느꼈습니다. 이는 ‘모든 것을 직접 구현해야 한다’는 내 개발 성향에서 비롯되었다고 생각합니다.",
-          "이를 극복하기 위해 **라이브러리 활용도를 높이되, 지나친 의존은 피하고자** 노력했습니다. 특히, 라이브러리를 도입할 때는 유지보수가 활발하게 이루어지고 있는지, 프로젝트에 적합한지를 신중히 검토하는 과정을 거쳤습니다. 이를 통해 실무에서 선배 개발자들이 라이브러리 선택에 신중했던 이유를 깊이 이해할 수 있었습니다.",
-          "또한, Atomic UI를 구축하면서 재사용성을 높이기 위한 **이벤트 주입**, 데이터 타입 안정화를 위한 **조건부 타입**, UI 테스트를 위한 **Storybook 활용** 등의 실무적인 기술을 경험할 수 있었습니다. 이 프로젝트는 단순한 UI 구현을 넘어, 유지보수성과 안정성을 고려한 **개발 환경 개선의 중요성**을 직접 체감할 수 있었던 의미 있는 경험이었습니다.",
-        ],
-      },
-    ],
-    links: {
-      blog: [
-        {
-          id: "blog-link-1",
-          title: "원티드 디자인 가이드 레퍼런스",
-          content:
-            "https://www.figma.com/design/Jz7iNlO1TT6WZlwIXTZixr/Wanted-Design-Library-(Community)?node-id=1173-12995&t=IxwhaPXh8Q5QJeYn-0",
-        },
-      ],
-      github: "https://github.com/inhye94/react-design-system.git",
-      deploy:
-        "https://672b99b618065f759d3ae16e-lyfkzljnvx.chromatic.com/?path=/docs/atoms-avatar--docs",
-    },
-  },
-  // {
-  //   id: "project-id-6",
-  //   title: "Chat App과 Cyber AirConditioner",
-  //   period: "2024.07.10 ~ 2024.7.30",
-  //   team: "개인 프로젝트",
-  //   thumbnailUrl:
-  //     "https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740751985/chat_chat-app_yza5l6.png",
-  //   stacks: [
-  //     { id: "stack-1", title: "React", content: "react" },
-  //     { id: "stack-2", title: "Node.js", content: "node" },
-  //     { id: "stack-3", title: "JavaScript", content: "javascript" },
-  //     { id: "stack-4", title: "Express", content: "express" },
-  //     { id: "stack-5", title: "socket.io", content: "socket" },
-  //     { id: "stack-6", title: "Yarn", content: "yarn" },
-  //   ],
-  //   description:
-  //     "실무에서 Socket.io 기반의 실시간 알림 기능을 도입하지 못했던 아쉬움을 바탕으로, React + Socket.io 환경에서 **실시간 상호작용이 가능한 채팅 애플리케이션**을 제작했습니다.\n\n초기부터 서버와 클라이언트를 분리하여 구조화했으며, 실시간 UX를 고려해 다양한 사용자 접근 방식에 대응할 수 있도록 라우팅 설정과 배포 전략을 개선했습니다.",
-  //   highlights: [
-  //     {
-  //       id: "highlight-1",
-  //       content: "Socket.io 기반의 실시간 채팅 인터페이스 구현",
-  //     },
-  //     {
-  //       id: "highlight-2",
-  //       content: "Nodemon과 concurrently를 활용한 개발 효율성 확보",
-  //     },
-  //     {
-  //       id: "highlight-3",
-  //       content: "Fly.io & Netlify를 활용한 서버-클라이언트 분리 배포",
-  //     },
-  //   ],
-  //   uxImprovements: [],
-  //   troubleShooting: [
-  //     {
-  //       id: "trouble-1",
-  //       title: "서버와 클라이언트 동시 배포 문제 해결 및 배포 전략 변경",
-  //       contents: [
-  //         "**[문제점]** `concurrently`를 사용해 서버와 클라이언트를 하나로 묶어 배포하려 했으나, 빌드 과정에서 오류가 발생했습니다.",
-  //         "**[해결]** 서버와 클라이언트를 함께 배포할 수 없다는 점을 확인한 후, 서버는 **fly.io**, 클라이언트는 **Netlify**에 각각 배포하여 문제를 해결했습니다.",
-  //         "**[성과]** 배포 환경을 분리함으로써 안정적인 서비스 운영이 가능해졌으며, 각각의 플랫폼에서 최적화된 배포를 수행할 수 있게 되었습니다.",
-  //       ],
-  //     },
-  //     {
-  //       id: "trouble-2",
-  //       title: "서버 배포 후 502 오류 해결 및 설정 최적화",
-  //       contents: [
-  //         "**[문제점]** 서버 배포에 성공했으나, 502 에러가 발생했습니다.",
-  //         "**[해결]** 서버 과부하나 네트워크 문제가 아님을 확인한 후, 서버 설정에서 서로 다른 포트 값이 지정되어 있음을 발견했습니다. 이를 동일한 값으로 수정하여 문제를 해결했습니다.",
-  //         "**[성과]** 배포 서비스에서 사용량을 분석하며 네트워크 및 과부하 문제가 아님을 확인하는 과정에서 **실시간 모니터링의 중요성**을 배우는 계기가 되었습니다",
-  //       ],
-  //     },
-  //     {
-  //       id: "trouble-3",
-  //       title: "배포 후 새로고침 오류 해결을 위한 라우팅 설정 개선",
-  //       contents: [
-  //         "**[문제점]** 배포 후 새로고침하거나 링크로 직접 접근하면 오류가 발생했습니다.",
-  //         "**[해결]** Client-side routing을 지원하기 위해 **public 폴더**에 `_redirects` 설정을 추가하여 경로 문제를 해결했습니다.",
-  //         "**[성과]** 새로고침 및 직접 접근 시에도 정상적으로 페이지가 로드되며, 원활한 사용자 경험을 제공할 수 있게 되었습니다. 또한, **사용자가 되어 다양한 접근 방식을 직접 시도하며 테스트한 경험을 통해, 예상치 못한 오류를 미리 발견하고 대응할 수 있는 능력을 기를 수 있었습니다.**",
-  //       ],
-  //     },
-  //   ],
-  //   learnings: [
-  //     {
-  //       id: "learning-1",
-  //       title: "실무에서의 실패 경험을 극복한 프로젝트",
-  //       contents: [
-  //         "서버 작업은 처음이었고 우여곡절이 많았습니다. 환경 설정부터 배포까지 모든 과정에 에러가 발행했기 때문이니다. 중간에 포기하고 싶은 마음도 들었지만 그럼에도 불구하고 프로젝트를 끝까지 마무리한 이유는, 실무에서의 실패경험 때문이었습니다. 실무 개발 환경에서 Socket.io의 차선책으로 설정 시간이 지나면 알림 API를 호출하는 방식으로 구현했지만 실시간 상호작용을 구현하지 못한 것에 대해 큰 아쉬움이 남았기 때문입니다.",
-  //         "이대로 포기하면 실패한 경험이 쌓이지만 성공할 때까지 도전하면 실패는 과정이 될 뿐입니다. 실무에서의 실패는 이 프로젝트를 제작함으로써 성공으로 나아가는 경험이 되었습니다. 당장 눈 앞의 결과에 좌절하지 않는 태도를 기를 수 있었습니다.",
-  //       ],
-  //     },
-  //   ],
-  //   links: {
-  //     github: "https://github.com/inhye94/socket-chat-app-client",
-  //     deploy: "https://socket-chat-app-client.vercel.app/",
-  //   },
-  // },
-  {
-    id: "project-id-7",
+    id: "project-id-4",
     title: "쇼핑몰 페이지",
     period: "2024.01.08 ~ 2024.7.25",
     team: "개인 프로젝트",
@@ -610,7 +387,7 @@ export const projects: IProjectItem[] = [
     },
   },
   {
-    id: "project-id-8",
+    id: "project-id-5",
     title: "Youtube 클론 페이지",
     period: "2023.12.26 ~ 2024.01.09",
     team: "개인 프로젝트",
