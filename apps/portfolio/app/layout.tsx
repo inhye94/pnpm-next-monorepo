@@ -24,14 +24,16 @@ export default function RootLayout({
         <Providers>
           <Gnb />
           <ProgressBar />
-          <main>{children}</main>
+          <main>
+            {children}
+            <Analytics />
+          </main>
           <Cta />
           <Finish />
 
           <ToastContainer />
           <div id="modal-root"></div>
         </Providers>
-        <Analytics />
       </body>
     </html>
   );
