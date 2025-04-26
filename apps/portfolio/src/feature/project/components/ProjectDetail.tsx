@@ -56,11 +56,8 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
           <Image
             src={project.thumbnailUrl}
             alt={`${project.title} 프로젝트의 썸네일`}
-            // className="h-full w-full object-cover"
             loading="lazy"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top"
+            fill={true}
           />
         </div>
       </header>

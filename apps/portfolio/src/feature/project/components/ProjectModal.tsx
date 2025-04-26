@@ -50,6 +50,9 @@ export default function ProjectModal({
                 <Modal.Title className="text-14 text-neutral-20 font-semibold whitespace-nowrap">
                   {title}
                 </Modal.Title>
+                <Modal.Description className="visually-hidden">
+                  {title}의 상세내용입니다.
+                </Modal.Description>
 
                 <Modal.Close className="relative -right-8" asChild>
                   <IconButton
