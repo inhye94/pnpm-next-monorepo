@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "@workspace/design-system": "workspace:^",
     "@workspace/utils": "workspace:^",
     "next": "15.1.3"
