@@ -12,7 +12,7 @@ export default function ProjectSection() {
   // const projects = await getProjects();
 
   const trackUserClick = useCallback((title: string) => {
-    track(`project-button-clicked-${title}`);
+    track("Project Button", {}, { flags: { title } });
   }, []);
 
   return (
