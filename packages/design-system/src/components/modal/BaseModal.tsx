@@ -41,3 +41,4 @@ Modal.Trigger = Dialog.Trigger;
 Modal.Close = Dialog.Close;
 Modal.Overlay = ModalOverlay;
 Modal.Title = Dialog.Title;
+Modal.Description = Dialog.Description;
