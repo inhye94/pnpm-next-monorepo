@@ -1,12 +1,19 @@
+"use client";
 import Section from "@/components/layout/Section";
+import { track } from "@vercel/analytics";
 import { BaseButton, Icon } from "@workspace/design-system/components";
 import { projects } from "@workspace/utils/datas";
+import { useCallback } from "react";
 import ProjectCard from "./components/ProjectCard";
 import ProjectDetail from "./components/ProjectDetail";
 import ProjectModal from "./components/ProjectModal";
 
-export default async function ProjectSection() {
+export default function ProjectSection() {
   // const projects = await getProjects();
+
+  const trackUserClick = useCallback((title: string) => {
+    track(`project-button-clicked-${title}`);
+  }, []);
 
   return (
     <Section title="Project" id="project">
@@ -19,7 +26,9 @@ export default async function ProjectSection() {
                 title={project.title}
                 links={project.links}
                 trigger={
-                  <BaseButton>
+                  <BaseButton
+                    onClick={trackUserClick.bind(null, project.title)}
+                  >
                     <Icon name="document" />
                     상세보기
                   </BaseButton>
