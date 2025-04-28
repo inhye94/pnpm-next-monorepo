@@ -3,5 +3,5 @@ export interface ICareerItem {
   corp: string;
   summary: string;
   period: stirng;
-  roles: string[];
+  roles: { id: string; content: string }[];
 }

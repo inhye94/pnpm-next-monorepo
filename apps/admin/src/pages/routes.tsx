@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import App from "../App";
 import { skillLoader, stackLoader } from "../entity/loaders";
 import { queryClient } from "../providers/QueryProvider";
+import CareerEditPage from "./CareerEditPage";
+import CareerPage from "./CareerPage";
 import NotFound from "./NotFound";
 import SidebarLayout from "./SidebarLayout";
 import SkillEditPage from "./SkillEditPage";
@@ -21,8 +23,8 @@ const router = createBrowserRouter([
           {
             path: "career",
             children: [
-              { index: true, element: <p>커리어</p> },
-              { path: "edit", element: <p>커리어 - 수정</p> },
+              { index: true, element: <CareerPage /> },
+              { path: "edit", element: <CareerEditPage /> },
             ],
           },
           {

@@ -23,9 +23,11 @@ export default function CareerCard({ career }: ICareerCard) {
         </p>
 
         <ul className="list-disc pl-12">
-          {career.roles.map((role, i) => (
-            <li key={`career-role-${i}`}>
-              <p className="text-14 text-neutral-20 leading-24">{role}</p>
+          {career.roles.map((role) => (
+            <li key={role.id}>
+              <p className="text-14 text-neutral-20 leading-24">
+                {role.content}
+              </p>
             </li>
           ))}
         </ul>
