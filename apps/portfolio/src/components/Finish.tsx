@@ -12,8 +12,8 @@ export default function Finish() {
             <Image
               src="https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740722488/imhsy9xcmxmq9b2kvuwf.jpg"
               alt="멋쟁이 개발자 박인혜"
-              layout="fill"
-              objectFit="cover"
+              loading="lazy"
+              fill={true}
             />
           </div>
 
