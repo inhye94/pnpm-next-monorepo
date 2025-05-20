@@ -54,6 +54,7 @@ export default function ProjectDetail({ project }: IProjectDetailProps) {
 
         <div className="rounded-16 border-neutral-90 relative mx-auto aspect-square w-full overflow-hidden border md:aspect-21/9">
           <Image
+            className="object-cover"
             src={project.thumbnailUrl}
             alt={`${project.title} 프로젝트의 썸네일`}
             loading="lazy"

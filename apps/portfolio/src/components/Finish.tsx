@@ -10,6 +10,7 @@ export default function Finish() {
         <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-x-24">
           <div className="relative h-60 w-60 overflow-hidden rounded-full">
             <Image
+              className="object-cover"
               src="https://res.cloudinary.com/dn9hy4vyn/image/upload/v1740722488/imhsy9xcmxmq9b2kvuwf.jpg"
               alt="멋쟁이 개발자 박인혜"
               loading="lazy"
