@@ -112,7 +112,7 @@ export default function CareerForm({ careers }: { careers: ICareerItem[] }) {
                   size="small"
                   onClick={() => addRole(career.id)}
                 >
-                  <span aria-hidden>+</span>경험 추가하기
+                  <span aria-hidden>+</span>성과 추가하기
                 </BaseButton>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function CareerForm({ careers }: { careers: ICareerItem[] }) {
         ))}
 
       <BaseButton type="button" onClick={addCareerItem}>
-        <span aria-hidden>+</span>스킬 추가하기
+        <span aria-hidden>+</span>경력 추가하기
       </BaseButton>
 
       <BaseButton type="button" onClick={submitCareerForm}>
