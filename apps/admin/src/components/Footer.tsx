@@ -44,5 +44,11 @@ export default function Footer() {
 }
 
 function openInNewTab(url: string) {
-  window.open(url, "_blank").focus();
+  if (typeof window !== "undefined") {
+    const newWindow = window.open(url, "_blank");
+
+    if (newWindow) {
+      newWindow.focus();
+    }
+  }
 }
