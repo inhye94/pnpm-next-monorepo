@@ -8,3 +8,7 @@ export const skillLoader = async (queryClient: QueryClient) => {
 export const stackLoader = async (queryClient: QueryClient) => {
   return queryClient.ensureQueryData(portfolioQueries.stack());
 };
+
+export const careerLoader = async (queryClient: QueryClient) => {
+  return queryClient.ensureQueryData(portfolioQueries.career());
+};
