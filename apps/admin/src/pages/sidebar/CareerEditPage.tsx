@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import Article from "../components/Article";
-import Loading from "../components/Loading";
-import { portfolioQueries } from "../entity/portfolioQueries";
-import CareerForm from "../feature/career/CareerForm";
+import Article from "../../components/Article";
+import Loading from "../../components/Loading";
+import { portfolioQueries } from "../../entity/portfolioQueries";
+import CareerForm from "../../feature/career/CareerForm";
 
 export default function CareerEditPage() {
   const { data: careers, isLoading } = useQuery(portfolioQueries.career());

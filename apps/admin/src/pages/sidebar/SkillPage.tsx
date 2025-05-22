@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { BaseButton } from "@workspace/design-system/components";
 import { useNavigate } from "react-router";
-import Article from "../components/Article";
-import Empty from "../components/Empty";
-import Loading from "../components/Loading";
-import { portfolioQueries } from "../entity/portfolioQueries";
-import SkillList from "../feature/skill/SkillList";
+import Article from "../../components/Article";
+import Empty from "../../components/Empty";
+import Loading from "../../components/Loading";
+import { portfolioQueries } from "../../entity/portfolioQueries";
+import SkillList from "../../feature/skill/SkillList";
 
 export default function SkillPage() {
   const { data: skills, isLoading } = useQuery(portfolioQueries.skill());

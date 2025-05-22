@@ -1,7 +1,7 @@
 import { Container } from "@workspace/design-system/components";
 import { Outlet } from "react-router";
-import Sidebar from "../components/Sidebar";
-import { sidebarMenus } from "../entity/menus";
+import Sidebar from "../../components/Sidebar";
+import { sidebarMenus } from "../../entity/menus";
 
 export default function SidebarLayout() {
   return (
