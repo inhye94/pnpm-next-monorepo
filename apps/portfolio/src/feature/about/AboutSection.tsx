@@ -1,7 +1,9 @@
 "use client";
 
+import ShakingText from "@/components/animation/Shaking";
+import Stagger from "@/components/animation/Stagger";
 import Section from "@/components/layout/Section";
-import { motion } from "motion/react";
+import React from "react";
 
 // data
 interface IAboutText {
@@ -11,7 +13,7 @@ interface IAboutText {
 }
 
 const ABOUT_TEXT: IAboutText[] = [
-  { id: "about-1", title: "안녕하세요!", icon: <ShakingHand /> },
+  { id: "about-1", title: "안녕하세요!", icon: <ShakingText>👋</ShakingText> },
   { id: "about-2", title: "사용자 피드백을 바탕으로" },
   { id: "about-3", title: "사용자 경험(UX)을 개선하는" },
   { id: "about-4", title: "프론트엔드 개발자" },
@@ -27,39 +29,17 @@ export default function AboutSection() {
       className="bg-primary flex aspect-square max-h-400 min-h-300 w-full items-center"
       hideTitle
     >
-      <div className="text-20 lg:text-30 text-center text-white lg:font-light">
-        {ABOUT_TEXT.map((text, index) => (
-          <motion.p
-            key={text.id}
-            initial={{ opacity: 0, translateY: "5px" }}
-            whileInView={{
-              opacity: 1,
-              translateY: 0,
-              transition: {
-                delay: index,
-                duration: 1,
-              },
-            }}
-          >
+      <Stagger
+        staggerTime={1}
+        className="text-20 lg:text-30 text-center text-white lg:font-light"
+      >
+        {ABOUT_TEXT.map((text) => (
+          <Stagger.Item key={text.id}>
             {text.title}
             {text.icon}
-          </motion.p>
+          </Stagger.Item>
         ))}
-      </div>
+      </Stagger>
     </Section>
-  );
-}
-
-function ShakingHand() {
-  return (
-    <motion.span
-      className="inline-block"
-      whileInView={{
-        rotateZ: [0, 20, -10, 20, 0],
-        transition: { duration: 1, delay: 0.5, ease: "easeInOut" },
-      }}
-    >
-      👋
-    </motion.span>
   );
 }
