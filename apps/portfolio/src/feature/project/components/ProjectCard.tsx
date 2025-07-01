@@ -25,7 +25,7 @@ export default function ProjectCard({
   return (
     <article
       className={classNames(
-        "bg-background-gray rounded-base hover:bg-background-darkgray relative flex min-h-300 flex-col gap-16 overflow-hidden p-32 transition hover:shadow-2xl",
+        "bg-background-gray rounded-base hover:bg-background-darkgray relative flex min-h-300 flex-col gap-16 overflow-hidden p-32 transition hover:-translate-y-8 hover:shadow-2xl",
         className,
       )}
     >

@@ -5,10 +5,11 @@ import { PolymorphicComponentProps } from "@/shared/polymorphic";
 import { motion } from "motion/react";
 
 // style varient
-const listStyle = (staggerTime: number) => ({
+const listStyle = (staggerTime: number, delayChildren: number) => ({
   visible: {
     transition: {
       staggerChildren: staggerTime,
+      delayChildren,
     },
   },
   hidden: {},
@@ -31,6 +32,9 @@ interface IStaggerProps {
   children: React.ReactNode;
   className?: string;
   staggerTime?: number;
+  viewportOnce?: boolean;
+  viewportAmount?: number;
+  delayChildren?: number;
 }
 
 export default function Stagger<T extends React.ElementType = "div">({
@@ -38,15 +42,19 @@ export default function Stagger<T extends React.ElementType = "div">({
   children,
   className,
   staggerTime = 0.7,
+  viewportOnce = true,
+  viewportAmount = 0.3,
+  delayChildren = 0,
 }: PolymorphicComponentProps<T, IStaggerProps>) {
   const Component = as || "div";
   const MotionCompoenent = motion(Component) as React.ElementType;
 
   return (
     <MotionCompoenent
-      variants={listStyle(staggerTime)}
+      variants={listStyle(staggerTime, delayChildren)}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: viewportOnce, amount: viewportAmount }}
       className={className}
     >
       {children}

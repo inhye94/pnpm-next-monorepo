@@ -1,4 +1,5 @@
 "use client";
+import Stagger from "@/components/animation/Stagger";
 import Section from "@/components/layout/Section";
 import { track } from "@vercel/analytics";
 import { BaseButton, Icon } from "@workspace/design-system/components";
@@ -17,29 +18,35 @@ export default function ProjectSection() {
 
   return (
     <Section title="Project" id="project">
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+      <Stagger
+        staggerTime={0.1}
+        delayChildren={0.3}
+        className="grid grid-cols-1 gap-12 md:grid-cols-3"
+      >
         {projects?.map((project) => (
-          <ProjectCard key={project.id} project={project} className="h-full">
-            <footer className="">
-              <ProjectModal
-                key={project.id}
-                title={project.title}
-                links={project.links}
-                trigger={
-                  <BaseButton
-                    onClick={trackUserClick.bind(null, project.title)}
-                  >
-                    <Icon name="document" />
-                    상세보기
-                  </BaseButton>
-                }
-              >
-                <ProjectDetail project={project} />
-              </ProjectModal>
-            </footer>
-          </ProjectCard>
+          <Stagger.Item key={project.id}>
+            <ProjectCard project={project} className="h-full">
+              <footer className="">
+                <ProjectModal
+                  key={project.id}
+                  title={project.title}
+                  links={project.links}
+                  trigger={
+                    <BaseButton
+                      onClick={trackUserClick.bind(null, project.title)}
+                    >
+                      <Icon name="document" />
+                      상세보기
+                    </BaseButton>
+                  }
+                >
+                  <ProjectDetail project={project} />
+                </ProjectModal>
+              </footer>
+            </ProjectCard>
+          </Stagger.Item>
         ))}
-      </div>
+      </Stagger>
     </Section>
   );
 }
