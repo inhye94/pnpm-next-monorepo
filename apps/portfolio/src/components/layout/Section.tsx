@@ -4,6 +4,7 @@ import { useScrollMenuContext } from "@/providers/ScrollMenuProvider";
 import { Container } from "@workspace/design-system/components";
 import classNames from "classnames";
 import { HTMLAttributes } from "react";
+import FadeIn from "../animation/FadeIn";
 
 /**
  * Section 컴포넌트
@@ -49,15 +50,17 @@ export default function Section({
       {...props}
     >
       <Container>
-        <h2
-          className={classNames(
-            "text-heading-3 mb-12 capitalize",
-            hideTitle && "visually-hidden",
-          )}
-        >
-          {title}
-        </h2>
-        {children}
+        <FadeIn viewportAmount={0.2}>
+          <h2
+            className={classNames(
+              "text-heading-3 mb-12 capitalize",
+              hideTitle && "visually-hidden",
+            )}
+          >
+            {title}
+          </h2>
+          {children}
+        </FadeIn>
       </Container>
     </section>
   );
