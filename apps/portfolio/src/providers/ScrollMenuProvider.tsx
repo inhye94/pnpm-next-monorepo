@@ -40,10 +40,10 @@ export function ScrollMenuProvider({
 
   // 메뉴 ref
   const menusRef = useRef<Record<string, RefObject<HTMLDivElement | null>>>({
+    skill: useRef<HTMLDivElement | null>(null),
+    link: useRef<HTMLDivElement | null>(null),
     project: useRef<HTMLDivElement | null>(null),
     career: useRef<HTMLDivElement | null>(null),
-    link: useRef<HTMLDivElement | null>(null),
-    skill: useRef<HTMLDivElement | null>(null),
   });
 
   const icons = useRef<Record<string, keyof typeof iconMap>>({
