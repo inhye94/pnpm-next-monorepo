@@ -4,7 +4,6 @@ export { default as CheckboxGroup } from "./checkboxGroup/CheckboxGroup";
 export { default as Dropdown } from "./dropdown/Dropdown";
 export { default as Icon } from "./icon";
 export { default as IconButton } from "./iconButton/IconButton";
-export { default as IconLink } from "./iconButton/IconLink";
 export { default as BaseInput } from "./input/BaseInput";
 export { default as Container } from "./layout/Container";
 export { default as Markdown } from "./markdown/ReactMarkdown";

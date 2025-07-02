@@ -1,8 +1,4 @@
-import {
-  Dropdown,
-  IconButton,
-  IconLink,
-} from "@workspace/design-system/components";
+import { Dropdown, IconButton } from "@workspace/design-system/components";
 import type { IProjectItem } from "@workspace/utils/types";
 import classNames from "classnames";
 import ProjectLinkItem from "./ProjectLinkItem";
@@ -35,11 +31,16 @@ export default function ProjectLinkList({
       <h5 className="visually-hidden">프로젝트 링크</h5>
 
       {links.github && (
-        <IconLink href={links.github} icon="github" label="github" />
+        <IconButton as="a" href={links.github} icon="github" label="github" />
       )}
 
       {links.deploy && (
-        <IconLink href={links.deploy} icon="externalLink" label="deploy" />
+        <IconButton
+          as="a"
+          href={links.deploy}
+          icon="externalLink"
+          label="deploy"
+        />
       )}
 
       {links.blog && (

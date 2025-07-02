@@ -14,5 +14,5 @@
     /* Aliases */
     // "baseUrl": "."
   },
-  "include": ["src", "../utils/src/shared/**/*.ts"]
+  "include": ["src", "../utils/src/**/*.ts"]
 }

@@ -1,5 +1,5 @@
+import { PolymorphicComponentProps } from "@workspace/utils/types";
 import classNames from "classnames";
-import type { ButtonAttr } from "../button/button";
 import Icon, { IIconProps } from "../icon";
 
 /**
@@ -18,25 +18,30 @@ import Icon, { IIconProps } from "../icon";
  */
 
 // type
-interface IIconButtonProps extends ButtonAttr {
-  icon: IIconProps["name"];
+interface IIconButtonProps {
   label: IIconProps["label"];
-  float?: boolean;
-  variant?: "outlined" | "ghost";
   className?: string;
 }
 
+interface IIconButtonStyleProps {
+  icon: IIconProps["name"];
+  float?: boolean;
+  variant?: "outlined" | "ghost";
+}
+
 // component
-export default function IconButton({
+export default function IconButton<T extends React.ElementType = "button">({
+  as,
   icon,
   label,
   float,
   variant = "outlined",
   className,
   ...props
-}: IIconButtonProps) {
+}: PolymorphicComponentProps<T, IIconButtonProps & IIconButtonStyleProps>) {
+  const Element = as || "button";
   return (
-    <button
+    <Element
       className={classNames(
         "iconButton",
         float && "is-float",
@@ -46,6 +51,6 @@ export default function IconButton({
       {...props}
     >
       <Icon name={icon} label={label} />
-    </button>
+    </Element>
   );
 }
