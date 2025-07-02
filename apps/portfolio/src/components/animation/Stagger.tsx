@@ -1,7 +1,7 @@
 "use client";
 
 import { easing } from "@/shared/animation";
-import { PolymorphicComponentProps } from "@/shared/polymorphic";
+import { PolymorphicComponentProps } from "@workspace/utils/types";
 import { motion } from "motion/react";
 
 // style varient

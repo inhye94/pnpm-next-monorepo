@@ -1,4 +1,3 @@
-// PolymorphicComponent
 export type AsPropType<T extends React.ElementType> = {
   as?: T;
 };
