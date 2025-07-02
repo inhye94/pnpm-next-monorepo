@@ -1,6 +1,6 @@
 import { Icon } from "@workspace/design-system/components";
 import { IIconProps } from "node_modules/@workspace/design-system/src/components/icon";
-import { AnchorHTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 /**
  * ProjectLinkItem 컴포넌트
@@ -14,9 +14,7 @@ import { AnchorHTMLAttributes } from "react";
  */
 
 // type
-type LinkAttr = AnchorHTMLAttributes<HTMLAnchorElement>;
-
-interface IProjectLinkItemProps extends LinkAttr {
+interface IProjectLinkItemProps extends ComponentPropsWithRef<"a"> {
   icon: IIconProps["name"];
   text: string;
   className?: string;

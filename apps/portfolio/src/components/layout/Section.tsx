@@ -3,7 +3,7 @@
 import { useScrollMenuContext } from "@/providers/ScrollMenuProvider";
 import { Container } from "@workspace/design-system/components";
 import classNames from "classnames";
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 import FadeIn from "../animation/FadeIn";
 
 /**
@@ -21,9 +21,7 @@ import FadeIn from "../animation/FadeIn";
  */
 
 // type
-export type SectionAttr = HTMLAttributes<HTMLDivElement>;
-
-interface ISectionProps extends SectionAttr {
+interface ISectionProps extends ComponentPropsWithRef<"section"> {
   id: string;
   title: string;
   className?: string;

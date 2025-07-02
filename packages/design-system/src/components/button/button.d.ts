@@ -1,4 +1,4 @@
-export type ButtonAttr = React.ButtonHTMLAttributes<HTMLButtonElement>;
+import { ComponentPropsWithoutRef } from "react";
 
 export type ButtonVariantType = "filled" | "outlined" | "ghost";
 export type ButtonSizeType = "small" | "medium" | "large";
@@ -11,7 +11,7 @@ export type ButtonColorType =
   | "warning"
   | "info";
 
-export interface IBaseButtonProps extends ButtonAttr {
+export interface IBaseButtonProps extends ComponentPropsWithoutRef<"button"> {
   variant?: ButtonVariantType;
   color?: ButtonColorType;
   size?: ButtonSizeType;
