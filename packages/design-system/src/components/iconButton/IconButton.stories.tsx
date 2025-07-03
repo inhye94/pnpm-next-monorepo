@@ -54,3 +54,20 @@ export const Outlined: Story = {
     label: "생일 아이콘",
   },
 };
+
+export const Ghost: Story = {
+  args: {
+    variant: "ghost",
+    icon: "birth",
+    label: "생일 아이콘",
+  },
+};
+
+export const Float: Story = {
+  args: {
+    variant: "outlined",
+    icon: "birth",
+    label: "생일 아이콘",
+    float: true,
+  },
+};
