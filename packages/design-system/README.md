@@ -19,9 +19,44 @@
 ## 작업 사항
 
 - **모노레포 기반 커스텀 패키지**로 디자인 시스템 구축
-- **Storybook**을 활용해 UI 테스트 및 Atomic UI와 디자인 가이드 구현
+- [**Storybook**](https://67875cd86620d78844d43146-drfgvuzaig.chromatic.com/?path=/docs/components-button--docs)을 활용해 UI 테스트 및 Atomic UI와 디자인 가이드 구현
+- [Polymorphic 컴포넌트 구조](https://github.com/inhye94/pnpm-next-monorepo/blob/main/packages/design-system/src/components/iconButton/IconButton.tsx)로 설계하여 재사용성을 높이고 속성 타입까지 완벽 대응
 - 프로젝트 간 **UI 일관성을 확보**하고, 디자인 변경에 따른 **수정 시간**을 크게 단축
 - TailwindCSS Config 파일로 색상, 간격 등을 표준화하여 스타일링 속도와 가독성을 개선
+
+## 주의 사항
+
+- Barrel 패턴
+  - 기존 디렉토리: 디렉토리 안의 `index.tsx`에 export 처리
+  - 새로운 디렉토리: 디렉토리 안에 `index.tsx` 생성하여 export 처리하고 `package.json`의 `export` 항목에 path를 추가한다.
+  - (Optional) 일부 디렉토리는 barrel 패턴임에도 자동 임포트가 안되곤 하는데, 그럴 때에는 수동 import 해주자. 이론적으론 해당 프로젝트 디렉토리의 root에 index.tsx를 생성 > 사용할 디렉토리를 export 처리하면 자동 임포트가 동작할 것이다. 근데 실제로는 잘 안된다(VSCode의 자동임포트를 위한 작업이라, 나는 설정 안 함). 되면 되는대로 사용하고, 안되면 수동 import 하자. 스트레스 받지 마시오.
+
+**예시 - src/components**
+
+```tsx
+// design-system/src/components/index.tsx
+export { default as BaseBadge } from "./badge/BaseBadge";
+export { default as BaseButton } from "./button/BaseButton";
+export { default as CheckboxGroup } from "./checkboxGroup/CheckboxGroup";
+export { default as Dropdown } from "./dropdown/Dropdown";
+// ...
+```
+
+```json
+// design-system/package.json
+{
+  "name": "@workspace/design-system",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["**"],
+  "exports": {
+    "./components": "./src/components/index.tsx"
+    // ...
+  }
+  // ...
+}
+```
 
 ## 관련 링크
 
