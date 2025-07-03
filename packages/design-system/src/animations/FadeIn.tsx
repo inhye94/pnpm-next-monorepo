@@ -1,5 +1,6 @@
 import { PolymorphicComponentProps } from "@workspace/utils/types";
 import { motion } from "motion/react";
+import { useMemo } from "react";
 import { easing } from "./options";
 
 interface IFadeInStyleProps {
@@ -30,10 +31,13 @@ export default function FadeIn<T extends React.ElementType = "div">({
   className,
 }: PolymorphicComponentProps<T, IFadeInStyleProps | IFadeInProps>) {
   const Component = as || "div";
-  const MotionCompoenent = motion(Component) as React.ElementType;
+  const MotionComponent = useMemo(
+    () => motion(Component) as React.ElementType,
+    [Component],
+  );
 
   return (
-    <MotionCompoenent
+    <MotionComponent
       initial={{ opacity, y, x }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
       transition={{ ease: easing, duration }}
@@ -41,6 +45,6 @@ export default function FadeIn<T extends React.ElementType = "div">({
       className={className}
     >
       {children}
-    </MotionCompoenent>
+    </MotionComponent>
   );
 }

@@ -48,7 +48,7 @@ export default function Section({
       {...props}
     >
       <Container>
-        <FadeIn viewportAmount={0.2}>
+        <FadeIn>
           <h2
             className={classNames(
               "text-heading-3 mb-12 capitalize",

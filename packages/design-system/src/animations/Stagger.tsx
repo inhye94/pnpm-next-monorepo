@@ -1,5 +1,6 @@
 import { PolymorphicComponentProps } from "@workspace/utils/types";
 import { motion } from "motion/react";
+import { useMemo } from "react";
 import { easing } from "./options";
 
 // style varient
@@ -45,10 +46,13 @@ export default function Stagger<T extends React.ElementType = "div">({
   delayChildren = 0,
 }: PolymorphicComponentProps<T, IStaggerProps>) {
   const Component = as || "div";
-  const MotionCompoenent = motion(Component) as React.ElementType;
+  const MotionComponent = useMemo(
+    () => motion(Component) as React.ElementType,
+    [Component],
+  );
 
   return (
-    <MotionCompoenent
+    <MotionComponent
       variants={listStyle(staggerTime, delayChildren)}
       initial="hidden"
       whileInView="visible"
@@ -56,7 +60,7 @@ export default function Stagger<T extends React.ElementType = "div">({
       className={className}
     >
       {children}
-    </MotionCompoenent>
+    </MotionComponent>
   );
 }
 
@@ -68,12 +72,15 @@ function StaggerItem<T extends React.ElementType = "div">({
   className,
 }: PolymorphicComponentProps<T, IStaggerProps>) {
   const Component = as || "div";
-  const MotionCompoenent = motion(Component) as React.ElementType;
+  const MotionComponent = useMemo(
+    () => motion(Component) as React.ElementType,
+    [Component],
+  );
 
   return (
-    <MotionCompoenent variants={itemStyle} className={className}>
+    <MotionComponent variants={itemStyle} className={className}>
       {children}
-    </MotionCompoenent>
+    </MotionComponent>
   );
 }
 
