@@ -1,7 +1,8 @@
 "use client";
-import Stagger from "@/components/animation/Stagger";
+
 import Section from "@/components/layout/Section";
 import { track } from "@vercel/analytics";
+import { Stagger } from "@workspace/design-system/animations";
 import { BaseButton, Icon } from "@workspace/design-system/components";
 import { projects } from "@workspace/utils/datas";
 import { useCallback } from "react";

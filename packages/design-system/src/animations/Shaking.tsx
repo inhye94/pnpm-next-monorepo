@@ -1,7 +1,5 @@
-"use client";
-
-import { easing } from "@/shared/animation";
 import { motion } from "motion/react";
+import { easing } from "./options";
 
 interface IShakingProps {
   children: React.ReactNode;

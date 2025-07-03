@@ -1,8 +1,6 @@
-"use client";
-
-import { easing } from "@/shared/animation";
 import { PolymorphicComponentProps } from "@workspace/utils/types";
 import { motion } from "motion/react";
+import { easing } from "./options";
 
 // style varient
 const listStyle = (staggerTime: number, delayChildren: number) => ({

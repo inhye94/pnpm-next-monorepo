@@ -11,7 +11,8 @@
     "./components": "./src/components/index.tsx",
     "./providers": "./src/providers/index.tsx",
     "./providers/ToastProvider": "./src/providers/ToastProvider.tsx",
-    "./providers/ModalProvider": "./src/providers/ModalProvider.tsx"
+    "./providers/ModalProvider": "./src/providers/ModalProvider.tsx",
+    "./animations": "./src/animations/index.tsx"
   },
   "scripts": {
     "dev": "vite",

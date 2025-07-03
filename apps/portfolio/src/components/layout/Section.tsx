@@ -1,10 +1,10 @@
 "use client";
 
 import { useScrollMenuContext } from "@/providers/ScrollMenuProvider";
+import { FadeIn } from "@workspace/design-system/animations";
 import { Container } from "@workspace/design-system/components";
 import classNames from "classnames";
 import { ComponentPropsWithRef } from "react";
-import FadeIn from "../animation/FadeIn";
 
 /**
  * Section 컴포넌트

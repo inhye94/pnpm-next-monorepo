@@ -1,8 +1,7 @@
 "use client";
 
-import ShakingText from "@/components/animation/Shaking";
-import Stagger from "@/components/animation/Stagger";
 import Section from "@/components/layout/Section";
+import { Shaking, Stagger } from "@workspace/design-system/animations";
 import React from "react";
 
 // data
@@ -13,7 +12,7 @@ interface IAboutText {
 }
 
 const ABOUT_TEXT: IAboutText[] = [
-  { id: "about-1", title: "안녕하세요!", icon: <ShakingText>👋</ShakingText> },
+  { id: "about-1", title: "안녕하세요!", icon: <Shaking>👋</Shaking> },
   { id: "about-2", title: "사용자 피드백을 바탕으로" },
   { id: "about-3", title: "사용자 경험(UX)을 개선하는" },
   { id: "about-4", title: "프론트엔드 개발자" },

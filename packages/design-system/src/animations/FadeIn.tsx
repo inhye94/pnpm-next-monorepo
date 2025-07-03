@@ -1,6 +1,6 @@
-import { easing } from "@/shared/animation";
 import { PolymorphicComponentProps } from "@workspace/utils/types";
 import { motion } from "motion/react";
+import { easing } from "./options";
 
 interface IFadeInStyleProps {
   y?: number | string;
