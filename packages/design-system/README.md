@@ -7,7 +7,7 @@
 - 작업기간: 2024.12.23 ~ 진행중
 - stack: Vite, React, TypeScript, TailwindCSS, Storybook, PNPM
 - 깃허브: https://github.com/inhye94/pnpm-next-monorepo/tree/main/packages/design-system
-- Storybook 배포링크: https://67875cd86620d78844d43146-dzvstjnmho.chromatic.com/?path=/docs/components-textfield--docs
+- Storybook 배포링크: https://67875cd86620d78844d43146-drfgvuzaig.chromatic.com/?path=/docs/components-button--docs
 
 ## 개발 배경
 
@@ -63,9 +63,12 @@ Figma Dev 모드를 사용하여 color token과 text token을 손쉽게 추출�
 ## 실행 방법
 
 ```bash
-# Install JavaScript Packages
+# Design System 패키지 디렉토리에서 패키지 설치
 pnpm install
 
-# Run Frontend Server
+# 루트 디렉토리에서 프론트엔드 Server 시작
 pnpm design-system dev
+
+# 루트 디렉토리에서 워크스페이스 패키지로 추가
+pnpm [프로젝트명] add @workspace/design-system --workspace
 ```
