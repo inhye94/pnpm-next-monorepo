@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { motion } from "motion/react";
 import { useToastContext } from "../../providers/ToastProvider";
 import IconButton from "../iconButton/IconButton";
 import type { IToastMessage } from "./toast";
@@ -8,11 +7,7 @@ export default function ToastItem({ id, message, type }: IToastMessage) {
   const { removeToast } = useToastContext();
 
   return (
-    <motion.div
-      className={classNames("toast", `is-${type}`)}
-      initial={{ translateY: "16px" }}
-      animate={{ translateY: 0 }}
-    >
+    <div className={classNames("toast", `is-${type}`)}>
       <p>{message}</p>
       <IconButton
         variant="ghost"
@@ -21,6 +16,6 @@ export default function ToastItem({ id, message, type }: IToastMessage) {
         onClick={() => removeToast(id)}
         className="close-button"
       />
-    </motion.div>
+    </div>
   );
 }

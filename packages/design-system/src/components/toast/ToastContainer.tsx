@@ -1,5 +1,7 @@
 "use client";
 
+import { FadeInOut } from "@workspace/design-system/animations";
+import { AnimatePresence } from "motion/react";
 import { useToastContext } from "../../providers/ToastProvider";
 import { IToastMessage } from "./toast";
 import ToastItem from "./ToastItem";
@@ -23,11 +25,19 @@ export default function ToastContainer() {
 
   return (
     <ul className="toast-container">
-      {toastMessages.map((toast) => (
-        <li key={toast.id}>
-          <ToastItem id={toast.id} message={toast.message} type={toast.type} />
-        </li>
-      ))}
+      <AnimatePresence>
+        {toastMessages.map((toast) => (
+          <li key={toast.id}>
+            <FadeInOut showY={20} hideX={-20}>
+              <ToastItem
+                id={toast.id}
+                message={toast.message}
+                type={toast.type}
+              />
+            </FadeInOut>
+          </li>
+        ))}
+      </AnimatePresence>
     </ul>
   );
 }
