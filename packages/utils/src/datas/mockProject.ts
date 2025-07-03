@@ -23,10 +23,10 @@ export const projects: IProjectItem[] = [
         id: "highlight-1",
         content: "motion 라이브러리로 부드러운 인터랙션 구현",
       },
-      {
-        id: "highlight-2",
-        content: "스크롤 메뉴를 위한 custom context hook 구성",
-      },
+      // {
+      //   id: "highlight-2",
+      //   content: "스크롤 메뉴를 위한 custom context hook 구성",
+      // },
       {
         id: "highlight-3",
         content:
@@ -141,36 +141,58 @@ export const projects: IProjectItem[] = [
         id: "highlight-1",
         content: "Headless 컴포넌트 라이브러리(Radix Primitive) 기반 UI 설계",
       },
-      {
-        id: "highlight-2",
-        content: "웹 접근성과 스타일 재정의 기능 중심 설계",
-      },
+      // {
+      //   id: "highlight-2",
+      //   content: "웹 접근성과 스타일 재정의 기능 중심 설계",
+      // },
       {
         id: "highlight-3",
         content: "Storybook 기반 테스트/문서화 통합",
       },
+      // {
+      //   id: "highlight-4",
+      //   content: "TailwindCSS Tree-Shaking 및 상속 이슈 대응",
+      // },
+      // {
+      //   id: "highlight-5",
+      //   content: "Figma의 AI 기능을 활용한 디자인 가이드 자동화",
+      // },
       {
-        id: "highlight-4",
-        content: "TailwindCSS Tree-Shaking 및 상속 이슈 대응",
-      },
-      {
-        id: "highlight-5",
-        content: "Figma의 AI 기능을 활용한 디자인 가이드 자동화",
+        id: "highlight-6",
+        content: "Polymorphic 컴포넌트, CCP 구조 설계로 재사용성 증가",
       },
     ],
     uxImprovements: [],
     troubleShooting: [
       {
         id: "trouble-1",
-        title: "UI 테스트",
+        title: "웹 접근성 개선 (Headless 컴포넌트 라이브러리)",
         contents: [
-          "**[문제점]** 기존 UI 테스트는 별도의 **테스트 페이지**를 만들어 각 컴포넌트를 테스트 케이스별로 나열하여 검증했습니다. 하지만 이 방식은 테스트 페이지를 **개발할 때마다 새롭게 코드 작업이 필요**해 개발 시간이 증가했고, UI 변경 사항에 따라 **문서화(노션 등) 작업을 수동**으로 진행해 공수가 이중으로 들었습니다.",
-          "**[해결]** **Storybook을 도입**하여 **컴포넌트 UI 테스트 환경을 자동화**하고 **문서화를 통합**했습니다. 각 컴포넌트를 독립적으로 렌더링하여 테스트 가능한 환경을 구축하고 Docs 탭을 활용해 자동으로 문서화가 이루어지도록 설정했습니다.",
-          "**[성과]** UI 테스트 및 문서화 공수를 약 **50% 이상 절감**, 문서화 자동화로 **테스트 페이지 관리 필요성을 제거**했습니다.",
+          "**[문제점]** `aria-*`, 키보드 컨트롤, 포커스 처리 등 **접근성 요소를 직접 구현하는 데 한계**가 있었고, 유지보수 또한 복잡해졌습니다.",
+          "**[해결]** Radix Primitive와 같은 **Headless 컴포넌트 라이브러리**를 도입해 접근성 요구사항을 기본적으로 충족하는 구조로 전환했습니다.",
+          "**[성과]** **스크린 리더 대응**이 더 수월해졌고, 코드가 간결해져 **핵심 로직에 집중**할 수 있는 환경이 마련되었습니다.",
         ],
       },
       {
         id: "trouble-2",
+        title: "UI 테스트/문서화 (Storybook)",
+        contents: [
+          "**[문제점]** 텍스트 설명만으로는 UI가 **직관적으로 전달되지 않았고**, UI 변경 시 문서화(노션 등)를 수동으로 처리해야 해 **공수가 두 배**로 들었습니다.",
+          "**[해결]** **Storybook을 도입**해 컴포넌트를 독립적으로 렌더링하고 Docs 탭으로 자동 문서화되도록 설정했습니다. UI 테스트와 문서화를 하나의 흐름으로 통합했습니다.",
+          "**[성과]** **문서화 자동화**로 **공수를 약 50% 절감**했고, **비개발자도 UI 테스트가 가능한 환경**을 구축했습니다.",
+        ],
+      },
+      {
+        id: "trouble-3",
+        title: "컴포넌트 재사용성 개선 (CCP, Polymorphic 구조)",
+        contents: [
+          "**[문제점]** 동일한 디자인이라도 사용하는 HTML 태그가 달라 **컴포넌트를 중복 작성**해야 했고, **관심사가 분산**되어 관리가 어려웠습니다.",
+          "**[해결]** 관심사를 하나로 묶고 응집도를 높이기 위해 **CCP 패턴**을 적용하고, 다양한 태그에 대응하기 위해 **Polymorphic 컴포넌트 구조**로 설계했습니다.",
+          "**[성과]** 컴포넌트의 **재사용성이 크게 향상**되었고, **속성 타입까지 완전하게 대응**할 수 있었습니다. 또한, **관심사를 HTML 태그로 명확히 표현**할 수 있는 구조가 되어 의도 전달력도 개선되었습니다.",
+        ],
+      },
+      {
+        id: "trouble-4",
         title: "TailwindCSS의 Tree-Shaking 에러 대응",
         contents: [
           "**[문제점]** 디자인 시스템에서 제공하는 모달의 스타일이 **사용자 프로젝트에서 정상적으로 적용되지 않는 문제**가 발생했습니다.",
@@ -186,14 +208,6 @@ export const projects: IProjectItem[] = [
         contents: [
           "운 좋게 친구의 **Figma Dev 모드**를 체험할 수 있었습니다. 덕분에 디자인 가이드에 필요한 token(color, text 등)을 몇 번의 클릭으로 손쉽게 추출할 수 있었습니다. 기존에 SCSS로 작업할 때는 색상 토큰 추출 및 테마 구현에 하루가 소요되었지만, **Figma의 강력한 AI 기능 덕분에 단순 반복 작업을 생략**할 수 있었습니다.",
           "이 경험을 통해, AI의 생산성은 개발자의 창의적이고 전략적인 작업을 도와준다는 것을 깨닫게 되었습니다. 새롭게 나오는 AI 툴에 열린 마음으로 다가가게 된 계기가 되었습니다.",
-        ],
-      },
-      {
-        id: "learning-2",
-        title: "확장이 용이한 디자인 시스템 제작",
-        contents: [
-          "디자인 시스템은 **디자인 일관성**뿐만 아니라 **도입 및 확장 용이성**까지 고려해야 한다는 점을 깨달았습니다. 특히, Radix UI의 모달 컴포넌트를 CCP 패턴으로 구현하면서, **부모나 조상에게 구조 결정을 위임**함으로써 내부 구조의 자율성을 높이고, 재사용성을 극대화할 수 있었습니다.",
-          "그리고 Context를 이용해 상태를 주입하는 방식으로 Modal과 Toast를 구현했습니다. 이로 인해 **상태 관리가 용이해졌고, 컴포넌트 간의 의존성을 줄일 수 있었습니다.**",
         ],
       },
       {
@@ -334,12 +348,12 @@ export const projects: IProjectItem[] = [
       { id: "highlight-1", content: "다중 파일 유효성 검사 구현" },
       {
         id: "highlight-2",
-        content: "Firebase & Cloudinary를 활용한 실데이터 환경 구성",
-      },
-      {
-        id: "highlight-3",
         content: "타입 안정성을 위한 Typescript 마이그레이션",
       },
+      // {
+      //   id: "highlight-3",
+      //   content: "Firebase & Cloudinary를 활용한 실데이터 환경 구성",
+      // },
     ],
     uxImprovements: [
       {
