@@ -15,14 +15,14 @@ export interface ILocalNavMenu {
   id: string;
   text: string;
   icon: React.ReactNode;
-  target: RefObject<HTMLDivElement | null>;
+  target: RefObject<HTMLElement>;
   isActive: boolean;
 }
 
 interface IScrollMenuContext {
   activeMenu: string | null;
   menus: ILocalNavMenu[];
-  getTargetRef: (id: string) => RefObject<HTMLDivElement | null> | null;
+  getTargetRef: (id: string) => RefObject<HTMLElement>;
   scrollToTarget: (id: string) => void;
 }
 
@@ -39,11 +39,11 @@ export function ScrollMenuProvider({
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   // 메뉴 ref
-  const menusRef = useRef<Record<string, RefObject<HTMLDivElement | null>>>({
-    skill: useRef<HTMLDivElement | null>(null),
-    link: useRef<HTMLDivElement | null>(null),
-    project: useRef<HTMLDivElement | null>(null),
-    career: useRef<HTMLDivElement | null>(null),
+  const menusRef = useRef<Record<string, RefObject<HTMLElement>>>({
+    skill: useRef<HTMLElement>(null),
+    link: useRef<HTMLElement>(null),
+    project: useRef<HTMLElement>(null),
+    career: useRef<HTMLElement>(null),
   });
 
   const icons = useRef<Record<string, keyof typeof iconMap>>({
@@ -65,10 +65,8 @@ export function ScrollMenuProvider({
   );
 
   // 타겟 찾기
-  const getTargetRef = (
-    id: string,
-  ): RefObject<HTMLDivElement | null> | null => {
-    return menusRef.current[id] ?? null;
+  const getTargetRef = (id: string): RefObject<HTMLElement> => {
+    return menusRef.current[id] as RefObject<HTMLElement>;
   };
 
   // 스크롤 이동
